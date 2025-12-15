@@ -12,7 +12,7 @@ load_dotenv()
 
 # OpenAI Configuration
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-MODEL = "gpt-4o"
+MODEL = "gpt-4.1"
 SOURCE_LANG = "English"
 TARGET_LANG = "Uzbek (Latin script)"
 
@@ -21,14 +21,16 @@ total_input_tokens = 0
 total_output_tokens = 0
 total_cost = 0.0
 
-# GPT-4o pricing (as of 2024)
-INPUT_TOKEN_COST = 0.005 / 1000  # $0.005 per 1K input tokens
-OUTPUT_TOKEN_COST = 0.015 / 1000  # $0.015 per 1K output tokens
+# GPT-4.1 pricing 
+# input tokens are 2.00$ per 1M tokens
+# output tokens are 0.5 $ per 1M tokens
+INPUT_TOKEN_COST = 2.00 / 1000000  # $2.00 per 1M input tokens
+OUTPUT_TOKEN_COST = 0.50 / 1000000  # $0.50 per 1M output tokens
 
 DOCS_DIR = Path("samples")
-OUTPUT_DIR = Path("sample_translation_openai/docs_uz")
-CACHE_FILE = Path("sample_translation_openai/translation_cache.json")
-TOKEN_STATS_FILE = Path("sample_translation_openai/token_stats.json")
+OUTPUT_DIR = Path("sample_translation_openai_41/docs_uz")
+CACHE_FILE = Path("sample_translation_openai_41/translation_cache.json")
+TOKEN_STATS_FILE = Path("sample_translation_openai_41/token_stats.json")
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -139,7 +141,7 @@ def translate_with_openai(text: str) -> str:
                 {"role": "system", "content": TRANSLATION_SYSTEM_PROMPT},
                 {"role": "user", "content": f"Translate the following text from {SOURCE_LANG} to {TARGET_LANG}. Remember: DO NOT translate code, technical terms, or add any extra words. Translate ONLY the natural language content:\n\n{text}"}
             ],
-            temperature=0.3,  # Lower temperature for more consistent translations
+            temperature=0.0,  # Lower temperature for more consistent translations
             max_tokens=4096,
         )
         
