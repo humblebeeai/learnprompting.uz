@@ -18,7 +18,7 @@ SOURCE_LANG = "English"
 TARGET_LANG = "Uzbek (Latin script)"
 
 # Concurrency settings
-MAX_CONCURRENT_REQUESTS = 10
+MAX_CONCURRENT_REQUESTS = 1
 semaphore = None  # Will be initialized in async context
 
 # Token tracking
@@ -147,8 +147,8 @@ async def translate_with_openai(text: str) -> str:
                     {"role": "system", "content": TRANSLATION_SYSTEM_PROMPT},
                     {"role": "user", "content": f"Translate the following text from {SOURCE_LANG} to {TARGET_LANG}. Remember: DO NOT translate code, technical terms, or add any extra words. Translate ONLY the natural language content:\n\n{text}"}
                 ],
-                temperature=0.0,  # Lower temperature for more consistent translations
-                max_tokens=4096,
+                temperature=0.3,  # Lower temperature for more consistent translations
+                max_tokens=8192,
             )
             
             translated = response.choices[0].message.content.strip()
@@ -221,7 +221,7 @@ async def translate_batch(texts: list) -> list:
 
                     {combined_text}"""}
                                 ],
-                temperature=0.0,
+                temperature=0.3,
                 max_tokens=8192,
             )
             
