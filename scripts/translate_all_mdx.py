@@ -6,20 +6,58 @@ import json
 import hashlib
 from pathlib import Path
 from dotenv import load_dotenv
+from openai import OpenAI
 
 load_dotenv()
 
-TILMOCH_API_URL = "https://websocket.tahrirchi.uz/translate-v2"
-TILMOCH_API_KEY = os.getenv("TILMOCH_API_KEY")
-SOURCE_LANG = "eng_Latn"
-TARGET_LANG = "uzn_Latn"
-MODEL = "tilmoch"
+# OpenAI Configuration
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+MODEL = "gpt-4o"
+SOURCE_LANG = "English"
+TARGET_LANG = "Uzbek (Latin script)"
+
+# Token tracking
+total_input_tokens = 0
+total_output_tokens = 0
+total_cost = 0.0
+
+# GPT-4o pricing (as of 2024)
+INPUT_TOKEN_COST = 0.005 / 1000  # $0.005 per 1K input tokens
+OUTPUT_TOKEN_COST = 0.015 / 1000  # $0.015 per 1K output tokens
 
 DOCS_DIR = Path("samples")
-OUTPUT_DIR = Path("sample_translation/docs_uz")
-CACHE_FILE = Path("sample_translation/translation_cache.json")
+OUTPUT_DIR = Path("sample_translation_openai/docs_uz")
+CACHE_FILE = Path("sample_translation_openai/translation_cache.json")
+TOKEN_STATS_FILE = Path("sample_translation_openai/token_stats.json")
+
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
 MIN_BATCH_SIZE = 800  # Minimum characters before sending translation request
 BATCH_SEPARATOR = "\n|||TRANSLATE_SPLIT|||\n"  # Unique separator for batching
+
+# Initialize OpenAI client
+client = OpenAI(api_key=OPENAI_API_KEY)
+
+# Translation system prompt
+TRANSLATION_SYSTEM_PROMPT = f"""You are a professional translator specializing in technical documentation translation from {SOURCE_LANG} to {TARGET_LANG}.
+
+CRITICAL RULES:
+1. DO NOT translate code blocks, code snippets, or programming syntax
+2. DO NOT translate technical terms like:
+   - "Few-Shot Prompting", "Zero-Shot", "One-Shot"
+   - "Embedding", "Token", "Prompt", "Fine-tuning"
+   - "LLM", "GPT", "API"
+   - Programming concepts, framework names, library names
+   - Variable names, function names, file paths, URLs
+
+3. ONLY translate natural language text (prose, explanations, descriptions)
+4. Preserve ALL formatting: markdown syntax, line breaks, spacing, punctuation
+5. DO NOT add, remove, or modify any words - translate EXACTLY what is provided
+6. DO NOT hallucinate or add explanatory text
+7. Match the meaning and tone of the original text precisely
+8. Keep the translation natural and understandable in {TARGET_LANG}
+
+When translating, focus on conveying the exact meaning while maintaining technical accuracy and readability."""
 
 def load_cache():
     """Load translation cache from file."""
@@ -31,6 +69,40 @@ def load_cache():
             print(f"[WARNING] Could not load cache: {e}")
             return {}
     return {}
+
+def load_token_stats():
+    """Load token usage statistics from file."""
+    if TOKEN_STATS_FILE.exists():
+        try:
+            with open(TOKEN_STATS_FILE, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"[WARNING] Could not load token stats: {e}")
+            return {"total_input_tokens": 0, "total_output_tokens": 0, "total_cost": 0.0}
+    return {"total_input_tokens": 0, "total_output_tokens": 0, "total_cost": 0.0}
+
+def save_token_stats(stats):
+    """Save token usage statistics to file."""
+    try:
+        TOKEN_STATS_FILE.parent.mkdir(parents=True, exist_ok=True)
+        with open(TOKEN_STATS_FILE, 'w', encoding='utf-8') as f:
+            json.dump(stats, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"[ERROR] Could not save token stats: {e}")
+
+def update_token_stats(input_tokens, output_tokens):
+    """Update global token statistics and calculate cost."""
+    global total_input_tokens, total_output_tokens, total_cost
+    
+    total_input_tokens += input_tokens
+    total_output_tokens += output_tokens
+    
+    # Calculate cost
+    input_cost = input_tokens * INPUT_TOKEN_COST
+    output_cost = output_tokens * OUTPUT_TOKEN_COST
+    total_cost += input_cost + output_cost
+    
+    return input_cost + output_cost
 
 def save_cache(cache):
     """Save translation cache to file."""
@@ -47,52 +119,52 @@ def get_text_hash(text):
 # Translation cache
 translation_cache = load_cache()
 
-def translate_with_tilmoch(text: str) -> str:
-    """Translate text using Tilmoch/Sayqalchi API with caching."""
+def translate_with_openai(text: str) -> str:
+    """Translate text using OpenAI GPT-4o with caching."""
     if not text or not text.strip():
         return text
     
     # Check cache first
     text_hash = get_text_hash(text)
     if text_hash in translation_cache:
+        print(f"[CACHE HIT] Using cached translation")
         return translation_cache[text_hash]
     
     try:
         print(f"[API CALL] Translating {len(text)} chars: {text[:50]}...")
-        response = requests.post(
-            TILMOCH_API_URL,
-            json={
-                "text": text,
-                "source_lang": SOURCE_LANG,
-                "target_lang": TARGET_LANG,
-                "model": MODEL,
-            },
-            headers={
-                "Authorization": TILMOCH_API_KEY,
-                "Content-Type": "application/json",
-            },
-            timeout=30,
+        
+        response = client.chat.completions.create(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": TRANSLATION_SYSTEM_PROMPT},
+                {"role": "user", "content": f"Translate the following text from {SOURCE_LANG} to {TARGET_LANG}. Remember: DO NOT translate code, technical terms, or add any extra words. Translate ONLY the natural language content:\n\n{text}"}
+            ],
+            temperature=0.3,  # Lower temperature for more consistent translations
+            max_tokens=4096,
         )
         
-        if response.status_code != 200:
-            print(f"[ERROR] API returned status {response.status_code}")
-            return text
+        translated = response.choices[0].message.content.strip()
         
-        result = response.json()
-        translated = result.get("translated_text", text)
+        # Track tokens
+        input_tokens = response.usage.prompt_tokens
+        output_tokens = response.usage.completion_tokens
+        cost = update_token_stats(input_tokens, output_tokens)
+        
+        print(f"[TOKENS] Input: {input_tokens}, Output: {output_tokens}, Cost: ${cost:.4f}")
         
         # Cache the translation
         translation_cache[text_hash] = translated
         
-        time.sleep(0.2)  # Rate limiting
+        time.sleep(0.5)  # Rate limiting for OpenAI
         return translated
+        
     except Exception as e:
         print(f"[ERROR] Translation failed: {str(e)}")
         return text
 
 
 def translate_batch(texts: list) -> list:
-    """Translate multiple texts in a single API call."""
+    """Translate multiple texts in a single API call using OpenAI."""
     if not texts:
         return []
     
@@ -112,6 +184,7 @@ def translate_batch(texts: list) -> list:
             texts_to_translate.append((i, text))
     
     if not texts_to_translate:
+        print(f"[CACHE] All {len(texts)} texts found in cache")
         return results
     
     # Batch texts together with separator
@@ -122,30 +195,35 @@ def translate_batch(texts: list) -> list:
     # Translate the batch
     try:
         print(f"[BATCH API] Translating {len(batch_texts)} texts ({len(combined_text)} chars)")
-        response = requests.post(
-            TILMOCH_API_URL,
-            json={
-                "text": combined_text,
-                "source_lang": SOURCE_LANG,
-                "target_lang": TARGET_LANG,
-                "model": MODEL,
-            },
-            headers={
-                "Authorization": TILMOCH_API_KEY,
-                "Content-Type": "application/json",
-            },
-            timeout=30,
+        
+        response = client.chat.completions.create(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": TRANSLATION_SYSTEM_PROMPT},
+                {"role": "user", "content": f"""Translate the following texts from {SOURCE_LANG} to {TARGET_LANG}. 
+                
+                The texts are separated by: {BATCH_SEPARATOR}
+
+                IMPORTANT: 
+                - Keep the EXACT separator "{BATCH_SEPARATOR}" between translations
+                - Maintain the same number of segments as the input
+
+                Texts to translate:
+
+                {combined_text}"""}
+                            ],
+            temperature=0.0,
+            max_tokens=8192,
         )
         
-        if response.status_code != 200:
-            print(f"[ERROR] Batch API returned status {response.status_code}")
-            # Fallback to original texts
-            for idx, text in texts_to_translate:
-                results[idx] = text
-            return results
+        translated_combined = response.choices[0].message.content.strip()
         
-        result = response.json()
-        translated_combined = result.get("translated_text", combined_text)
+        # Track tokens
+        input_tokens = response.usage.prompt_tokens
+        output_tokens = response.usage.completion_tokens
+        cost = update_token_stats(input_tokens, output_tokens)
+        
+        print(f"[TOKENS] Input: {input_tokens}, Output: {output_tokens}, Cost: ${cost:.4f}")
         
         # Split back into individual translations
         translated_parts = translated_combined.split(BATCH_SEPARATOR)
@@ -157,7 +235,7 @@ def translate_batch(texts: list) -> list:
             
             # Fallback: translate each text individually
             for idx, text in texts_to_translate:
-                translated = translate_with_tilmoch(text)
+                translated = translate_with_openai(text)
                 text_hash = get_text_hash(text)
                 translation_cache[text_hash] = translated
                 results[idx] = translated
@@ -168,13 +246,15 @@ def translate_batch(texts: list) -> list:
                 translation_cache[text_hash] = translated_text
                 results[idx] = translated_text
         
-        time.sleep(0.3)  # Rate limiting
+        time.sleep(0.5)  # Rate limiting for OpenAI
         
     except Exception as e:
         print(f"[ERROR] Batch translation failed: {str(e)}")
-        # Fallback to original texts
+        print(f"[FALLBACK] Translating individually...")
+        # Fallback to individual translations
         for idx, text in texts_to_translate:
-            results[idx] = text
+            translated = translate_with_openai(text)
+            results[idx] = translated
     
     return results
 
@@ -460,16 +540,27 @@ def translate_all_mdx_files(force_retranslate=False):
     Args:
         force_retranslate: If True, retranslate existing files. Default False.
     """
-    if not TILMOCH_API_KEY:
-        print("[ERROR] TILMOCH_API_KEY not found in environment variables!")
+    global total_input_tokens, total_output_tokens, total_cost
+    
+    if not OPENAI_API_KEY:
+        print("[ERROR] OPENAI_API_KEY not found in environment variables!")
         print("Please set it in your .env file")
         return
+    
+    # Load existing token stats
+    token_stats = load_token_stats()
+    total_input_tokens = token_stats.get("total_input_tokens", 0)
+    total_output_tokens = token_stats.get("total_output_tokens", 0)
+    total_cost = token_stats.get("total_cost", 0.0)
     
     print(f"Starting translation of all MDX files...")
     print(f"Source: {DOCS_DIR}")
     print(f"Output: {OUTPUT_DIR}")
     print(f"Cache: {CACHE_FILE}")
+    print(f"Model: {MODEL}")
+    print(f"Translation: {SOURCE_LANG} → {TARGET_LANG}")
     print(f"Force retranslate: {force_retranslate}")
+    print(f"Previous token usage: Input={total_input_tokens:,}, Output={total_output_tokens:,}, Cost=${total_cost:.4f}")
     
     # Find all MDX files
     mdx_files = list(DOCS_DIR.rglob("*.mdx"))
@@ -525,6 +616,15 @@ def translate_all_mdx_files(force_retranslate=False):
             print(f"[ERROR] Failed: {e}")
             failed += 1
     
+    # Save token stats
+    token_stats = {
+        "total_input_tokens": total_input_tokens,
+        "total_output_tokens": total_output_tokens,
+        "total_cost": total_cost,
+        "last_updated": time.strftime("%Y-%m-%d %H:%M:%S")
+    }
+    save_token_stats(token_stats)
+    
     # Summary
     elapsed = time.time() - start_time
     print(f"\n{'='*80}")
@@ -538,6 +638,18 @@ def translate_all_mdx_files(force_retranslate=False):
     print(f"Time elapsed:           {elapsed:.1f} seconds ({elapsed/60:.1f} minutes)")
     if completed > 0:
         print(f"Average per file:       {elapsed/completed:.1f} seconds")
+    print(f"\n{'='*80}")
+    print(f"TOKEN USAGE & COST")
+    print(f"{'='*80}")
+    print(f"Input tokens:           {total_input_tokens:,}")
+    print(f"Output tokens:          {total_output_tokens:,}")
+    print(f"Total tokens:           {total_input_tokens + total_output_tokens:,}")
+    print(f"Total cost (USD):       ${total_cost:.4f}")
+    print(f"Model:                  {MODEL}")
+    print(f"Token stats file:       {TOKEN_STATS_FILE}")
+    print(f"\n{'='*80}")
+    print(f"FILES & CACHE")
+    print(f"{'='*80}")
     print(f"Cache entries:          {len(translation_cache)}")
     print(f"Output directory:       {OUTPUT_DIR}")
     print(f"Cache file:             {CACHE_FILE}")

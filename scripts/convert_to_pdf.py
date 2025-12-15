@@ -118,9 +118,9 @@ def convert_mdx_to_pdf(mdx_path, output_path):
         return False
 
 def main():
-    base_dir = Path(__file__).parent
-    sample_dir = base_dir / "sample_translation" / "docs_uz"
-    output_dir = base_dir / "sample_pdfs"
+    base_dir = Path(__file__).parent.parent
+    sample_dir = base_dir / "sample_translation_openai" / "docs_uz"
+    output_dir = base_dir / "sample_translation_openai_pdfs"
     
     # Create output directory
     output_dir.mkdir(exist_ok=True)
