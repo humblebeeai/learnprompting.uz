@@ -138,6 +138,12 @@ async function createConfig() {
                     src: "img/simple_ai.webp",
                 },
                 items: [
+                    {
+                        type: "doc",
+                        docId: "intro/index",
+                        position: "left",
+                        label: "Docs",
+                    },
                     { type: "localeDropdown", position: "right" },
                     {
                         href: "https://github.com/humblebeeai/Learn_Prompting",
@@ -148,7 +154,7 @@ async function createConfig() {
             },
             announcementBar: {
                 id: "collaboration",
-                content: '🇺🇿 🇺🇸 <b>Learn Prompting × HumblebeeAI</b> Collaboration Edition',
+                content: '🇺🇿 🇺🇸 <b>Learn Prompting × <a href="https://humblebee.ai" target="_blank">HumblebeeAI</a></b> Collaboration Edition',
                 backgroundColor: "#53ffd4",
                 textColor: "#000",
                 isCloseable: true,
@@ -158,7 +164,7 @@ async function createConfig() {
                 logo: {
                     alt: 'HumblebeeAI Logo',
                     src: '/humblebee_logo.svg',
-                    href: 'https://academy.humblebee.ai',
+                    href: 'https://humblebee.ai',
                     width: 150,
                 },
                 copyright: `

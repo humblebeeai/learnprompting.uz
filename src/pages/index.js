@@ -1,4 +1,5 @@
 import React from 'react';
+import Translate, {translate} from '@docusaurus/Translate';
 import { useEffect, useRef, useState } from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -33,6 +34,7 @@ function useInView(threshold = 0.1) {
 
 // Hero Section with premium design
 function HomepageHero() {
+  const { i18n } = useDocusaurusContext();
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -48,44 +50,38 @@ function HomepageHero() {
       </div>
       
       <div className="hero-content">
-        {/* <div className={`hero-badge ${isLoaded ? 'animate-fade-in' : 'opacity-0'}`}>
+        <div className={`hero-badge ${isLoaded ? 'animate-fade-in' : 'opacity-0'}`}>
           <span className="badge-dot" />
-          <span>HumblebeeAI × Learn Prompting</span>
-        </div> */}
+          <span><a href="https://humblebee.ai" target="_blank">HumblebeeAI</a> × Learn Prompting</span>
+        </div>
 
         <h1 className={`hero-title ${isLoaded ? 'animate-fade-in-up stagger-1' : 'opacity-0'}`}>
-          <span className="title-line">Sun'iy intellekt bilan</span>
-          <span className="title-line title-accent">samarali ishlashni</span>
-          <span className="title-line">o'rganing</span>
+          <span className="title-line"><Translate id="homepage.hero.title.line1">Sun'iy intellekt bilan</Translate></span>
+          <span className="title-line title-accent"><Translate id="homepage.hero.title.line2">samarali ishlashni</Translate></span>
+          <span className="title-line"><Translate id="homepage.hero.title.line3">o'rganing</Translate></span>
         </h1>
 
         <p className={`hero-subtitle ${isLoaded ? 'animate-fade-in-up stagger-2' : 'opacity-0'}`}>
-          ChatGPT, Claude va boshqa AI vositalari bilan professional darajada ishlash ko'nikmalarini egallang. 
-          Bepul, ochiq manbali qo'llanma.
+          <Translate id="homepage.hero.subtitle">ChatGPT, Claude va boshqa AI vositalari bilan professional darajada ishlash ko'nikmalarini egallang. Bepul, ochiq manbali qo'llanma.</Translate>
         </p>
 
         <div className={`hero-actions ${isLoaded ? 'animate-fade-in-up stagger-3' : 'opacity-0'}`}>
           <Link
             className="btn-primary"
             to="/docs/intro">
-            <span>O'zbekchada boshlash</span>
+            <span><Translate id="homepage.hero.button.start">Boshlash</Translate></span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </Link>
-          <Link
-            className="btn-secondary"
-            to="/en/docs/intro">
-            <span>Start in English</span>
-          </Link>
         </div>
 
         <div className={`hero-stats ${isLoaded ? 'animate-fade-in-up stagger-4' : 'opacity-0'}`}>
-          <StatItem value="1M+" label="O'quvchilar" />
+          <StatItem value="3M+" label={<Translate id="homepage.stats.learners">O'quvchilar</Translate>} />
           <div className="stat-divider" />
-          <StatItem value="60+" label="Modullar" />
+          <StatItem value="60+" label={<Translate id="homepage.stats.modules">Modullar</Translate>} />
           <div className="stat-divider" />
-          <StatItem value="100%" label="Bepul" />
+          <StatItem value="100%" label={<Translate id="homepage.stats.free">Bepul</Translate>} />
         </div>
       </div>
     </section>
@@ -114,8 +110,8 @@ function FeaturesSection() {
           <path d="M2 12l10 5 10-5"/>
         </svg>
       ),
-      title: "Bosqichma-bosqich o'rganish",
-      description: "Oddiy tushunchalardan murakkab texnikalargacha tizimli ravishda o'rganing"
+      title: <Translate id="homepage.features.stepbystep.title">Bosqichma-bosqich o'rganish</Translate>,
+      description: <Translate id="homepage.features.stepbystep.description">Oddiy tushunchalardan murakkab texnikalargacha tizimli ravishda o'rganing</Translate>
     },
     {
       icon: (
@@ -124,8 +120,8 @@ function FeaturesSection() {
           <path d="M12 6v6l4 2"/>
         </svg>
       ),
-      title: "Amaliy mashqlar",
-      description: "Har bir darsda real vazifalar va interaktiv mashqlar bilan mustahkamlang"
+      title: <Translate id="homepage.features.practice.title">Amaliy mashqlar</Translate>,
+      description: <Translate id="homepage.features.practice.description">Har bir darsda real vazifalar va interaktiv mashqlar bilan mustahkamlang</Translate>
     },
     {
       icon: (
@@ -136,8 +132,8 @@ function FeaturesSection() {
           <path d="M16 3.13a4 4 0 010 7.75"/>
         </svg>
       ),
-      title: "Hamjamiyat",
-      description: "O'zbek tilidagi AI ishqibozlari hamjamiyatiga qo'shiling"
+      title: <Translate id="homepage.features.community.title">Hamjamiyat</Translate>,
+      description: <Translate id="homepage.features.community.description">O'zbek tilidagi AI ishqibozlari hamjamiyatiga qo'shiling</Translate>
     }
   ];
 
@@ -145,8 +141,8 @@ function FeaturesSection() {
     <section ref={ref} className="features-section">
       <div className="section-container">
         <div className={`section-header ${isInView ? 'animate-slide-up' : 'init-slide-up'}`}>
-          <span className="section-label">Nimalarni o'rganasiz</span>
-          <h2 className="section-title">AI bilan muloqot san'ati</h2>
+          <span className="section-label"><Translate id="homepage.features.label">Nimalarni o'rganasiz</Translate></span>
+          <h2 className="section-title"><Translate id="homepage.features.mainTitle">AI bilan muloqot san'ati</Translate></h2>
         </div>
         
         <div className="features-grid">
@@ -174,26 +170,26 @@ function LearningPathSection() {
   const steps = [
     {
       number: "01",
-      title: "AI asoslari",
-      description: "Sun'iy intellekt qanday ishlashini tushuning",
+      title: <Translate id="homepage.path.step1.title">AI asoslari</Translate>,
+      description: <Translate id="homepage.path.step1.description">Sun'iy intellekt qanday ishlashini tushuning</Translate>,
       color: "#10b981"
     },
     {
       number: "02", 
-      title: "Prompt yozish",
-      description: "Samarali so'rovlar tuzishni o'rganing",
+      title: <Translate id="homepage.path.step2.title">Prompt yozish</Translate>,
+      description: <Translate id="homepage.path.step2.description">Samarali so'rovlar tuzishni o'rganing</Translate>,
       color: "#06b6d4"
     },
     {
       number: "03",
-      title: "Ilg'or texnikalar",
-      description: "Professional usullarni egallang",
+      title: <Translate id="homepage.path.step3.title">Ilg'or texnikalar</Translate>,
+      description: <Translate id="homepage.path.step3.description">Professional usullarni egallang</Translate>,
       color: "#8b5cf6"
     },
     {
       number: "04",
-      title: "Amaliy qo'llash",
-      description: "Real loyihalarda foydalaning",
+      title: <Translate id="homepage.path.step4.title">Amaliy qo'llash</Translate>,
+      description: <Translate id="homepage.path.step4.description">Real loyihalarda foydalaning</Translate>,
       color: "#f59e0b"
     }
   ];
@@ -202,8 +198,8 @@ function LearningPathSection() {
     <section ref={ref} className="path-section">
       <div className="section-container">
         <div className={`section-header ${isInView ? 'animate-slide-up' : 'init-slide-up'}`}>
-          <span className="section-label">O'quv yo'li</span>
-          <h2 className="section-title">4 bosqichda professional darajaga yeting</h2>
+          <span className="section-label"><Translate id="homepage.path.label">O'quv yo'li</Translate></span>
+          <h2 className="section-title"><Translate id="homepage.path.mainTitle">4 bosqichda professional darajaga yeting</Translate></h2>
         </div>
 
         <div className="path-grid">
@@ -235,13 +231,13 @@ function CTASection() {
     <section ref={ref} className="cta-section">
       <div className="cta-container">
         <div className={`cta-content ${isInView ? 'animate-slide-up' : 'init-slide-up'}`}>
-          <h2 className="cta-title">Bugun boshlang</h2>
+          <h2 className="cta-title"><Translate id="homepage.cta.title">Bugun boshlang</Translate></h2>
           <p className="cta-description">
-            1 million dan ortiq o'quvchilarga qo'shiling va AI bilan ishlash mahoratini egallang
+            <Translate id="homepage.cta.description">3 million dan ortiq o'quvchilarga qo'shiling va AI bilan ishlash mahoratini egallang</Translate>
           </p>
           <div className="cta-actions">
             <Link className="btn-primary btn-lg" to="/docs/intro">
-              <span>Kursni boshlash</span>
+              <span><Translate id="homepage.cta.button">Kursni boshlash</Translate></span>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
@@ -264,13 +260,17 @@ function CollaborationSection() {
   return (
     <section ref={ref} className="collab-section">
       <div className={`collab-content ${isInView ? 'animate-slide-up' : 'init-slide-up'}`}>
-        <div className="collab-badge">Hamkorlik</div>
+        <div className="collab-badge"><Translate id="homepage.collab.badge">Hamkorlik</Translate></div>
         <p className="collab-text">
-          O'zbek va rus tillaridagi tarjima versiyalari <strong>HumblebeeAI</strong> tomonidan yuritiladi.
-          Asl kontent <strong>Learn Prompting</strong> ochiq manbali hamjamiyati tomonidan yaratilgan.
+          <Translate id="homepage.collab.text" values={{
+            humblebee: <strong><a href="https://humblebee.ai" target="_blank">HumblebeeAI</a></strong>,
+            learnprompting: <strong>Learn Prompting</strong>
+          }}>
+            {"O'zbek va rus tillaridagi tarjima versiyalari {humblebee} tomonidan yuritiladi. Asl kontent {learnprompting} ochiq manbali hamjamiyati tomonidan yaratilgan."}
+          </Translate>
         </p>
         <Link className="collab-link" to="/about-collaboration">
-          Hamkorlik haqida batafsil
+          <Translate id="homepage.collab.link">Hamkorlik haqida batafsil</Translate>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
@@ -286,8 +286,8 @@ export default function Home() {
   
   return (
     <Layout
-      title="AI Bilan Muloqot"
-      description="Learn Prompting × HumblebeeAI Hamkorligi">
+      title={translate({id: 'homepage.meta.title', message: 'AI Bilan Muloqot'})}
+      description={translate({id: 'homepage.meta.description', message: 'Learn Prompting × HumblebeeAI Hamkorligi'})}>
       <main className="homepage">
         <HomepageHero />
         <FeaturesSection />
