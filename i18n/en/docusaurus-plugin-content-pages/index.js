@@ -266,7 +266,7 @@ function CollaborationSection() {
             humblebee: <strong><a href="https://humblebee.ai" target="_blank">HumblebeeAI</a></strong>,
             learnprompting: <strong>Learn Prompting</strong>
           }}>
-            {"O'zbek tarjima versiyalari {humblebee} tomonidan yuritiladi. Asl kontent {learnprompting} ochiq manbali hamjamiyati tomonidan yaratilgan."}
+            {"O'zbek tarjima versiyasi {humblebee} tomonidan yuritiladi. Asl kontent {learnprompting} ochiq manbali hamjamiyati tomonidan yaratilgan."}
           </Translate>
         </p>
         <Link className="collab-link" to="/about-collaboration">

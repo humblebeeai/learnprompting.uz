@@ -1,0 +1,158 @@
+{
+	"homepage.hero.title.line1": {
+		"message": "AI bilan muloqot qilishni"
+	},
+	"homepage.hero.title.line2": {
+		"message": "samarali"
+	},
+	"homepage.hero.title.line3": {
+		"message": "va professional tarzda o‘rganing"
+	},
+	"homepage.hero.subtitle": {
+		"message": "ChatGPT, Claude va boshqa AI vositalaridan professional darajada foydalanishni o‘rganing. Bepul, ochiq manbali kurs."
+	},
+	"homepage.hero.button.start": {
+		"message": "Boshlash"
+	},
+	"homepage.stats.learners": {
+		"message": "O‘quvchilar"
+	},
+	"homepage.stats.modules": {
+		"message": "Modullar"
+	},
+	"homepage.stats.free": {
+		"message": "Bepul"
+	},
+	"homepage.features.stepbystep.title": {
+		"message": "Bosqichma-bosqich o‘rganish"
+	},
+	"homepage.features.stepbystep.description": {
+		"message": "Oddiy tushunchalardan murakkab texnikalargacha tizimli ravishda o‘rganing"
+	},
+	"homepage.features.practice.title": {
+		"message": "Amaliy mashqlar"
+	},
+	"homepage.features.practice.description": {
+		"message": "Har bir darsda real vazifalar va interaktiv mashqlar orqali bilimni mustahkamlang"
+	},
+	"homepage.features.community.title": {
+		"message": "Hamjamiyat"
+	},
+	"homepage.features.community.description": {
+		"message": "AI ixlosmandlari hamjamiyatiga qo‘shiling"
+	},
+	"homepage.features.label": {
+		"message": "Nimalarni o‘rganasiz"
+	},
+	"homepage.features.mainTitle": {
+		"message": "AI bilan muloqot san’ati"
+	},
+	"homepage.path.label": {
+		"message": "O‘rganish yo‘li"
+	},
+	"homepage.path.mainTitle": {
+		"message": "4 bosqichda professional darajaga chiqing"
+	},
+	"homepage.path.step1.title": {
+		"message": "AI asoslari"
+	},
+	"homepage.path.step1.description": {
+		"message": "Sun’iy intellekt qanday ishlashini tushuning"
+	},
+	"homepage.path.step2.title": {
+		"message": "Prompt injiniring"
+	},
+	"homepage.path.step2.description": {
+		"message": "Samarali promptlar yozishni o‘rganing"
+	},
+	"homepage.path.step3.title": {
+		"message": "Ilg‘or texnikalar"
+	},
+	"homepage.path.step3.description": {
+		"message": "Professional usullarni mukammal o‘zlashtiring"
+	},
+	"homepage.path.step4.title": {
+		"message": "Amaliy qo‘llash"
+	},
+	"homepage.path.step4.description": {
+		"message": "Bilimingizni real loyihalarda qo‘llang"
+	},
+	"homepage.cta.title": {
+		"message": "Bugun boshlang"
+	},
+	"homepage.cta.description": {
+		"message": "3 milliondan ortiq o‘rganuvchilarga qo‘shiling va AI ko‘nikmalarini egallang"
+	},
+	"homepage.cta.button": {
+		"message": "Kursni boshlash"
+	},
+	"homepage.collab.badge": {
+		"message": "Hamkorlik"
+	},
+	"homepage.collab.text": {
+		"message": "O‘zbek versiyasi {humblebee} tomonidan yuritiladi. Kontent {learnprompting} ochiq manbali hamjamiyati tomonidan yaratilgan."
+	},
+	"homepage.collab.link": {
+		"message": "Hamkorlik haqida batafsil"
+	},
+	"homepage.meta.title": {
+		"message": "AI bilan muloqot"
+	},
+	"homepage.meta.description": {
+		"message": "Learn Prompting × HumblebeeAI hamkorligi"
+	},
+	"footer.quickLinks.uzbek": {
+		"message": "O‘zbekcha darslar"
+	},
+	"footer.quickLinks.english": {
+		"message": "Inglizcha darslar"
+	},
+	"footer.quickLinks.academy": {
+		"message": "AI Akademiyasi"
+	},
+	"footer.quickLinks.collaboration": {
+		"message": "Hamkorlik"
+	},
+	"footer.legalLinks.privacy": {
+		"message": "Maxfiylik siyosati"
+	},
+	"footer.legalLinks.terms": {
+		"message": "Foydalanish shartlari"
+	},
+	"footer.legalLinks.license": {
+		"message": "Litsenziya"
+	},
+	"footer.tagline": {
+		"message": "AI bilan professional ishlashni o‘rganing"
+	},
+	"footer.column.quickLinks": {
+		"message": "Tezkor havolalar"
+	},
+	"footer.column.contact": {
+		"message": "Aloqa"
+	},
+	"footer.copyright": {
+		"message": "© {year} Learn Prompting × {humblebee}"
+	},
+	"footer.attribution": {
+		"message": "O‘zbekcha nashr {humblebee} tomonidan yuritiladi. Kontent {learnprompting} mualliflari tomonidan yaratilgan."
+	},
+	"theme.admonition.takeaways": {
+		"message": "Asosiy xulosalar"
+	},
+	"theme.admonition.note": {
+		"message": "Eslatma"
+	},
+	"theme.admonition.tip": {
+		"message": "Maslahat"
+	},
+	"theme.admonition.danger": {
+		"message": "Xavf"
+	},
+	"theme.admonition.info": {
+		"message": "Ma’lumot"
+	},
+	"theme.admonition.caution": {
+		"message": "Ogohlantirish"
+	}
+}
