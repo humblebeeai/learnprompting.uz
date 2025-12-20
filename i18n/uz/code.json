@@ -1,0 +1,191 @@
+{
+	"homepage.hero.title.line1": {
+		"message": "AI bilan samarali muloqot qiling."
+	},
+	"homepage.hero.title.line2": {
+		"message": "Professional darajaga chiqing."
+	},
+	"homepage.hero.title.line3": {
+		"message": ""
+	},
+	"homepage.hero.subtitle": {
+		"message": "ChatGPT, Claude va boshqa sun’iy intellekt vositalaridan **ish, ta’lim va biznesda** to‘g‘ri va samarali foydalanishni o‘rganing. 100% bepul, ochiq manbali, real ko‘nikmalarga yo‘naltirilgan kurs."
+	},
+	"homepage.hero.trust": {
+		"message": "O‘zbek tilida tarjima va lokalizatsiya — hamjamiyat bilan birga."
+	},
+	"homepage.hero.button.start": {
+		"message": "Kursni boshlash"
+	},
+	"homepage.hero.button.modules": {
+		"message": "Modullar ro‘yxati"
+	},
+	"homepage.stats.learners": {
+		"message": "o‘rganuvchi"
+	},
+	"homepage.stats.modules": {
+		"message": "modul"
+	},
+	"homepage.stats.free": {
+		"message": "100% bepul"
+	},
+	"homepage.audience.students": {
+		"message": "Talabalar"
+	},
+	"homepage.audience.teachers": {
+		"message": "O‘qituvchilar"
+	},
+	"homepage.audience.entrepreneurs": {
+		"message": "Tadbirkorlar va mutaxassislar"
+	},
+	"homepage.audience.civilservants": {
+		"message": "Davlat va ofis xodimlari"
+	},
+	"homepage.features.stepbystep.title": {
+		"message": "Aniq prompt yozish"
+	},
+	"homepage.features.stepbystep.description": {
+		"message": "Natija beradigan savollar, topshiriqlar va instruktsiyalar tuzish"
+	},
+	"homepage.features.practice.title": {
+		"message": "Ish uchun tayyor shablonlar"
+	},
+	"homepage.features.practice.description": {
+		"message": "Email, reja, hisobot, prezentatsiya va tahlil promptlari"
+	},
+	"homepage.features.community.title": {
+		"message": "Amaliy mashqlar"
+	},
+	"homepage.features.community.description": {
+		"message": "Har bir modulda real hayotdan olingan vazifalar"
+	},
+	"homepage.features.responsible.title": {
+		"message": "Mas’uliyatli AI’dan foydalanish"
+	},
+	"homepage.features.responsible.description": {
+		"message": "Xatolarni aniqlash, tekshirish, ishonchlilik va xavfsizlik"
+	},
+	"homepage.features.label": {
+		"message": "Siz oladigan ko‘nikmalar"
+	},
+	"homepage.features.mainTitle": {
+		"message": "AI bilan muloqot san’ati"
+	},
+	"homepage.path.label": {
+		"message": "O‘rganish yo‘li"
+	},
+	"homepage.path.mainTitle": {
+		"message": "Qadamma-qadam real ko‘nikmaga"
+	},
+	"homepage.path.step1.title": {
+		"message": "AI va prompt asoslari"
+	},
+	"homepage.path.step1.description": {
+		"message": "Sun’iy intellekt qanday ishlaydi, LLM’lar nimaga qodir va tamoyillar"
+	},
+	"homepage.path.step2.title": {
+		"message": "Amaliy qo‘llanmalar"
+	},
+	"homepage.path.step2.description": {
+		"message": "AI’dan kundalik ishda foydalanish: email, hujjat, reja"
+	},
+	"homepage.path.step3.title": {
+		"message": "Intermediate va Advanced"
+	},
+	"homepage.path.step3.description": {
+		"message": "Instruction prompting, few-shot, multi-step va murakkab vazifalar"
+	},
+	"homepage.path.step4.title": {
+		"message": "Kengaytirilgan mavzular"
+	},
+	"homepage.path.step4.description": {
+		"message": "Ishonchlilik, tekshiruv, image prompting va tooling"
+	},
+	"homepage.cta.title": {
+		"message": "Bugun boshlang"
+	},
+	"homepage.cta.description": {
+		"message": "Bu kursni millionlab o‘rganuvchilar real ishlarida qo‘llamoqda. Siz ham bugun boshlang va birinchi amaliy natijani qisqa vaqt ichida ko‘ring."
+	},
+	"homepage.cta.button": {
+		"message": "Kursni boshlash"
+	},
+	"homepage.collab.badge": {
+		"message": "Hamkorlik va ochiqlik"
+	},
+	"homepage.collab.content": {
+		"message": "Kontent: Learn Prompting open-source hamjamiyati"
+	},
+	"homepage.collab.translation": {
+		"message": "Tarjima va lokalizatsiya: HumblebeeAI"
+	},
+	"homepage.collab.license": {
+		"message": "Manba va litsenziya: GitHub’da ochiq"
+	},
+	"homepage.collab.text": {
+		"message": "O‘zbekcha nashr {humblebee} tomonidan yuritiladi. Barcha kontent ochiq manbali va bepul."
+	},
+	"homepage.collab.link": {
+		"message": "Hamkorlik haqida batafsil"
+	},
+	"homepage.meta.title": {
+		"message": "AI bilan muloqot"
+	},
+	"homepage.meta.description": {
+		"message": "Learn Prompting × HumblebeeAI"
+	},
+	"footer.quickLinks.uzbek": {
+		"message": "Kurslar"
+	},
+	"footer.quickLinks.english": {
+		"message": "(EN) Courses"
+	},
+	"footer.quickLinks.academy": {
+		"message": "AI Akademiyasi"
+	},
+	"footer.quickLinks.collaboration": {
+		"message": "Hamkorlik"
+	},
+	"footer.legalLinks.privacy": {
+		"message": "Maxfiylik siyosati"
+	},
+	"footer.legalLinks.terms": {
+		"message": "Foydalanish shartlari"
+	},
+	"footer.legalLinks.license": {
+		"message": "Litsenziya"
+	},
+	"footer.tagline": {
+		"message": "AI bilan professional ishlashni o‘rganing"
+	},
+	"footer.column.quickLinks": {
+		"message": "Tezkor havolalar"
+	},
+	"footer.column.contact": {
+		"message": "Aloqa"
+	},
+	"footer.copyright": {
+		"message": "© {year} Learn Prompting × {humblebee}"
+	},
+	"footer.attribution": {
+		"message": "O‘zbekcha nashr {humblebee} tomonidan yuritiladi."
+	},
+	"theme.admonition.takeaways": {
+		"message": "Asosiy xulosalar"
+	},
+	"theme.admonition.note": {
+		"message": "Eslatma"
+	},
+	"theme.admonition.tip": {
+		"message": "Maslahat"
+	},
+	"theme.admonition.danger": {
+		"message": "Xavf"
+	},
+	"theme.admonition.info": {
+		"message": "Ma’lumot"
+	},
+	"theme.admonition.caution": {
+		"message": "Ogohlantirish"
+	}
+}
