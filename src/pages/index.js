@@ -50,25 +50,13 @@ function HomepageHero() {
       </div>
 
       <div className="hero-content">
-        <div
-          className={`hero-badge ${isLoaded ? "animate-fade-in" : "opacity-0"}`}
-        >
-          <span className="badge-dot" />
-          <span>
-            <a href="https://humblebee.ai" target="_blank">
-              HumblebeeAI
-            </a>{" "}
-            × Learn Prompting
-          </span>
-        </div>
-
         <h1
           className={`hero-title ${
             isLoaded ? "animate-fade-in-up stagger-1" : "opacity-0"
           }`}
         >
           <span className="title-line">
-            <Translate id="homepage.hero.title.line1">AI bilan.</Translate>
+            <Translate id="homepage.hero.title.line1">AI bilan</Translate>
           </span>
           <span className="title-line title-accent">
             <Translate id="homepage.hero.title.line2">
@@ -87,11 +75,10 @@ function HomepageHero() {
             isLoaded ? "animate-fade-in-up stagger-2" : "opacity-0"
           }`}
         >
-          <Translate id="homepage.hero.subtitle">
-            ChatGPT, Claude va boshqa sun'iy intellekt vositalaridan ish, ta'lim
-            va biznesda to'g'ri va samarali foydalanishni o'rganing. 100% bepul,
-            ochiq manbali, real ko'nikmalarga yo'naltirilgan kurs.
-          </Translate>
+          ChatGPT, Claude va boshqa sun'iy intellekt vositalaridan{" "}
+          <strong>ish, ta'lim va biznesda</strong> to'g'ri va samarali
+          foydalanishni o'rganing. 100% bepul, ochiq manbali, real ko'nikmalarga
+          yo'naltirilgan kurs.
         </p>
 
         <div
@@ -280,7 +267,7 @@ function FeaturesSection() {
       ),
       title: (
         <Translate id="homepage.features.stepbystep.title">
-          Aniq prompt yozish
+          To'g'ri prompt yozish
         </Translate>
       ),
       description: (
@@ -312,12 +299,12 @@ function FeaturesSection() {
       ),
       title: (
         <Translate id="homepage.features.community.title">
-          Amaliy mashqlar
+          Amaliy misollar
         </Translate>
       ),
       description: (
         <Translate id="homepage.features.community.description">
-          Har bir modulda real hayotdan olingan vazifalar
+          Har bir modulda real hayotdan olingan misollar
         </Translate>
       ),
       accentColor: "#8b5cf6",
@@ -331,12 +318,12 @@ function FeaturesSection() {
       ),
       title: (
         <Translate id="homepage.features.responsible.title">
-          Mas'uliyatli AI'dan foydalanish
+          Ishonchli natijalar olish
         </Translate>
       ),
       description: (
         <Translate id="homepage.features.responsible.description">
-          Xatolarni aniqlash, tekshirish, ishonchlilik va xavfsizlik
+          AI javoblarini tekshirish, xatolarni tuzatish va sifatli natija olish
         </Translate>
       ),
       accentColor: "#f59e0b",
@@ -504,12 +491,12 @@ function CTASection() {
           }`}
         >
           <h2 className="cta-title">
-            <Translate id="homepage.cta.title">Bugun boshlang</Translate>
+            <Translate id="homepage.cta.title">Hoziroq boshlang</Translate>
           </h2>
           <p className="cta-description">
             <Translate id="homepage.cta.description">
               Bu kursni millionlab o'rganuvchilar real ishlarida qo'llamoqda.
-              Siz ham bugun boshlang va birinchi amaliy natijani qisqa vaqt
+              Siz ham hoziroq boshlang va birinchi amaliy natijani qisqa vaqt
               ichida ko'ring.
             </Translate>
           </p>
@@ -551,14 +538,9 @@ function CollaborationSection() {
             isInView ? "animate-slide-up" : "init-slide-up"
           }`}
         >
-          <span className="collab-badge">
-            <Translate id="homepage.collab.badge">
-              Hamkorlik va ochiqlik
-            </Translate>
-          </span>
           <h2 className="collab-title">
             <Translate id="homepage.collab.maintitle">
-              Ochiq hamkorlik asosida
+              Ochiq manba asosida
             </Translate>
           </h2>
         </div>
@@ -699,9 +681,9 @@ function CollaborationSection() {
             </Translate>
           </p>
 
-          <Link className="collab-link" to="/about-collaboration">
+          <Link className="collab-link" to="/about-project">
             <Translate id="homepage.collab.link">
-              Hamkorlik haqida batafsil
+              Loyiha haqida batafsil
             </Translate>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path

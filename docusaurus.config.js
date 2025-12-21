@@ -168,8 +168,8 @@ async function createConfig() {
             position: "right",
           },
           {
-            to: "/about-collaboration",
-            label: "Hamkorlik haqida",
+            to: "/about-project",
+            label: "Loyiha haqida",
             position: "right",
           },
           {
@@ -216,8 +216,8 @@ async function createConfig() {
                 to: "/docs/intro",
               },
               {
-                label: "Hamkorlik haqida",
-                to: "/about-collaboration",
+                label: "Loyiha haqida",
+                to: "/about-project",
               },
             ],
           },

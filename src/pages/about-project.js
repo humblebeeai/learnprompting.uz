@@ -70,7 +70,7 @@ export default function AboutCollaboration() {
           >
             Ushbu loyiha <strong>Learn Prompting</strong>ning global tajribasi
             va <strong>HumblebeeAI</strong>ning mahalliy ekspertizasi
-            birlashuvidir. Maqsadimiz — O'zbekistonda AI savodxonligini yangi
+            birlashuvidir. Maqsadimiz - O'zbekistonda AI savodxonligini yangi
             bosqichga olib chiqish.
           </p>
         </div>
@@ -115,7 +115,7 @@ export default function AboutCollaboration() {
                 HumblebeeAI
               </h3>
               <p style={{ color: "var(--color-text-secondary)" }}>
-                Markaziy Osiyodagi yetakchi AI kompaniyasi. Bizning maqsadimiz —
+                Markaziy Osiyodagi yetakchi AI kompaniyasi. Bizning maqsadimiz -
                 mintaqada sun'iy intellekt texnologiyalarini joriy etish va Top
                 1% kadrlar tayyorlash.
               </p>
@@ -142,7 +142,7 @@ export default function AboutCollaboration() {
                   color: "var(--color-text-secondary)",
                 }}
               >
-                Biz ishonamizki, sun'iy intellekt bilimlariga ega bo'lish — bu
+                Biz ishonamizki, sun'iy intellekt bilimlariga ega bo'lish - bu
                 hashamat emas, balki zamonaviy dunyoda zaruratdir.
               </p>
 
@@ -170,8 +170,8 @@ export default function AboutCollaboration() {
                   Ushbu loyiha O'zbekiston Respublikasi Prezidentining{" "}
                   <strong>"5 million o'zbek prompt muhandisi"</strong> (Digital
                   Uzbekistan 2030) strategiyasidan ilhomlangan holda yaratildi.
-                  Biz har bir o'zbekistonlik — xoh u talaba, o'qituvchi yoki
-                  tadbirkor bo'lsin — kelajak texnologiyalaridan erkin foydalana
+                  Biz har bir o'zbekistonlik - xoh u talaba, o'qituvchi yoki
+                  tadbirkor bo'lsin - kelajak texnologiyalaridan erkin foydalana
                   olishini istaymiz.
                 </p>
               </div>
