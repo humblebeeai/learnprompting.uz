@@ -14,12 +14,12 @@ MRKL tizimi bir qator modullardan (masalan, kalkulyator, ob-havo API, ma’lumot
 
 MRKL tizimining oddiy namunasi bu LLM bo‘lib, u
 kalkulyator ilovasidan foydalaning. Bu bitta modul tizimi bo‘lib, unda LLM marshrutizator hisoblanadi.
-So‘ralganda, `What is 100*100?`, LLM quyidagini tanlashi mumkin
+So‘ralganda, `Nechiga teng 100*100?`, LLM quyidagini tanlashi mumkin
 promptdan raqamlarni ajrating va so‘ng MRKL System’ga kalkulyatordan foydalanishni ayting
 natijani hisoblash uchun ilova. Bu quyidagicha ko‘rinishi mumkin:
 
 <pre>
-  <p>What is 100*100?</p>
+  <p>Nechiga teng 100*100?</p>
 
   <span className="bluegreen-highlight">CALCULATOR[100*100]</span>
 </pre>
@@ -33,7 +33,7 @@ Quyidagi qo‘shimcha dastur misollarini ko‘rib chiqing:
 foydalanuvchi matnidan SQL so‘rovi tuzish uchun ma’lumotlarni ajratib olish.
 
 <pre>
-  <p>What is the price of Apple stock right now?</p>
+  <p>Hozirda Apple aksiyalarining narxi qancha?</p>
 
   <span className="bluegreen-highlight">
 Joriy narx DATABASE[SELECT price FROM stock WHERE company =
@@ -45,7 +45,7 @@ Joriy narx DATABASE[SELECT price FROM stock WHERE company =
 promptdan ma’lumot olib, ob-havo API yordamida ma’lumotni olish.
 
 <pre>
-  <p>What is the weather like in New York?</p>
+  <p>Nyu-Yorkda ob-havo qanday?</p>
 
   <span className="bluegreen-highlight">
 Ob-havo WEATHER_API[New York].
@@ -59,7 +59,7 @@ Ob-havo WEATHER_API[New York].
 
 
 
-Keyin, men `Specification` yorlig‘iga o‘tdim va ma’lumotlar to‘plamini `input` bloki yordamida yukladim.
+Keyin, men `Spetsifikatsiya` yorlig‘iga o‘tdim va ma’lumotlar to‘plamini `kiritmoq` bloki yordamida yukladim.
 
 
 
@@ -69,12 +69,12 @@ ehtimol, pretraining jarayonida Google kalkulyatori haqida biroz ma'lumotga ega.
 
 
 
-Keyin, men ba'zi oddiy javascript kodini olib tashlash uchun ishlaydigan `code` blokini yaratdim
+Keyin, men ba'zi oddiy javascript kodini olib tashlash uchun ishlaydigan `kod` blokini yaratdim
 natijadan bo‘sh joylarni o‘chirish.
 
 
 
-Nihoyat, men qayta formatlangan tenglamani Google kalkulyatoriga yuboradigan `search` blokini yaratdim.
+Nihoyat, men qayta formatlangan tenglamani Google kalkulyatoriga yuboradigan `qidirmoq` blokini yaratdim.
 
 
 
