@@ -96,7 +96,7 @@ async function createConfig() {
             remarkPlugins: [
               math,
               (await import("remark-gfm")).default,
-              /*
+              
 							[
 							  (await import("@benchmark-urbanism/remark-bibtex")).default,
 							  { bibtexFile: "bibliography.bib" },
@@ -105,7 +105,7 @@ async function createConfig() {
 							  (await import("@renatonagliati/remark-auto-glossary")).default,
 							  { yamlFile: "glossary.yml" },
 							],
-							*/
+
             ],
             rehypePlugins: [[katex, { strict: false }]],
           },

@@ -58,12 +58,10 @@ Prompt tuzishda quyidagilarni sinab ko'ramiz:
 
 Promptimizni <span className="yellow-highlight">role-prompting</span> texnikasi yordamida boshlaymiz.
 
-<pre>
-  <span className="yellow-highlight">
-    Skippy nomli ilg'or chatbot sifatida, sizning asosiy maqsadingiz foydalanuvchilarga
-    imkon qadar yaxshi yordam berishdir.
-  </span>
-</pre>
+<AIInput>
+Skippy nomli ilg'or chatbot sifatida, sizning asosiy maqsadingiz foydalanuvchilarga
+imkon qadar yaxshi yordam berishdir.
+</AIInput>
 
 Endi, faraz qilaylik, semantik qidiruv bosqichida knowledge base'imizdan quyidagi hujjat ajratib olindi. Barcha hujjatlar VideoGram mahsuloti qanday ishlashini tushuntiradi, bu Instagram'ga o'xshash, lekin faqat videolar uchun mo'ljallangan xayoliy mahsulotdir.
 
@@ -71,10 +69,9 @@ Endi, faraz qilaylik, semantik qidiruv bosqichida knowledge base'imizdan quyidag
 
 Uning <span className="yellow-highlight">mazmunini</span> promptga quyidagicha qo'shishimiz mumkin.
 
-<pre>
+<AIInput>
 Skippy nomli ilg'or chatbot sifatida, sizning asosiy maqsadingiz foydalanuvchilarga imkon qadar yaxshi yordam berishdir.
-  <br />
-  <span className="yellow-highlight">
+
     START CONTEXT
     VideoGram'ga veb-sayt orqali kirish
         1. Brauzeringizni oching va VideoGram veb-saytiga o'ting.
@@ -82,7 +79,7 @@ Skippy nomli ilg'or chatbot sifatida, sizning asosiy maqsadingiz foydalanuvchila
         3. Kirish sahifasida VideoGram foydalanuvchi nomi va parolingizni kiriting.
         4. Ma'lumotlaringizni kiritganingizdan so'ng, “Kirish” tugmasini bosing.
         5. Endi siz VideoGram akkauntingizga kirgan bo'lishingiz kerak.
-        <br/>
+
     VideoGram'ga mobil ilova orqali kirish
         1. Mobil qurilmangizda VideoGram ilovasini oching.
         2. Asosiy sahifada pastki o'ng burchakda joylashgan “Kirish” tugmasini bosing.
@@ -90,104 +87,93 @@ Skippy nomli ilg'or chatbot sifatida, sizning asosiy maqsadingiz foydalanuvchila
         4. Ma'lumotlaringizni kiritganingizdan so'ng, “Kirish” tugmasini bosing.
         5. Siz endi VideoGram akkauntingizga tizimga kirdingiz.
     KONTEKSTNI YOPISH
-  </span>
-</pre>
+</AIInput>
 
-Oxirida, <span className="yellow-highlight">suhbat va foydalanuvchi savolini</span> prompt oxiriga qo'shishimiz kerak, quyidagi misoldagidek.
+Oxirida, suhbat va foydalanuvchi savolini prompt oxiriga qo'shishimiz kerak, quyidagi misoldagidek.
 
-<pre>
+
+<AIInput>
 Skippy nomli ilg'or chatbot sifatida, sizning asosiy maqsadingiz foydalanuvchilarga imkon qadar yaxshi yordam berishdir.
-  <br/>
+
 KONTEKSTNI BOSHLASH
 VideoGram'ga Veb-saytdan kirish
-  1. Veb-brauzeringizni oching va VideoGram veb-saytiga o'ting.
-  2. Sahifaning yuqori o'ng burchagida joylashgan “Login” tugmasini bosing.
-  3. Login sahifasida VideoGram foydalanuvchi nomi va parolingizni kiriting.
-  4. Ma'lumotlaringizni kiritganingizdan so'ng, “Login” tugmasini bosing.
-  5. Siz endi VideoGram akkauntingizga tizimga kirdingiz.
-  <br/>
+  1.Veb-brauzeringizni oching va VideoGram veb-saytiga o'ting.
+  2.Sahifaning yuqori o'ng burchagida joylashgan “Login” tugmasini bosing.
+  3.Login sahifasida VideoGram foydalanuvchi nomi va parolingizni kiriting.
+  4.Ma'lumotlaringizni kiritganingizdan so'ng, “Login” tugmasini bosing.
+  5.Siz endi VideoGram akkauntingizga tizimga kirdingiz.
+
 VideoGram'ga Mobil Ilovadan kirish
-  1. Mobil qurilmangizda VideoGram ilovasini oching.
-  2. Asosiy sahifada, pastki o'ng burchakda joylashgan “Login” tugmasini bosing.
-  3. Login sahifasida VideoGram foydalanuvchi nomi va parolingizni kiriting.
-  4. Ma'lumotlaringizni kiritganingizdan so'ng, “Login” tugmasini bosing.
-  5. Siz endi VideoGram akkauntingizga tizimga kirdingiz.
+  1.Mobil qurilmangizda VideoGram ilovasini oching.
+  2.Asosiy sahifada, pastki o'ng burchakda joylashgan “Login” tugmasini bosing.
+  3.Login sahifasida VideoGram foydalanuvchi nomi va parolingizni kiriting.
+  4.Ma'lumotlaringizni kiritganingizdan so'ng, “Login” tugmasini bosing.
+  5.Siz endi VideoGram akkauntingizga tizimga kirdingiz.
 
 KONTEKSTNI YOPISH
-  <br/>
-  <span className="yellow-highlight">
-    SKIPPY: Salom, men Skippy! Sizga qanday yordam bera olaman?
-    FOYDALANUVCHI: Login tugmasini topa olmayapman.
-        SKIPPY:
-  </span>
-</pre>
+SKIPPY: Salom, men Skippy! Sizga qanday yordam bera olaman?
+FOYDALANUVCHI: Login tugmasini topa olmayapman.
+SKIPPY:
+</AIInput>
 
 Ushbu promptni GPT-3 ga yuborib, quyidagi javobni oldim.
 
-<pre>
-  <span className="bluegreen-highlight">
-    Hechqisi yo'q! Veb-saytda login tugmasi sahifaning yuqori o'ng burchagida joylashgan. Mobil ilovada esa login tugmasi pastki o'ng burchakda joylashgan. Qo'shimcha yordam kerak bo'lsa, menga xabar bering!
-  </span>
-</pre>
+<AIOutput>
+Hechqisi yo'q! Veb-saytda login tugmasi sahifaning yuqori o'ng burchagida joylashgan. Mobil ilovada esa login tugmasi pastki o'ng burchakda joylashgan. Qo'shimcha yordam kerak bo'lsa, menga xabar bering!
+</AIOutput>
 
 Yaratilgan javobdagi ma'lumotlar bilimlar bazasi hujjatidan olinganiga e'tibor bering.
 
 ## GPT-3 yordamida savollarni aniqlashtirish
 
-Keling, yanada noaniq foydalanuvchi so'rovi bilan urinib ko'ramiz, masalan <span className="yellow-highlight">“kira olmayapman”</span>. Mana to'liq prompt.
+Keling, yanada noaniq foydalanuvchi so'rovi bilan urinib ko'ramiz, masalan “kira olmayapman. Mana to'liq prompt.
 
-<pre>
-Skippy nomli ilg'or chatbot sifatida, sizning asosiy maqsadingiz foydalanuvchilarga imkon qadar yaxshi yordam berishdir.
-  <br/>
-  KONTEKSTNI BOSHLASH
+<AIInput>
+  Skippy nomli ilg'or chatbot sifatida, sizning asosiy maqsadingiz foydalanuvchilarga imkon qadar yaxshi yordam berishdir.
+
+KONTEKSTNI BOSHLASH
   VideoGram'ga Veb-saytdan kirish
-  1. Veb-brauzeringizni oching va VideoGram veb-saytiga o'ting.
-  2. Sahifaning yuqori o'ng burchagida joylashgan “Login” tugmasini bosing.
-  3. Login sahifasida VideoGram foydalanuvchi nomi va parolingizni kiriting.
-  4. Ma'lumotlaringizni kiritganingizdan so'ng, “Login” tugmasini bosing.
-  5. Siz endi VideoGram akkauntingizga tizimga kirdingiz.
-  <br/>
-  VideoGram'ga Mobil Ilovadan kirish
-  1. Mobil qurilmangizda VideoGram ilovasini oching.
-  2. Asosiy sahifada, pastki o'ng burchakda joylashgan “Login” tugmasini bosing.
-  3. Login sahifasida VideoGram foydalanuvchi nomi va parolingizni kiriting.
-  4. Ma'lumotlaringizni kiritganingizdan so'ng, “Login” tugmasini bosing.
-  5. Siz endi VideoGram akkauntingizga tizimga kirdingiz.
+  1.Veb-brauzeringizni oching va VideoGram veb-saytiga o'ting.
+  2.Sahifaning yuqori o'ng burchagida joylashgan “Login” tugmasini bosing.
+  3.Login sahifasida VideoGram foydalanuvchi nomi va parolingizni kiriting.
+  4.Ma'lumotlaringizni kiritganingizdan so'ng, “Login” tugmasini bosing.
+  5.Siz endi VideoGram akkauntingizga tizimga kirdingiz.
+
+VideoGram'ga Mobil Ilovadan kirish
+  1.Mobil qurilmangizda VideoGram ilovasini oching.
+  2.Asosiy sahifada, pastki o'ng burchakda joylashgan “Login” tugmasini bosing.
+  3.Login sahifasida VideoGram foydalanuvchi nomi va parolingizni kiriting.
+  4.Ma'lumotlaringizni kiritganingizdan so'ng, “Login” tugmasini bosing.
+  5.Siz endi VideoGram akkauntingizga tizimga kirdingiz.
   KONTEKSTNI YOPISH
-  <br/>
   SKIPPY: Salom, men Skippy! Sizga qanday yordam bera olaman?
-  FOYDALANUVCHI: <span className="yellow-highlight">Kira olmayapman</span>
-  SKIPPY:
-</pre>
+  FOYDALANUVCHI: Kira olmayapman
+</AIInput>
 
 GPT-3 foydalanuvchining muammosini yaxshiroq tushunishga harakat qilib javob beradi.
 
-<pre>
-  <span className="bluegreen-highlight">
+<AIOutput>
     Afsuski, bunday bo'ldi. Ayta olasizmi, siz tizimga kirishga harakat qilayotgan joyingiz
     VideoGram veb-sayti yoki mobil ilovasi orqali emasmi?
-  </span>
-</pre>
+</AIOutput>
 
 Keyingi bosqichda, butun suhbat qanday davom etishini ko'ramiz. To'liq prompt ko'rinmasligi uchun yashirilgan.
 
-<pre>
+<AIOutput>
   FOYDALANUVCHI: Kira olmayapman
-  <br />
+
     SKIPPY: Afsuski, bunday bo'ldi. Ayta olasizmi, siz tizimga kirishga harakat qilayotgan joyingiz
     VideoGram veb-sayti yoki mobil ilovasi orqali emasmi?
-  <br />
-  FOYDALANUVCHI: Mobil ilova
-  <br />
-  <span className="bluegreen-highlight">
+
+FOYDALANUVCHI: Mobil ilova
+
     SKIPPY: OK, muammo yo'q. Mobil ilova orqali tizimga kirish uchun, VideoGram ilovasini oching
     mobil qurilmangizda. Asosiy sahifada, pastki o'ng burchakda joylashgan “Login” tugmasini bosing
     tizimga kirish sahifasida VideoGram foydalanuvchi nomingizni
     va parolingizni kiriting. Ma'lumotlaringizni kiritganingizdan so'ng, “Login”
     tugmasini bosing. Endi siz VideoGram akkauntingizga kirgan bo'lishingiz kerak. Iltimos,
     qo'shimcha yordam kerak bo'lsa, menga xabar bering.
-  </span>
-</pre>
+</AIOutput>
 
 GPT-3 to'g'ri kontekstual ma'lumotga ega bo'lsa, noaniqliklarni boshqara oladi.
 
