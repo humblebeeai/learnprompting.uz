@@ -6,34 +6,28 @@ title: "🟢 Muhokama savollarini yeching"
 
 # Muhokama savollarini yeching
 
-To‘g‘ri prompting yordamida, GPT-3 qisqa javoblar yozishda juda qobiliyatli. Buni ko‘rsatish uchun men ko‘plab oliy o‘quv yurtlarida haftalik topshiriq sifatida beriladigan **muhokama savollarini yechish**ga qarayman. Muhokama savoliga javob odatda 100-700 so‘z atrofida bo‘ladi. Uzoqroq matnlar biroz murakkabroq bo‘lishi mumkin, chunki LLMlar cheklangan xotiraga ega va ular yozayotgan narsaning umumiy manzarasini tushunishda qiynaladi (@jin2022plot).
+To'g'ri prompting yordamida, GPT-3 qisqa javoblar yozishda juda qobiliyatli. Buni ko'rsatish uchun men ko'plab oliy o'quv yurtlarida haftalik topshiriq sifatida beriladigan **muhokama savollarini yechish**ga qarayman. Muhokama savoliga javob odatda 100-700 so'z atrofida bo'ladi. Uzoqroq matnlar biroz murakkabroq bo'lishi mumkin, chunki LLMlar cheklangan xotiraga ega va ular yozayotgan narsaning umumiy manzarasini tushunishda qiynaladi (@jin2022plot).
 
-Keling, oddiy muhokama savoliga misol ko‘ramiz:
+Keling, oddiy muhokama savoliga misol ko'ramiz:
 
-> _"Bugungi kunda sayyoramiz duch kelayotgan eng dolzarb ekologik muammolar qaysilar va bu muammolarni hal qilishda shaxslar qanday choralar ko‘rishi mumkin?"_
+> _"Bugungi kunda sayyoramiz duch kelayotgan eng dolzarb ekologik muammolar qaysilar va bu muammolarni hal qilishda shaxslar qanday choralar ko'rishi mumkin?"_
 
-Buni GPT-3 uchun oddiy promptga aylantirish uchun unga <span className="yellow-highlight">Quyidagiga javob bering:</span> deb qo‘shishimiz mumkin.
+Buni GPT-3 uchun oddiy promptga aylantirish uchun unga <span className="yellow-highlight">Quyidagiga javob bering:</span> deb qo'shishimiz mumkin.
 
-<pre>
-  <span className="yellow-highlight">Respond to the following:</span>
-  <br />
-  <br />
+<AIInput>
   Bugungi kunda sayyoramiz duch kelayotgan eng dolzarb ekologik muammolar qaysilar va
-  bu muammolarni hal qilishda shaxslar qanday choralar ko‘rishi mumkin?
-</pre>
+  bu muammolarni hal qilishda shaxslar qanday choralar ko'rishi mumkin?
+</AIInput>
 
-Ushbu prompt bilan olingan natijalar izchil emas va ba’zilari atigi bir-ikki gapdan iborat. Oddiy muhokama javobi bir nechta paragraflardan iborat bo‘lishi kerak, shuning uchun bu natijalar ideal emas. Yaxshi prompt **format va mazmun bo‘yicha aniq ko‘rsatmalar** berishi kerak. Tilni noaniqlikdan xoli qilish natijalarni izchil va sifatli qiladi. Mana yaxshiroq prompt.
+Ushbu prompt bilan olingan natijalar izchil emas va ba'zilari atigi bir-ikki gapdan iborat. Oddiy muhokama javobi bir nechta paragraflardan iborat bo'lishi kerak, shuning uchun bu natijalar ideal emas. Yaxshi prompt **format va mazmun bo'yicha aniq ko'rsatmalar** berishi kerak. Tilni noaniqlikdan xoli qilish natijalarni izchil va sifatli qiladi. Mana yaxshiroq prompt.
 
-<pre>
-  <span className="yellow-highlight">
-  Kirish, asosiy qism va xulosa paragraflaridan iborat, juda batafsil insho yozing
-  quyidagiga javoban:
-  </span>
-  <br />
-  <br />
+<AIOutput>
+Kirish, asosiy qism va xulosa paragraflaridan iborat, juda batafsil insho yozing
+quyidagiga javoban:
+
 Bugungi kunda sayyoramiz duch kelayotgan eng dolzarb ekologik muammolar qaysilar va
-bu muammolarni hal qilishda shaxslar qanday choralar ko‘rishi mumkin?
-</pre>
+bu muammolarni hal qilishda shaxslar qanday choralar ko'rishi mumkin?
+</AIOutput>
 
 <iframe
   src="https://player.vimeo.com/video/778327269?h=77d739ae72&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
@@ -45,28 +39,25 @@ bu muammolarni hal qilishda shaxslar qanday choralar ko‘rishi mumkin?
   title="example"
 ></iframe>
 
-Ikkinchi prompt o‘rtacha hisobda yaxshiroq tuzilgan va uzunroq natijalar beradi. Promptda ‘insho’ so‘zidan foydalanish ataylab qilingan, chunki GPT-3 insho ta’rifini tushunadi va shuning uchun yaxlit, tuzilgan javoblar yaratish ehtimoli yuqori.
+Ikkinchi prompt o'rtacha hisobda yaxshiroq tuzilgan va uzunroq natijalar beradi. Promptda 'insho' so'zidan foydalanish ataylab qilingan, chunki GPT-3 insho ta'rifini tushunadi va shuning uchun yaxlit, tuzilgan javoblar yaratish ehtimoli yuqori.
 
-## Ko‘plab muhokama savollari prompting uchun samarali emas.
+## Ko'plab muhokama savollari prompting uchun samarali emas.
 
-> _"Fuqarolar urushi kengayish ustidan bo‘lgan mojaro edi? Rozimisiz yoki rozi emasmisiz va nega?"_
+> _"Fuqarolar urushi kengayish ustidan bo'lgan mojaro edi? Rozimisiz yoki rozi emasmisiz va nega?"_
 
-Bu oliy o‘quv yurti tarix kursidan olingan haqiqiy muhokama savoli. U to‘g‘ri ifodalanmagan va juda ochiq qolgan. **Yaxshi muhokama javoblari olish uchun savolni aniq promptga aylantirish kerak.** Yuqoridagi muhokama savoli uchun aniq prompt quyidagicha bo‘lishi mumkin:
+Bu oliy o'quv yurti tarix kursidan olingan haqiqiy muhokama savoli. U to'g'ri ifodalanmagan va juda ochiq qolgan. **Yaxshi muhokama javoblari olish uchun savolni aniq promptga aylantirish kerak.** Yuqoridagi muhokama savoli uchun aniq prompt quyidagicha bo'lishi mumkin:
 
-> _"Fuqarolar urushining sabablarini va kengayish mojaro rol o‘ynaganmi yoki yo‘qligini tushuntiring. Fikringizni dalillar bilan asoslang."_
+> _"Fuqarolar urushining sabablarini va kengayish mojaro rol o'ynaganmi yoki yo'qligini tushuntiring. Fikringizni dalillar bilan asoslang."_
 
-Endi format va kontekst bo‘yicha ko‘rsatmalar qo‘shishimiz mumkin.
+Endi format va kontekst bo'yicha ko'rsatmalar qo'shishimiz mumkin.
 
-<pre>
-  <span className="yellow-highlight">
-  Insho tuzilmasida, juda batafsil muhokama javobi yozing,
-  quyidagi promptga javoban:
-  </span>
-  <br />
-  <br />
-  Fuqarolar urushining sabablarini va kengayish mojaro rol o‘ynaganmi yoki yo‘qligini
-  tushuntiring. Fikringizni dalillar bilan asoslang.
-</pre>
+<AIInput>
+Insho tuzilmasida, juda batafsil muhokama javobi yozing,
+quyidagi promptga javoban:
+
+Fuqarolar urushining sabablarini va kengayish mojaro rol o'ynaganmi yoki yo'qligini
+tushuntiring. Fikringizni dalillar bilan asoslang.
+</AIInput>
 
 ## Aniq promptlarni avtomatik qayta yozishni GPT-3 yordamida bajaring
 
@@ -76,72 +67,55 @@ Yuqoridagi qayta yozish misoli OpenAI'ning [ChatGPT](https://openai.com/blog/cha
 
 ## Iteratsiya
 
-Muhokama savolingiz uchun samarali prompt tuzganingizdan so‘ng, endi GPT-3 yaratgan natijalarni takomillashtirishingiz kerak. Bu natijani so‘zlar soni kabi cheklovlarga moslashtirish yoki turli natijalardan tushunchalarni birlashtirishni o‘z ichiga olishi mumkin.
+Muhokama savolingiz uchun samarali prompt tuzganingizdan so'ng, endi GPT-3 yaratgan natijalarni takomillashtirishingiz kerak. Bu natijani so'zlar soni kabi cheklovlarga moslashtirish yoki turli natijalardan tushunchalarni birlashtirishni o'z ichiga olishi mumkin.
 
-Iteratsiya qilishning oddiy usuli — bir nechta natijalar yaratib, ularni ko‘rib chiqish va GPT-3 qanday tushunchalardan foydalanayotganini hamda qanday tuzilishga amal qilayotganini tushunishdir. Natijalar baholangandan so‘ng, eng mos natijalarni tanlab, ularni yaxlit javobga birlashtirishingiz mumkin.
+Iteratsiya qilishning oddiy usuli — bir nechta natijalar yaratib, ularni ko'rib chiqish va GPT-3 qanday tushunchalardan foydalanayotganini hamda qanday tuzilishga amal qilayotganini tushunishdir. Natijalar baholangandan so'ng, eng mos natijalarni tanlab, ularni yaxlit javobga birlashtirishingiz mumkin.
 
-Yana bir iteratsiya usuli — boshlash va **bosqichma-bosqich kengaytirish**. Bu bir nechta promptni talab qiladi: boshlang‘ich prompt dastlabki paragrafni yozadi, keyingi promptlar esa yozilgan matnni kengaytiradi.
+Yana bir iteratsiya usuli — boshlash va **bosqichma-bosqich kengaytirish**. Bu bir nechta promptni talab qiladi: boshlang'ich prompt dastlabki paragrafni yozadi, keyingi promptlar esa yozilgan matnni kengaytiradi.
 
 Mana ehtimoliy falsafiy muhokama savoli:
 
 > _"Matematika ixtiro qilinganmi yoki kashf etilganmi? Javobingizni ehtiyotkorona asoslab tushuntiring."_
 
-Buni quyidagicha oddiy promptga qo‘shing:
+Buni quyidagicha oddiy promptga qo'shing:
 
-<pre>
-  <span className="yellow-highlight">
-    Quyidagiga javoban boshlang‘ich paragraf yozing:
-  </span>
-  <br />
-  <br />
+<AIOutput>
+  Quyidagiga javoban boshlang'ich paragraf yozing:
   Matematika ixtiro qilinganmi yoki kashf etilganmi? Javobingizni ehtiyotkorona asoslab tushuntiring
-</pre>
+</AIOutput>
 
 Men bir nechta javoblar yaratdim va menga yoqqanini topdim:
 
-<pre>
-  <span className="bluegreen-highlight">
+<AIOutput>
     Falsafa va matematika sohasidagi olimlar orasida
-    matematika ixtiro qilinganmi yoki kashf etilganmi degan savol bo‘yicha ko‘plab bahslar mavjud. Ba’zilar matematik tushunchalar va
+    matematika ixtiro qilinganmi yoki kashf etilganmi degan savol bo'yicha ko'plab bahslar mavjud. Ba'zilar matematik tushunchalar va
     prinsiplar inson ongidan mustaqil mavjud va shuning uchun
-    ixtiro qilingan emas, balki kashf etilgan deb hisoblash mumkin, deb ta’kidlaydi. Masalan,
+    ixtiro qilingan emas, balki kashf etilgan deb hisoblash mumkin, deb ta'kidlaydi. Masalan,
     sonlar, nisbatlar va geometrik shakllar tushunchasi tabiiy dunyoda kuzatiladi va
-    ularni tizimli tarzda abstraktlashtirish va o‘rganish mumkin.
-  </span>
-</pre>
+    ularni tizimli tarzda abstraktlashtirish va o'rganish mumkin.
+</AIOutput>
 
 Bu juda yaxshi boshlanish. Keyin men kengaytirish uchun yana bir prompt berdim:
 
-<pre>
-  <span className="yellow-highlight">
-  Men quyidagi promptga javoban batafsil qisqa insho yozmoqdaman:
-  </span>
-  <br />
-  <br />
-  Matematika ixtiro qilinganmi yoki kashf etilganmi? Javobingizni ehtiyotkorona asoslab tushuntiring.
-  <span className="yellow-highlight">
-    <p />
-    Mana hozirgacha yozganlarim:
-  </span>
-  <br />
-  <br />
-  Falsafa va matematika sohasidagi olimlar orasida matematika
-  ixtiro qilinganmi yoki kashf etilganmi degan savol bo‘yicha ko‘plab bahslar mavjud. Ba’zilar matematik tushunchalar va prinsiplar
-  inson ongidan mustaqil mavjud va shuning uchun ixtiro qilingan emas, balki kashf etilgan deb hisoblash mumkin, deb ta’kidlaydi. Masalan,
-  sonlar, nisbatlar va geometrik shakllar tushunchasi tabiiy dunyoda kuzatiladi va
-  ularni tizimli tarzda abstraktlashtirish va o‘rganish mumkin.
-  
-  way.
-  <p />
-  <span className="yellow-highlight">
-  Maqolamning keyingi paragrafini yozing.
-  </span>
-</pre>
+<AIInput>
+Men quyidagi promptga javoban batafsil qisqa insho yozmoqdaman:
 
-Quyidagi demo yordamida ushbu kengaytirish promptini sinab ko‘ring (sizga OpenAI API kaliti kerak bo‘ladi)
+Matematika ixtiro qilinganmi yoki kashf etilganmi? Javobingizni ehtiyotkorona asoslab tushuntiring.
+
+Mana hozirgacha yozganlarim:
+
+Falsafa va matematika sohasidagi olimlar orasida matematika
+ixtiro qilinganmi yoki kashf etilganmi degan savol bo'yicha ko'plab bahslar mavjud. Ba'zilar matematik tushunchalar va prinsiplar
+inson ongidan mustaqil mavjud va shuning uchun ixtiro qilingan emas, balki kashf etilgan deb hisoblash mumkin, deb ta'kidlaydi. Masalan,
+sonlar, nisbatlar va geometrik shakllar tushunchasi tabiiy dunyoda kuzatiladi va
+ularni tizimli tarzda abstraktlashtirish va o'rganish mumkin.
+
+</AIInput>
+
+Quyidagi demo yordamida ushbu kengaytirish promptini sinab ko'ring (sizga OpenAI API kaliti kerak bo'ladi)
 
 <iframe
-  src="https://embed.learnprompting.org/embed?config=eyJ0b3BQIjowLCJ0ZW1wZXJhdHVyZSI6MCwibWF4VG9rZW5zIjoyNTYsIm91dHB1dCI6Ik9uIHRoZSBvdGhlciBoYW5kLCBzb21lIGFyZ3VlIHRoYXQgbWF0aCBpcyBsYXJnZWx5IGFuIGludmVudGlvbiBvZiB0aGUgaHVtYW4gbWluZC4gTWF0aGVtYXRpY2FsIHByaW5jaXBsZXMgYXJlIGJhc2VkIG9uIGxvZ2ljYWwgcmVhc29uaW5nLCB3aGljaCBpcyBhIGZlYXR1cmUgb2YgdGhlIGh1bWFuIG1pbmQuIEZvciBpbnN0YW5jZSwgRXVjbGlkZWFuIGdlb21ldHJ5IGlzIGJhc2VkIG9uIGFic3RyYWN0IGF4aW9tcyBhbmQgcG9zdHVsYXRlcywgd2hpY2ggYXJlIGFjY2VwdGVkIGFzIHRydWUgd2l0aG91dCBwcm9vZi4gQXMgc3VjaCwgaXQgY2FuIGJlIGFyZ3VlZCB0aGF0IGdlb21ldHJ5IGlzIGFuIGludmVudGlvbiBvZiB0aGUgaHVtYW4gbWluZCByYXRoZXIgdGhhbiBhIGRpc2NvdmVyeS4gU2ltaWxhcmx5LCBtYXRoZW1hdGljYWwgZm9ybXVsYXMgYW5kIGVxdWF0aW9ucyBhcmUgdXNlZCB0byBtb2RlbCBhbmQgcHJlZGljdCBwaHlzaWNhbCBwaGVub21lbmEsIHdoaWNoIGFyZSBhZ2FpbiB0aGUgcmVzdWx0IG9mIGh1bWFuIHJlYXNvbmluZy4iLCJwcm9tcHQiOiJJIGFtIHdyaXRpbmcgYSBkZXRhaWxlZCBzaG9ydCBlc3NheSByZXNwb25kaW5nIHRvIHRoZSBmb2xsb3dpbmcgcHJvbXB0OiBcbklzIG1hdGggaW52ZW50ZWQgb3IgZGlzY292ZXJlZD8gVXNlIGNhcmVmdWwgcmVhc29uaW5nIHRvIGV4cGxhaW4geW91ciBhbnN3ZXIuIFxuXG5IZXJlIGlzIHdoYXQgSSBoYXZlIHNvIGZhcjogVGhlcmUgaXMgbXVjaCBkZWJhdGUgYW1vbmcgcGhpbG9zb3BoZXJzIGFuZCBtYXRoZW1hdGljaWFucyBhcyB0byB3aGV0aGVyIG1hdGggaXMgaW52ZW50ZWQgb3IgZGlzY292ZXJlZC4gU29tZSBhcmd1ZSB0aGF0IG1hdGhlbWF0aWNhbCBjb25jZXB0cyBhbmQgcHJpbmNpcGxlcyBleGlzdCBpbmRlcGVuZGVudGx5IG9mIGh1bWFuIG1pbmRzIGFuZCBjYW4gdGhlcmVmb3JlIGJlIGNvbnNpZGVyZWQgYXMgZGlzY292ZXJlZCByYXRoZXIgdGhhbiBpbnZlbnRlZC4gRm9yIGV4YW1wbGUsIHRoZSBjb25jZXB0IG9mIG51bWJlcnMsIHJhdGlvcywgYW5kIGdlb21ldHJpYyBzaGFwZXMgYXJlIG9ic2VydmVkIGluIHRoZSBuYXR1cmFsIHdvcmxkIGFuZCBjYW4gYmUgYWJzdHJhY3RlZCBhbmQgc3R1ZGllZCBpbiBhIHN5c3RlbWF0aWMgd2F5LiBcblxuV3JpdGUgdGhlIG5leHQgcGFyYWdyYXBoIG9mIG15IGVzc2F5LiIsIm1vZGVsIjoidGV4dC1kYXZpbmNpLTAwMyJ9"
+  src="https://embed.learnprompting.org/embed?config=eyJ0b3BQIjowLCJ0ZW1wZXJhdHVyZSI6MCwibWF4VG9rZW5zIjoyNTYsIm91dHB1dCI6IkJvc2hxYSB0b21vbmRhbiwgYXlyaW1sYXIgbWF0ZW1hdGlrYSBhc29zYW4gaW5zb24gb25naW5pbmcgaXh0aXJvc2ksIGRlYiBoaXNvYmxheWRpLiBNYXRlbWF0aWsgdGFtb3lpbGxhciBtYW50aXFpeSBmaWtybGFzaGdhIGFzb3NsYW5hZGksIG1hbnRpcWl5IGZpa3JsYXNoIGVzYSBpbnNvbiBvbmdpZ2EgeG9zIHh1c3VzaXlhdGRpci4gTWFzYWxhbiwgRXZrbGlkIGdlb21ldHJpeWFzaSBpc2JvdHNpeiByYXZpc2hkYSB0b%2BKAmGfigJhyaSBkZWIgcWFidWwgcWlsaW5hZGlnYW4gbWF2aHVtIGFrc2lvbWFsYXIgdmEgcG9zdHVsYXRsYXJnYSBhc29zbGFuYWRpLiBTaHUgYm9pcyBnZW9tZXRyaXlhIGthc2hmaXlvdGRhbiBrb%2BKAmHJhLCBpbnNvbiBvbmdpbmluZyBpeHRpcm9zaSwgZGViIGJhaG9sYW5pc2hpIG11bWtpbi4gWHVkZGkgc2h1bmluZ2RlaywgbWF0ZW1hdGlrIGZvcm11bGFsYXIgdmEgdGVuZ2xhbWFsYXIgamlzbW9uaXkgaG9kaXNhbGFybmkgbW9kZWxsYXNodGlyaXNoIHZhIGJhc2hvcmF0IHFpbGlzaCB1Y2h1biBxb%2BKAmGxsYW5pbGFkaSwgYnUgZXNhIHlhbmEgaW5zb24gYXFsLXpha292YXRpIG1haHN1bGlkaXIuIiwicHJvbXB0IjoiTWF0ZW1hdGlrYW5pbmcg4oCca2FzaGYgZXRpbGdhbuKAnSBkZWdhbiBxYXJhc2hpbmkgeWFuYWRhIGt1Y2hheXRpcmFkaWdhbiBkYWxpbCBzaHVraSwga2%2FigJhwbGFiIG1hdGVtYXRpayBuYXRpamFsYXIgaW5zb24gbml5YXRpIHlva2kgeG9oaXNoaWRhbiBxYXTigJlpIG5hemFyLCBnb%2BKAmHlvIG%2FigJh6LW%2FigJh6aWRhbiDigJxtYWpidXJpeeKAnSB0YXJ6ZGEgeXV6YWdhIGNoaXFhZGkuIE1hc2FsYW4sIHR1cmxpIG1hZGFuaXlhdGxhciBiaXItYmlyaWRhbiBtdXN0YXFpbCByYXZpc2hkYSBiaXIgeGlsIHRlb3JlbWFsYXIgdmEgaGlzb2JsYXNoIHVzdWxsYXJpZ2Ega2VsaWIgcW9sZ2FuOiBidSBlc2EgbWF0ZW1hdGlrIGhhcWlxYXRsYXIgc2h1bmNoYWtpIGtlbGlzaHV2IG1haHN1bGkgZW1hcywgYmFsa2kgbWHigJlsdW0gYmlyIGljaGtpIG1hbnRpcWl5IHR1emlsaXNoZ2EgZWdhIGVrYW5pbmkga2%2FigJhyc2F0YWRpLiBUYWJpYXRkYSBoYW0gbWF0ZW1hdGlrIOKAnGl6bGFy4oCdIGtv4oCYcCB1Y2hyYXlkaTogbWFzYWxhbiwgb%2BKAmHNpbWxpa2xhcm5pbmcgYmFyZyBqb3lsYXNodXZpIHlva2kgcW9iaXEgc3BpcmFsaWRhIG11YXl5YW4gcW9udW5peWF0bGFyLCBmaXppa2FkYWdpIGhhcmFrYXQgdmEgdG%2FigJhscWluIGhvZGlzYWxhcmlkYSBlc2EgdGVuZ2xhbWFsYXIgb3JxYWxpIGlmb2RhbGFuYWRpZ2FuIGFuaXEgbXVub3NhYmF0bGFyIG1hdmp1ZC4gQWdhciBidSBtdW5vc2FiYXRsYXIgaW5zb24gYm%2FigJhsbWFzYSBoYW0gc2FxbGFuaWIgcW9sYWRpZ2FuIGJv4oCYbHNhLCB1IGhvbGRhIG1hdGVtYXRpa2Eg4oCUIGluc29uIHRvbW9uaWRhbiBv4oCYeWxhYiB0b3BpbGdhbiBpeHRpeW9yaXkgdGlsIGVtYXMsIGJhbGtpIGJvcmxpcWRhZ2kgdGFydGliIHZhIHR1emlsbWFuaSB0YXN2aXJsYWIgYmVydXZjaGksIGJpeiBhc3RhLXNla2luIG9jaGliIGJvcmFkaWdhbiBxb251bml5YXRsYXIgbWFqbXVhc2kgYm%2FigJhsaXNoaSBtdW1raW4uIiwibW9kZWwiOiJ0ZXh0LWRhdmluY2ktMDAzIn0%3D"
   style={{
     width: "100%",
     height: "500px",
@@ -155,41 +129,36 @@ Quyidagi demo yordamida ushbu kengaytirish promptini sinab ko‘ring (sizga Open
 
 Men ushbu prompt yordamida bir nechta kengaytmalarni yaratdim va menga yoqqanini tanlab, quyidagi yakuniy natijaga erishdim:
 
-<pre>
-  Falsafa va matematika olimlari orasida
-  <br />
-  matematika ixtiro qilinganmi yoki kashf etilganmi degan savol bo‘yicha ko‘plab bahslar mavjud. Ba’zilar matematik tushunchalar va
-  prinsiplar
-  <br />
-  inson ongidan mustaqil ravishda mavjud bo‘lib, shuning uchun ularni kashf etilgan deb hisoblash mumkin
-  ixtiro qilingan emas, deb ta’kidlaydilar.
-  <br />
-  Masalan, sonlar, nisbatlar va geometrik shakllar tushunchasi
-  tabiatda
-  <br />
-  kuzatiladi va ularni tizimli tarzda abstraktlashtirib o‘rganish mumkin.
-  <span className="bluegreen-highlight">
-    <br />
-    <br />
-    Boshqa tomondan, ba’zilar matematika asosan inson
-    ongining ixtirosi deb hisoblaydi. Matematik
-    <br />
-    prinsiplar mantiqiy tafakkurga asoslanadi, bu esa inson
-    ongiga xos xususiyatdir. Masalan,
-    <br />
-    Evklid geometriyasi abstrakt aksiomalar va postulatlarga asoslangan bo‘lib,
-    ular isbotsiz
-    <br />
-    haqiqat sifatida qabul qilinadi. Shunday ekan, geometriya inson
-    ongining ixtirosi,
-    <br />
-    kashfiyot emas, deb ta’kidlash mumkin. Xuddi shuningdek, matematik formulalar va tenglamalar
-    fizik
-    <br />
-    hodisalarni modellashtirish va bashorat qilish uchun ishlatiladi, bu esa yana inson tafakkurining natijasidir.
-  </span>
-</pre>
+<AIInput>
+Falsafa va matematika olimlari orasida
+matematika ixtiro qilinganmi yoki kashf etilganmi degan savol bo'yicha ko'plab bahslar mavjud. Ba'zilar matematik tushunchalar va
+prinsiplar
 
-Kengaytirish promptlaridan foydalanib, biz yozishni bosqichma-bosqich amalga oshirib, har bir bosqichda takrorlashimiz mumkin. Bu **yuqori sifatli natija olish va bosqichlarni o‘zgartirish** kerak bo‘lganda foydalidir.
+inson ongidan mustaqil ravishda mavjud bo'lib, shuning uchun ularni kashf etilgan deb hisoblash mumkin
+ixtiro qilingan emas, deb ta'kidlaydilar.
+
+Masalan, sonlar, nisbatlar va geometrik shakllar tushunchasi
+tabiatda
+
+kuzatiladi va ularni tizimli tarzda abstraktlashtirib o'rganish mumkin.
+
+Boshqa tomondan, ba'zilar matematika asosan inson
+ongining ixtirosi deb hisoblaydi. Matematik
+
+prinsiplar mantiqiy tafakkurga asoslanadi, bu esa inson
+ongiga xos xususiyatdir. Masalan,
+
+Evklid geometriyasi abstrakt aksiomalar va postulatlarga asoslangan bo'lib,
+ular isbotsiz
+haqiqat sifatida qabul qilinadi. Shunday ekan, geometriya inson
+ongining ixtirosi,
+
+kashfiyot emas, deb ta'kidlash mumkin. Xuddi shuningdek, matematik formulalar va tenglamalar
+fizik
+
+hodisalarni modellashtirish va bashorat qilish uchun ishlatiladi, bu esa yana inson tafakkurining natijasidir.
+</AIInput>
+
+Kengaytirish promptlaridan foydalanib, biz yozishni bosqichma-bosqich amalga oshirib, har bir bosqichda takrorlashimiz mumkin. Bu **yuqori sifatli natija olish va bosqichlarni o'zgartirish** kerak bo'lganda foydalidir.
 
 Muallif: [jayo78](https://twitter.com/jayo782).
