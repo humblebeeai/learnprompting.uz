@@ -282,7 +282,7 @@ export default function AboutCollaboration() {
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text"
                 }}>
-                  Nega bu kurs bepul?
+                  5 million o'zbek prompt muhandislari
                 </h2>
 
                 <p style={{
@@ -291,34 +291,8 @@ export default function AboutCollaboration() {
                   color: "var(--color-text-secondary)",
                   marginBottom: "2rem"
                 }}>
-                  Biz ishonamizki, sun'iy intellekt bilimlariga ega bo'lish - bu hashamat emas, balki zamonaviy dunyoda zaruratdir.
+                  Ushbu loyiha O'zbekiston Respublikasi Prezidentining <strong><a href="https://president.uz/oz/lists/view/8719/">Digital Uzbekistan 2030</a></strong> strategiyasidan ilhomlangan holda yaratildi. Biz har bir o'zbekistonlik - xoh u talaba, o'qituvchi yoki tadbirkor bo'lsin - kelajak texnologiyalaridan erkin foydalana olishini istaymiz.
                 </p>
-
-                {/* Highlight box */}
-                <div style={{
-                  background: "linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(6, 182, 212, 0.05))",
-                  padding: "1.5rem",
-                  borderRadius: "16px",
-                  borderLeft: "4px solid var(--color-brand-primary)",
-                  marginBottom: "2rem"
-                }}>
-                  <h4 style={{
-                    fontSize: "1.1rem",
-                    fontWeight: 700,
-                    marginBottom: "0.75rem",
-                    color: "var(--color-text-primary)"
-                  }}>
-                    "5 million o'zbek prompt muhandisi"
-                  </h4>
-                  <p style={{
-                    marginBottom: 0,
-                    fontSize: "0.95rem",
-                    lineHeight: 1.6,
-                    color: "var(--color-text-secondary)"
-                  }}>
-                    Ushbu loyiha O'zbekiston Respublikasi Prezidentining <strong>Digital Uzbekistan 2030</strong> strategiyasidan ilhomlangan holda yaratildi. Biz har bir o'zbekistonlik - xoh u talaba, o'qituvchi yoki tadbirkor bo'lsin - kelajak texnologiyalaridan erkin foydalana olishini istaymiz.
-                  </p>
-                </div>
 
                 {/* Stats */}
                 <div style={{
