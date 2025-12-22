@@ -116,6 +116,12 @@
 	"homepage.collab.content.title": {
 		"message": "Kontent yaratish"
 	},
+	"homepage.collab.maintitle": {
+		"message": "Ochiq hamkorlik asosida"
+	},
+	"homepage.collab.content.title": {
+		"message": "Kontent yaratish"
+	},
 	"homepage.collab.content": {
 		"message": "Open-source hamjamiyat"
 	},
