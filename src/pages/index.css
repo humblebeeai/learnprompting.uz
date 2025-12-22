@@ -42,6 +42,12 @@
 	.hero-section {
 		padding: 4rem 2rem 6rem;
 	}
+
+	.about-hero {
+		padding: 3rem 2rem 6rem !important;
+		align-items: start !important;
+		justify-content: start !important;
+	}
 }
 
 /* Hero Background */

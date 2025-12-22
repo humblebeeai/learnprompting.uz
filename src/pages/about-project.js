@@ -13,8 +13,7 @@ export default function AboutCollaboration() {
     >
       {/* Hero Section */}
       <section
-        className="hero-section"
-        style={{ minHeight: "60vh", padding: "4rem 0" }}
+        className="hero-section about-hero"
       >
         <div className="hero-background">
           <div
@@ -28,122 +27,16 @@ export default function AboutCollaboration() {
           className="container"
           style={{ position: "relative", zIndex: 1, textAlign: "center" }}
         >
-          <div
-            className="badge-pill"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "0.5rem",
-              background: "rgba(16, 185, 129, 0.1)",
-              color: "var(--color-brand-primary)",
-              padding: "0.5rem 1rem",
-              borderRadius: "999px",
-              fontSize: "0.9rem",
-              fontWeight: "600",
-              marginBottom: "2rem",
-            }}
-          >
-            <span>O'zbekiston uchun maxsus</span>
-          </div>
-
-          <h1
-            style={{
-              fontSize: "3.5rem",
-              lineHeight: 1.1,
-              marginBottom: "1.5rem",
-              fontWeight: 800,
-            }}
-          >
-            Zamonaviy bilimlar,{" "}
-            <span className="title-accent" style={{ display: "inline" }}>
-              Milliy rivojlanish
-            </span>
-          </h1>
-
-          <p
-            style={{
-              fontSize: "1.25rem",
-              color: "var(--color-text-secondary)",
-              maxWidth: "700px",
-              margin: "0 auto 3rem",
-            }}
-          >
-            Ushbu loyiha <strong>Learn Prompting</strong>ning global tajribasi
-            va <strong>HumblebeeAI</strong>ning mahalliy ekspertizasi
-            birlashuvidir. Maqsadimiz - O'zbekistonda AI savodxonligini yangi
-            bosqichga olib chiqish.
-          </p>
-        </div>
-      </section>
-
-      <section
-        style={{ padding: "4rem 0", background: "var(--color-bg-secondary)" }}
-      >
-        <div className="container">
-          <div className="row" style={{ alignItems: "center", justifyContent: "center" }}>
-            {/* Learn Prompting */}
-            <div className="col col--5" style={{ textAlign: "center", marginBottom: "2rem" }}>
-              <h3 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>
-                Learn Prompting
-              </h3>
-              <p style={{ color: "var(--color-text-secondary)" }}>
-                Dunyodagi eng yirik va mashhur ochiq manbali AI ta'lim
-                platformasi. 3 milliondan ortiq foydalanuvchi, Google, OpenAI va
-                Microsoft ekspertlari tomonidan e'tirof etilgan.
-              </p>
-            </div>
-
-            {/* X divider */}
-            <div className="col col--2" style={{ textAlign: "center", marginBottom: "2rem" }}>
-              <span style={{ fontSize: "2.5rem", fontWeight: "300", opacity: 0.3, lineHeight: 1 }}>×</span>
-            </div>
-
-            {/* HumblebeeAI */}
-            <div className="col col--5" style={{ textAlign: "center", marginBottom: "2rem" }}>
-              <h3 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>
-                HumblebeeAI
-              </h3>
-              <p style={{ color: "var(--color-text-secondary)" }}>
-                Global yetakchi AI kompaniyasi. Bizning maqsadimiz -
-                mintaqada sun'iy intellekt texnologiyalarini joriy etish va Top
-                1% kadrlar tayyorlash.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission / President Initiative - High-End Unified Design */}
-      <section
-        style={{
-          padding: "6rem 0",
-          background: "linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%)",
-          position: "relative",
-          overflow: "hidden"
-        }}
-      >
-        {/* Background decoration */}
-        <div style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          opacity: 0.03,
-          backgroundImage: "radial-gradient(circle at 2px 2px, var(--color-text-primary) 1px, transparent 0)",
-          backgroundSize: "40px 40px",
-          pointerEvents: "none"
-        }} />
-
-        <div className="container" style={{ position: "relative", zIndex: 1 }}>
-          {/* Unified Card Container */}
+          {/* Unified Card Container - Moved to top */}
           <div style={{
             background: "var(--color-bg-tertiary)",
             borderRadius: "32px",
             border: "1px solid var(--color-border)",
             boxShadow: "0 20px 60px rgba(0, 0, 0, 0.12)",
             overflow: "hidden",
-            backdropFilter: "blur(10px)"
+            backdropFilter: "blur(10px)",
+            textAlign: "left", // Reset alignment since Hero container is centered
+            marginBottom: "4rem" // Margin Bottom instead of Top
           }}>
             <div className="flex flex-col lg:flex-row items-center justify-center gap-1" style={{ margin: 0, alignItems: "stretch" }}>
               {/* Left side - Image with Link */}
@@ -154,10 +47,9 @@ export default function AboutCollaboration() {
                   rel="noopener noreferrer"
                   className="block relative h-full min-h-[300px] lg:min-h-[500px] overflow-hidden no-underline cursor-pointer"
                   style={{
-                    display: "block", // Maintaining block for older browser compatibility if needed by the framework, though 'block' class covers it
+                    display: "block",
                     position: "relative",
                     height: "100%",
-                    // minHeight removed from here to let CSS classes handle responsiveness
                     overflow: "hidden",
                     textDecoration: "none",
                     cursor: "pointer"
@@ -186,7 +78,7 @@ export default function AboutCollaboration() {
                   <img
                     src="/img/5mln-ai-prompters.jpg"
                     alt="5 Million AI Prompters Initiative"
-										className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 ease-in-out"
+                    className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 ease-in-out"
                   />
                   {/* Overlay gradient */}
                   <div style={{
@@ -323,6 +215,93 @@ export default function AboutCollaboration() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div
+            className="badge-pill"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              background: "rgba(16, 185, 129, 0.1)",
+              color: "var(--color-brand-primary)",
+              padding: "0.5rem 1rem",
+              borderRadius: "999px",
+              fontSize: "0.9rem",
+              fontWeight: "600",
+              marginBottom: "2rem",
+            }}
+          >
+            <span>O'zbekiston uchun maxsus</span>
+          </div>
+
+          <h1
+            style={{
+              fontSize: "3.5rem",
+              lineHeight: 1.1,
+              marginBottom: "1.5rem",
+              fontWeight: 800,
+            }}
+          >
+            Zamonaviy bilimlar,{" "}
+            <span className="title-accent" style={{ display: "inline" }}>
+              Milliy rivojlanish
+            </span>
+          </h1>
+
+          <p
+            style={{
+              fontSize: "1.25rem",
+              color: "var(--color-text-secondary)",
+              maxWidth: "700px",
+              margin: "0 auto 3rem",
+            }}
+          >
+            Ushbu loyiha <strong>Learn Prompting</strong>ning global tajribasi
+            va <strong>HumblebeeAI</strong>ning mahalliy ekspertizasi
+            birlashuvidir. Maqsadimiz - O'zbekistonda AI savodxonligini yangi
+            bosqichga olib chiqish.
+          </p>
+
+          {/* Unified Card Container - Moved from separate section */}
+
+        </div>
+      </section>
+
+
+
+      <section
+        style={{ padding: "4rem 0", background: "var(--color-bg-secondary)" }}
+      >
+        <div className="container">
+          <div className="row" style={{ alignItems: "center", justifyContent: "center" }}>
+            {/* Learn Prompting */}
+            <div className="col col--5" style={{ textAlign: "center", marginBottom: "2rem" }}>
+              <h3 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>
+                Learn Prompting
+              </h3>
+              <p style={{ color: "var(--color-text-secondary)" }}>
+                Dunyodagi eng yirik va mashhur ochiq manbali AI ta'lim
+                platformasi. 3 milliondan ortiq foydalanuvchi, Google, OpenAI va
+                Microsoft ekspertlari tomonidan e'tirof etilgan.
+              </p>
+            </div>
+
+            {/* X divider */}
+            <div className="col col--2" style={{ textAlign: "center", marginBottom: "2rem" }}>
+              <span style={{ fontSize: "2.5rem", fontWeight: "300", opacity: 0.3, lineHeight: 1 }}>×</span>
+            </div>
+
+            {/* HumblebeeAI */}
+            <div className="col col--5" style={{ textAlign: "center", marginBottom: "2rem" }}>
+              <h3 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>
+                HumblebeeAI
+              </h3>
+              <p style={{ color: "var(--color-text-secondary)" }}>
+                Global yetakchi AI kompaniyasi. Bizning maqsadimiz -
+                mintaqada sun'iy intellekt texnologiyalarini joriy etish va Top
+                1% kadrlar tayyorlash.
+              </p>
             </div>
           </div>
         </div>
@@ -462,7 +441,7 @@ export default function AboutCollaboration() {
             <div className="col col--6">
               <h3>Bizga qo'shiling</h3>
               <p>
-                Bu loyiha HumblebeeAI ochiq manba asosida tomonidan yuritiladi.
+                Bu loyiha HumblebeeAI tomonidan ochiq manba asosida tomonidan yuritiladi.
                 Agar sizda takliflar bo'lsa yoki tarjimaga hissa qo'shmoqchi
                 bo'lsangiz:
               </p>
