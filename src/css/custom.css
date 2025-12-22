@@ -647,5 +647,5 @@ html[data-theme='dark'] .alert--takeaways {
 }
 
 .tg-button:hover {
-	color: var(--ifm-color-primary);
+	color: var(--ifm-color-primary) !important;
 }
