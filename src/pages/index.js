@@ -600,20 +600,12 @@ function CollaborationSection() {
             >
               <div className="partner-card">
                 <div className="partner-icon">
-                  <svg
+                  <img
+                    src="/humblebee_logo.svg"
+                    alt="HumblebeeAI"
                     width="24"
                     height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="10" />
-                    <line x1="2" y1="12" x2="22" y2="12" />
-                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                  </svg>
+                  />
                 </div>
                 <h3 className="partner-name">HumblebeeAI</h3>
                 <p className="partner-role">

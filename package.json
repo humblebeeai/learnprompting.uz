@@ -28,7 +28,6 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@headlessui/react": "^1.7.16",
-    "@kailualabs/multimodal-search": "^1.0.1",
     "@mdx-js/react": "^1.6.22",
     "@motionone/utils": "^10.15.1",
     "@renatonagliati/remark-auto-glossary": "git://github.com/renatonagliati/remark-auto-glossary.git#fed3f0983592ea15298b54b82fc92acc53359c25",
