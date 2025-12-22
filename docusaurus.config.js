@@ -12,7 +12,7 @@ async function createConfig() {
     baseUrl: "/",
     onBrokenLinks: "warn", // Changed to warn to avoid build failures during migration
     onBrokenMarkdownLinks: "warn",
-    favicon: "img/favicon.ico",
+    favicon: "img/simple_ai.webp",
     organizationName: "humblebeeai", // Updated to new owner
     projectName: "Learn_Prompting",
     deploymentBranch: "gh-pages",
