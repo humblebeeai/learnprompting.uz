@@ -645,3 +645,7 @@ html[data-theme='dark'] .alert--takeaways {
 		/* Inline on mobile to save space if needed, or keep block */
 	}
 }
+
+.tg-button:hover {
+	color: var(--ifm-color-primary) !important;
+}

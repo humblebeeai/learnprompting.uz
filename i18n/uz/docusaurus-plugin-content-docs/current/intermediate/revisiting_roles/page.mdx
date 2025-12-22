@@ -4,31 +4,31 @@ title: "🟡 Revisiting Roles"
 ---
 
 
-# Rollarni Qayta Ko‘rib Chiqish
+# Rollarni Qayta Ko'rib Chiqish
 
 ### Yangi Modellarda Aniqlikni Oshirish
 
-GPT-3 davinci-002 kabi eski modellar rol promptingidan katta foyda ko‘rgan bo‘lsa-da, bu strategiyaning samaradorligi GPT-3.5 yoki GPT-4 kabi yangi modellar bilan kamaygan ko‘rinadi. Bu kuzatuv asosan amaliy foydalanishga asoslangan va qat'iy tizimli sinovlarga emas.
+GPT-3 davinci-002 kabi eski modellar rol promptingidan katta foyda ko'rgan bo'lsa-da, bu strategiyaning samaradorligi GPT-3.5 yoki GPT-4 kabi yangi modellar bilan kamaygan ko'rinadi. Bu kuzatuv asosan amaliy foydalanishga asoslangan va qat'iy tizimli sinovlarga emas.
 
-Misol uchun, "shifokor" yoki "huquqshunos" roli berilishi, AI modellarining oldingi versiyalarida sog‘liq yoki huquqiy kontekstlarda javoblarning dolzarbligi va chuqurligini oshirgan. Bu rol-promptlar modelning mavzuni tushunishini oshirishga hissa qo‘shganligini ko‘rsatadi.
+Misol uchun, "shifokor" yoki "huquqshunos" roli berilishi, AI modellarining oldingi versiyalarida sog'liq yoki huquqiy kontekstlarda javoblarning dolzarbligi va chuqurligini oshirgan. Bu rol-promptlar modelning mavzuni tushunishini oshirishga hissa qo'shganligini ko'rsatadi.
 
-Biroq, bu darajadagi yaxshilanishlar yangi versiyalarda kamroq seziladi. Ushbu ilg‘or modellar allaqachon murakkab tushunchaga ega va ko‘pincha rolga asoslangan mustahkamlashsiz ham yetarlicha aniq.
+Biroq, bu darajadagi yaxshilanishlar yangi versiyalarda kamroq seziladi. Ushbu ilg'or modellar allaqachon murakkab tushunchaga ega va ko'pincha rolga asoslangan mustahkamlashsiz ham yetarlicha aniq.
 
-## Rollar Haqida Ko‘proq
+## Rollar Haqida Ko'proq
 
-Rollar bir jumladan ko‘proq bo‘lishi mumkin. Ular AIga to‘liq aniq vazifalarni so‘rashi mumkin. Quyida [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts#prompts) dan bir nechta misollarni ko‘ring [^2].
+Rollar bir jumladan ko'proq bo'lishi mumkin. Ular AIga to'liq aniq vazifalarni so'rashi mumkin. Quyida [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts#prompts) dan bir nechta misollarni ko'ring [^b].
 
 > ### Etymologist sifatida harakat qiling
 >
-> Men sizdan etymologist sifatida harakat qilishingizni xohlayman. Men sizga bir so‘z beraman va siz o‘sha so‘zning kelib chiqishini
+> Men sizdan etymologist sifatida harakat qilishingizni xohlayman. Men sizga bir so'z beraman va siz o'sha so'zning kelib chiqishini
 >
-> qadimiy ildizlariga qadar izlaysiz. Shuningdek, so‘zning ma'nosi vaqt o‘tishi bilan qanday o‘zgarganligi haqida ma'lumot berishingiz kerak,
+> qadimiy ildizlariga qadar izlaysiz. Shuningdek, so'zning ma'nosi vaqt o'tishi bilan qanday o'zgarganligi haqida ma'lumot berishingiz kerak,
 >
-> agar iloji bo‘lsa. Mening birinchi so‘rovim "pizza" so‘zining kelib chiqishini izlash.
+> agar iloji bo'lsa. Mening birinchi so'rovim "pizza" so'zining kelib chiqishini izlash.
 
 > ### Absurdist sifatida harakat qiling
 >
-> Men sizdan absurdist sifatida harakat qilishingizni xohlayman. Absurdistning gaplari ma'nosiz. Absurdist tomonidan ishlatiladigan so‘zlar butunlay
+> Men sizdan absurdist sifatida harakat qilishingizni xohlayman. Absurdistning gaplari ma'nosiz. Absurdist tomonidan ishlatiladigan so'zlar butunlay
 >
 > bema'ni. Absurdist hech qanday tarzda oddiy gaplar tuzmaydi. Mening birinchi taklifim "Yangi seriyam Hot Skull uchun absurdist gaplar yaratishda yordam kerak,
 >
@@ -36,7 +36,7 @@ Rollar bir jumladan ko‘proq bo‘lishi mumkin. Ular AIga to‘liq aniq vazifal
 
 ### Avtomatik Ravishda Rol Yaratish
 
-Siz AIga siz uchun rol yaratishni so‘rashingiz mumkin! Keyin bu roldan boshqa promptning bir qismi sifatida foydalanishingiz mumkin. Bu yerda sinab ko‘ring:
+Siz AIga siz uchun rol yaratishni so'rashingiz mumkin! Keyin bu roldan boshqa promptning bir qismi sifatida foydalanishingiz mumkin. Bu yerda sinab ko'ring:
 
 <iframe
   src="https://embed.learnprompting.org/embed?config=eyJ0b3BQIjoxLCJ0ZW1wZXJhdHVyZSI6MSwibWF4VG9rZW5zIjoyNTYsIm91dHB1dCI6IkxlYWggR3JlZW53b29kIOKAlCBLYWxpZm9ybml5YSBzaHRhdGluaW5nIExvcy1BbmplbGVzIHNoYWhyaWRhbiBib%2BKAmGxnYW4gYmFkaWl5IHlvenV2Y2hpIGJv4oCYbGliLCB1IHlvenV2Y2hpbGlrIGZhb2xpeWF0aWRhIGluc29uaXkgaG9sYXRuaW5nIGNodXF1ciBxYXRsYW1sYXJpbmkgb%2BKAmHJnYW5pc2hnYSBrYXR0YSBpc2h0aXlvcSBiaWxhbiB5b25kYXNoYWRpLiBVIGlqb2Rrb3JsYXIgb2lsYXNpZGEgdHVn4oCYaWxnYW46IG90YXNpIGhheWthbHRhcm9zaCwgb25hc2kgcmFzc29tLCBha2FzaSBlc2Ega2lub3Jlamlzc3lvci4gSW5nbGl6IHRpbGkgdmEgYWRhYml5b3RpIGJv4oCYeWljaGEgYmFrYWxhdnIgZGFyYWphc2luaSBvbGdhY2gsIExlYWggcWlzcWEgaGlrb3lhbGFyIHlvemlzaG5pIGJvc2hsYWRpIHZhIHVsYXIga2V5aW5jaGFsaWsgdHVybGkgdG%2FigJhwbGFtbGFyZGEgbmFzaHIgZXRpbGRpLiBTaHVuZGFuIHNv4oCYbmcgdSBv4oCYemluaW5nIGJpcmluY2hpIHJvbWFuaW5pIHlvemRpIHZhIGJ1IGFzYXIgbnVmdXpsaSBhZGFiaXkgbXVrb2ZvdGdhIG5vbXpvZCBib%2BKAmGxpc2hpZ2Egc2FiYWIgYm%2FigJhsZGkuXG5cbkxlYWggYWRhYml5b3RnYSBib%2BKAmGxnYW4gY2h1cXVyIG11aGFiYmF0bmkgYm9sYWxpZ2lkYW4gYmVyaSBxYWxiaWRhIG9saWIga2VsYWRpLiBVIHR1cmxpIG1hZGFuaXlhdGxhciB1eWfigJh1bmxhc2hnYW4gbXVoaXRkYW4ga2VsaWIgY2hpcXFhbiB2YSBpbGhvbSBtYW5iYWxhcmkgZG9pbWl5IHJhdmlzaGRhIG%2FigJh6Z2FyaWIgdHVyYWRpZ2FuIHNlcmhhcmFrYXQgc2hhaGFyZGEgeWFzaGF5ZGkuIEJ1IGVzYSB1bmluZyBpam9kaWdhIGt1Y2hsaSB0YeKAmXNpciBrb%2BKAmHJzYXRhZGkuIExlYWhuaW5nIGhpa295YWxhcmkga2%2FigJhwaW5jaGEgY2hhbGthc2ggdmEgb2xkaW5kYW4gYXl0aWIgYm%2FigJhsbWF5ZGlnYW4gZHVueW9kYSBxYWJ1bCBxaWxpbmlzaCwgaGFxaXFhdCB2YSBtYeKAmW5vIGl6bGF5b3RnYW4gcWFocmFtb25sYXIgYXRyb2ZpZGEgcXVyaWxhZGkuIFUgaGlrb3lhbGFyIHl1cmFrIHZhIG9uZ25pIHlhbmdpIHFhcmFzaGxhcmdhIG9jaGlzaGksIHNodW5pbmdkZWssIGluc29uIGhheW90aW5pIGhheXJhdGxhbmFybGkgdGFyemRhIG%2FigJh6Z2FydGlyaXNoIHF1ZHJhdGlnYSBlZ2EgZWthbmlnYSBxYXTigJlpeSBpc2hvbmFkaS4iLCJwcm9tcHQiOiJCYWRpaXkgeW96dXZjaGkgaGFxaWRhIGZvbiByb2xpIC8gdGFyamltYWkgaG9sIHlvemluZzoiLCJtb2RlbCI6InRleHQtZGF2aW5jaS0wMDMifQ%3D%3D"
@@ -52,7 +52,7 @@ Siz AIga siz uchun rol yaratishni so‘rashingiz mumkin! Keyin bu roldan boshqa 
 
 ### Bir Necha Personalar Birgalikda Ishlash
 
-Oxirgi anekdot shundaki, siz bir nechta rol prompting qilingan LLMlarni birgalikda ishlatishingiz mumkin (@wang2023unleashing). Bu ko‘pincha matn yaratishning aniqligi va sifatini yaxshilashga olib kelishi mumkin.
+Oxirgi anekdot shundaki, siz bir nechta rol prompting qilingan LLMlarni birgalikda ishlatishingiz mumkin (@wang2023unleashing). Bu ko'pincha matn yaratishning aniqligi va sifatini yaxshilashga olib kelishi mumkin.
 
-[^1]: Rol prompting shuningdek _rol o‘ynash_(@shanahan2023roleplay), _rol o‘ynash_(@li2023camel), yoki hatto _persona pattern_(@white2023prompt) deb ham ataladi.
-[^2]: Bular _ChatGPT_ uchun yaratilgan, lekin ular boshqa AIlar bilan ham ishlashi mumkin va siz o‘z promptlaringizni yaratishda ilhom sifatida foydalanishingiz mumkin.
+[^a]: Rol prompting shuningdek _rol o'ynash_(@shanahan2023roleplay), _rol o'ynash_(@li2023camel), yoki hatto _persona pattern_(@white2023prompt) deb ham ataladi.
+[^b]: Bular _ChatGPT_ uchun yaratilgan, lekin ular boshqa AIlar bilan ham ishlashi mumkin va siz o'z promptlaringizni yaratishda ilhom sifatida foydalanishingiz mumkin.

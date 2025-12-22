@@ -188,7 +188,7 @@ function Home() {
               <li>
                 Reinflow AI fleet learning consolidated planning, briefing,
                 constructing technology process check integrated audits AI
-                solution inquiries—flow bill patterns round $2500 approx target.
+                solution inquiries-flow bill patterns round $2500 approx target.
               </li>
               <li>
                 Soft AI software intelligent help-desk developed paired neatly

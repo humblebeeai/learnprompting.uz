@@ -57,7 +57,7 @@ python3 scripts/fix_mdx_issues.py i18n/uz --recursive
   />
 </div>
 
-Role prompting — bu AI tomonidan yaratilgan matn(@shanahan2023roleplay)(@li2023camel)(@santu2023teler)
+Role prompting - bu AI tomonidan yaratilgan matn(@shanahan2023roleplay)(@li2023camel)(@santu2023teler)
 
 <Takeaways>
   - Rol promptlarini tushuning - Rol promptlaridan matn uslubini sozlash
@@ -74,7 +74,7 @@ Role prompting — bu AI tomonidan yaratilgan matn(@shanahan2023roleplay)(@li202
 
 ### After:
 ```mdx
-Role prompting — bu AI tomonidan yaratilgan matn(@shanahan2023roleplay)(@li2023camel)(@santu2023teler)
+Role prompting - bu AI tomonidan yaratilgan matn(@shanahan2023roleplay)(@li2023camel)(@santu2023teler)
 
 - Rol promptlarini tushuning
 - Rol promptlaridan matn uslubini sozlash

@@ -11,7 +11,7 @@ title: "🟢 Chatbotlarni Priming qilish"
 
 ## Priming Prompt
 
-Suhbatning **tuzilishi** va **uslubini** birinchi prompt orqali belgilab olish mumkin — bu Chatbot’ni “priming” qilish deb ataladi. Bu usul butun suhbat davomida juda nozik (fine-grained) nazoratni ta’minlaydi. Keling, bir nechta misollar orqali priming prompt[^1] yordamida suhbatni qanday tuzish va uslubini belgilash mumkinligini ko‘raylik.
+Suhbatning **tuzilishi** va **uslubini** birinchi prompt orqali belgilab olish mumkin - bu Chatbot'ni “priming” qilish deb ataladi. Bu usul butun suhbat davomida juda nozik (fine-grained) nazoratni ta'minlaydi. Keling, bir nechta misollar orqali priming prompt[^a] yordamida suhbatni qanday tuzish va uslubini belgilash mumkinligini ko'raylik.
 
 ## Chatbotlarni Tayyorlash nima?
 
@@ -37,7 +37,7 @@ Olov o'rniga muz nafas oladigan, yaltirab turgan tarozalarga ega ajdaho haqida, 
 
 ## Suhbat uslubini belgilash (Styling)
 
-Suhbat uslubini boshqarishning kulgili misollaridan biri — AIni **qaroqchi (pirate)** kabi gapirtirishdir. Buning uchun priming prompt sifatida **role prompt** ishlatamiz. Quyidagi promptlarni ChatGPT’ga kiritib ko‘ring.
+Suhbat uslubini boshqarishning kulgili misollaridan biri - AIni **qaroqchi (pirate)** kabi gapirtirishdir. Buning uchun priming prompt sifatida **role prompt** ishlatamiz. Quyidagi promptlarni ChatGPT'ga kiritib ko'ring.
 
 
 **Prompt:**
@@ -55,7 +55,7 @@ Suhbat uslubini boshqarishning kulgili misollaridan biri — AIni **qaroqchi (pi
 </AIOutput>
 
 
-Endi yana bir xabar yuboramiz va u hanuz qaroqchi kabi javob beradimi — tekshirib ko‘ramiz.
+Endi yana bir xabar yuboramiz va u hanuz qaroqchi kabi javob beradimi - tekshirib ko'ramiz.
 
 
 **Prompt:**
@@ -73,7 +73,7 @@ Hoy, do‘stim! Bu savolning javobi yelkan tomondan esayotgan shabada kabi oddiy
 </AIOutput>
 
 
-Suhbatning qolgan qismida ham AI qaroqchi kabi gapirishi kerak. Albatta, qaroqchi kabi gapiradigan AI har doim ham foydali bo‘lmasligi mumkin, ammo bu misol **priming** AI chiqish uslubini boshqarishda qanchalik samarali ekanini ko‘rsatadi. Endi yanada foydaliroq priming prompt’ni ko‘rib chiqamiz. `[field]` joyini o‘zingizga mos soha bilan almashtiring.
+Suhbatning qolgan qismida ham AI qaroqchi kabi gapirishi kerak. Albatta, qaroqchi kabi gapiradigan AI har doim ham foydali bo'lmasligi mumkin, ammo bu misol **priming** AI chiqish uslubini boshqarishda qanchalik samarali ekanini ko'rsatadi. Endi yanada foydaliroq priming prompt'ni ko'rib chiqamiz. `[field]` joyini o'zingizga mos soha bilan almashtiring.
 
 
 **Prompt:**
@@ -85,7 +85,7 @@ Suhbatning qolgan qismida ham AI qaroqchi kabi gapirishi kerak. Albatta, qaroqch
 
 ## Suhbat tuzilishini belgilash (Structuring)
 
-AI javoblarining faqat uslubini emas, balki **tuzilishini** ham nazorat qilish mumkin. Masalan, quyidagi priming prompt’ni ko‘rib chiqing:
+AI javoblarining faqat uslubini emas, balki **tuzilishini** ham nazorat qilish mumkin. Masalan, quyidagi priming prompt'ni ko'rib chiqing:
 
 
 **Prompt:**
@@ -137,14 +137,14 @@ AI javoblari uchun **aniq format** berish orqali foydalanuvchi izchil va tartibl
 - loyihalarni boshqarishda,
 - vazifalarni kuzatish va muddatlarni rejalashtirishda juda foydalidir.
 
-## Maxsus holatlar uchun ko‘rsatmalar (Special Case Instructions)
+## Maxsus holatlar uchun ko'rsatmalar (Special Case Instructions)
 
-Maxsus ko‘rsatmalar foydalanuvchi kiritgan matnda **muayyan holatlarni aniqlash** va shunga mos javob qaytarish uchun ishlatiladi. Masalan, bu:
+Maxsus ko'rsatmalar foydalanuvchi kiritgan matnda **muayyan holatlarni aniqlash** va shunga mos javob qaytarish uchun ishlatiladi. Masalan, bu:
 - zararli (toxic) fikrlarni,
 - jailbreaking urinishlarini,
-- yoki talabalar AI’dan ko‘chirishga urinishlarini aniqlash bo‘lishi mumkin.
+- yoki talabalar AI'dan ko'chirishga urinishlarini aniqlash bo'lishi mumkin.
 
-Quyidagi misolda AI’ga talabaga **to‘g‘ridan-to‘g‘ri javob bermaslik** buyuriladi.
+Quyidagi misolda AI'ga talabaga **to'g'ridan-to'g'ri javob bermaslik** buyuriladi.
 
 
 **Prompt:**
@@ -190,14 +190,14 @@ Sinab ko‘ring, agar biror aniq qadamda yordam kerak bo‘lsa, menga ayting!
 
 ## Xulosa
 
-Priming prompt’lar AI bilan suhbatda **uslub**, **tuzilish** va **mazmunni**
+Priming prompt'lar AI bilan suhbatda **uslub**, **tuzilish** va **mazmunni**
 boshqarish uchun juda kuchli vositadir. Suhbat boshida ohang va formatni
-belgilab olish orqali foydalanuvchi AI javoblarini o‘z ehtiyojlariga mos
-ravishda yo‘naltirishi mumkin. Biroq shuni yodda tutish kerakki, AI vaqt o‘tishi
-bilan priming prompt’ni “unutishi” mumkin va uni qayta priming qilishga to‘g‘ri
-keladi. Nima sababdan bunday bo‘lishini keyingi darsda o‘rganamiz.
+belgilab olish orqali foydalanuvchi AI javoblarini o'z ehtiyojlariga mos
+ravishda yo'naltirishi mumkin. Biroq shuni yodda tutish kerakki, AI vaqt o'tishi
+bilan priming prompt'ni “unutishi” mumkin va uni qayta priming qilishga to'g'ri
+keladi. Nima sababdan bunday bo'lishini keyingi darsda o'rganamiz.
 
 Qisman [Dastardi](https://twitter.com/lukescurrier) tomonidan yozilgan.
 
-[^1]: Priming prompt’lar ba’zan inception prompt’lar deb ham ataladi
+[^a]: Priming prompt'lar ba'zan inception prompt'lar deb ham ataladi
 (@li2023camel)

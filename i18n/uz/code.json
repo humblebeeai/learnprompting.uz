@@ -9,10 +9,10 @@
 		"message": "ishlashni o'rganing"
 	},
 	"homepage.hero.subtitle": {
-		"message": "ChatGPT, Claude va boshqa sun'iy intellekt vositalaridan **ish, ta'lim va biznesda** to'g'ri va samarali foydalanishni o'rganing. 100% bepul, ochiq manbali, real ko'nikmalarga yo'naltirilgan kurs."
+		"message": "ChatGPT, Claude va boshqa sun'iy intellekt vositalaridan ish, ta'lim va biznesda to'g'ri va samarali foydalanishni o'rganing. 100% bepul, ochiq manbali, real ko'nikmalarga yo'naltirilgan kurs."
 	},
 	"homepage.hero.trust": {
-		"message": "O'zbek tilida tarjima va lokalizatsiya — hamjamiyat bilan birga."
+		"message": "O'zbek tilida tarjima va lokalizatsiya - hamjamiyat bilan birga."
 	},
 	"homepage.hero.button.start": {
 		"message": "Kursni boshlash"
@@ -42,7 +42,7 @@
 		"message": "Davlat va ofis xodimlari"
 	},
 	"homepage.features.stepbystep.title": {
-		"message": "Aniq prompt yozish"
+		"message": "To'g'ri prompt yozish"
 	},
 	"homepage.features.stepbystep.description": {
 		"message": "Natija beradigan savollar, topshiriqlar va instruktsiyalar tuzish"
@@ -54,16 +54,16 @@
 		"message": "Email, reja, hisobot, prezentatsiya va tahlil promptlari"
 	},
 	"homepage.features.community.title": {
-		"message": "Amaliy mashqlar"
+		"message": "Amaliy misollar"
 	},
 	"homepage.features.community.description": {
-		"message": "Har bir modulda real hayotdan olingan vazifalar"
+		"message": "Har bir modulda real hayotdan olingan misollar"
 	},
 	"homepage.features.responsible.title": {
-		"message": "Mas'uliyatli AI'dan foydalanish"
+		"message": "Ishonchli natijalar olish"
 	},
 	"homepage.features.responsible.description": {
-		"message": "Xatolarni aniqlash, tekshirish, ishonchlilik va xavfsizlik"
+		"message": "AI javoblarini tekshirish, xatolarni tuzatish va sifatli natija olish"
 	},
 	"homepage.features.label": {
 		"message": "Nimalarni o'rganasiz?"
@@ -102,19 +102,22 @@
 		"message": "Ishonchlilik, tekshiruv, image prompting va tooling"
 	},
 	"homepage.cta.title": {
-		"message": "Bugun boshlang"
+		"message": "Hoziroq boshlang"
 	},
 	"homepage.cta.description": {
-		"message": "Bu kursni millionlab o'rganuvchilar real ishlarida qo'llamoqda. Siz ham bugun boshlang va birinchi amaliy natijani qisqa vaqt ichida ko'ring."
+		"message": "Bu kursni millionlab o'rganuvchilar real ishlarida qo'llamoqda. Siz ham hoziroq boshlang va birinchi amaliy natijani qisqa vaqt ichida ko'ring."
 	},
 	"homepage.cta.button": {
 		"message": "Kursni boshlash"
 	},
-	"homepage.collab.badge": {
-		"message": "Hamkorlik va ochiqlik"
+	"homepage.collab.maintitle": {
+		"message": "Ochiq manba asosida"
+	},
+	"homepage.collab.content.title": {
+		"message": "Kontent yaratish"
 	},
 	"homepage.collab.maintitle": {
-		"message": "Ochiq hamkorlik asosida"
+		"message": "Ochiq manba asosida"
 	},
 	"homepage.collab.content.title": {
 		"message": "Kontent yaratish"
@@ -138,7 +141,7 @@
 		"message": "O'zbekcha nashr {humblebee} tomonidan yuritiladi. Barcha kontent ochiq manbali va bepul."
 	},
 	"homepage.collab.link": {
-		"message": "Hamkorlik haqida batafsil"
+		"message": "Loyiha haqida batafsil"
 	},
 	"homepage.meta.title": {
 		"message": "AI bilan muloqot"
@@ -159,7 +162,7 @@
 		"message": "AI Akademiyasi"
 	},
 	"footer.quickLinks.collaboration": {
-		"message": "Hamkorlik"
+		"message": "Loyiha haqida"
 	},
 	"footer.legalLinks.privacy": {
 		"message": "Maxfiylik siyosati"

@@ -20,7 +20,7 @@ You are responsible for maintaining the confidentiality of your Account login in
 
 ### 2.1 Plans
 
-The features and price of your access to the Service is determined by the subscription plan and account type you register for, purchase, renew, or change into (each, a “Plan”)—to review the features and price associated with Learn Prompting's Plans, please visit `https://learn-prompting.webflow.io/pricing`.
+The features and price of your access to the Service is determined by the subscription plan and account type you register for, purchase, renew, or change into (each, a “Plan”)-to review the features and price associated with Learn Prompting's Plans, please visit `https://learn-prompting.webflow.io/pricing`.
 
 ### 2.2 Free plan
 

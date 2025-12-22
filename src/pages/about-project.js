@@ -43,7 +43,7 @@ export default function AboutCollaboration() {
               marginBottom: "2rem",
             }}
           >
-            <span>🇺🇿 O'zbekiston uchun maxsus</span>
+            <span>O'zbekiston uchun maxsus</span>
           </div>
 
           <h1
@@ -70,7 +70,7 @@ export default function AboutCollaboration() {
           >
             Ushbu loyiha <strong>Learn Prompting</strong>ning global tajribasi
             va <strong>HumblebeeAI</strong>ning mahalliy ekspertizasi
-            birlashuvidir. Maqsadimiz — O'zbekistonda AI savodxonligini yangi
+            birlashuvidir. Maqsadimiz - O'zbekistonda AI savodxonligini yangi
             bosqichga olib chiqish.
           </p>
         </div>
@@ -103,7 +103,6 @@ export default function AboutCollaboration() {
 
             {/* X divider */}
             <div
-              className="col col--1"
               style={{ textAlign: "center", fontSize: "2rem", opacity: 0.3 }}
             >
               ×
@@ -115,7 +114,7 @@ export default function AboutCollaboration() {
                 HumblebeeAI
               </h3>
               <p style={{ color: "var(--color-text-secondary)" }}>
-                Markaziy Osiyodagi yetakchi AI kompaniyasi. Bizning maqsadimiz —
+                Markaziy Osiyodagi yetakchi AI kompaniyasi. Bizning maqsadimiz -
                 mintaqada sun'iy intellekt texnologiyalarini joriy etish va Top
                 1% kadrlar tayyorlash.
               </p>
@@ -142,7 +141,7 @@ export default function AboutCollaboration() {
                   color: "var(--color-text-secondary)",
                 }}
               >
-                Biz ishonamizki, sun'iy intellekt bilimlariga ega bo'lish — bu
+                Biz ishonamizki, sun'iy intellekt bilimlariga ega bo'lish - bu
                 hashamat emas, balki zamonaviy dunyoda zaruratdir.
               </p>
 
@@ -163,15 +162,25 @@ export default function AboutCollaboration() {
                     marginBottom: "1rem",
                   }}
                 >
-                  <span style={{ fontSize: "1.5rem" }}>🇺🇿</span>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                  </svg>
                   Milliy Tashabbus
                 </h4>
                 <p style={{ marginBottom: 0 }}>
                   Ushbu loyiha O'zbekiston Respublikasi Prezidentining{" "}
                   <strong>"5 million o'zbek prompt muhandisi"</strong> (Digital
                   Uzbekistan 2030) strategiyasidan ilhomlangan holda yaratildi.
-                  Biz har bir o'zbekistonlik — xoh u talaba, o'qituvchi yoki
-                  tadbirkor bo'lsin — kelajak texnologiyalaridan erkin foydalana
+                  Biz har bir o'zbekistonlik - xoh u talaba, o'qituvchi yoki
+                  tadbirkor bo'lsin - kelajak texnologiyalaridan erkin foydalana
                   olishini istaymiz.
                 </p>
               </div>
@@ -196,27 +205,127 @@ export default function AboutCollaboration() {
                 Ushbu kontent <strong>Creative Commons BY-NC-SA 4.0</strong>{" "}
                 litsenziyasi asosida tarqatiladi.
               </p>
-              <ul style={{ paddingLeft: "1.2rem" }}>
-                <li>
-                  ✅ <strong>Erkin foydalanish:</strong> O'qish, o'rganish va
-                  ulashish bepul.
+              <ul style={{ paddingLeft: "1.2rem", listStyle: "none" }}>
+                <li
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "0.5rem",
+                    marginBottom: "0.75rem",
+                  }}
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#10b981"
+                    strokeWidth="2"
+                    style={{ flexShrink: 0, marginTop: "0.2rem" }}
+                  >
+                    <path
+                      d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <polyline
+                      points="22 4 12 14.01 9 11.01"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <span>
+                    <strong>Erkin foydalanish:</strong> O'qish, o'rganish va
+                    ulashish bepul.
+                  </span>
                 </li>
-                <li>
-                  ✅ <strong>Moslashtirish:</strong> Materiallardan o'quv
-                  dasturlari uchun foydalanish mumkin (manba ko'rsatilgan
-                  holda).
+                <li
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "0.5rem",
+                    marginBottom: "0.75rem",
+                  }}
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#10b981"
+                    strokeWidth="2"
+                    style={{ flexShrink: 0, marginTop: "0.2rem" }}
+                  >
+                    <path
+                      d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <polyline
+                      points="22 4 12 14.01 9 11.01"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <span>
+                    <strong>Moslashtirish:</strong> Materiallardan o'quv
+                    dasturlari uchun foydalanish mumkin (manba ko'rsatilgan
+                    holda).
+                  </span>
                 </li>
-                <li>
-                  ❌ <strong>Tijoriy foydalanish:</strong> Kontentni
-                  o'zlashtirib sotish taqiqlanadi.
+                <li
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "0.5rem",
+                  }}
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#ef4444"
+                    strokeWidth="2"
+                    style={{ flexShrink: 0, marginTop: "0.2rem" }}
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <line
+                      x1="15"
+                      y1="9"
+                      x2="9"
+                      y2="15"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <line
+                      x1="9"
+                      y1="9"
+                      x2="15"
+                      y2="15"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <span>
+                    <strong>Tijoriy foydalanish:</strong> Kontentni o'zlashtirib
+                    sotish taqiqlanadi.
+                  </span>
                 </li>
               </ul>
             </div>
             <div className="col col--6">
               <h3>Bizga qo'shiling</h3>
               <p>
-                Bu loyiha hamjamiyat tomonidan yuritiladi. Agar sizda takliflar
-                bo'lsa yoki tarjimaga hissa qo'shmoqchi bo'lsangiz:
+                Bu loyiha HumblebeeAI ochiq manba asosida tomonidan yuritiladi.
+                Agar sizda takliflar bo'lsa yoki tarjimaga hissa qo'shmoqchi
+                bo'lsangiz:
               </p>
               <div
                 style={{ display: "flex", gap: "1rem", marginTop: "1.5rem" }}
@@ -225,10 +334,10 @@ export default function AboutCollaboration() {
                   className="button button--primary button--lg"
                   to="https://github.com/humblebeeai/Learn_Prompting"
                 >
-                  GitHub'da ishtirok eting
+                  Loyihaga o'z hissangizni qo'shing
                 </Link>
                 <Link
-                  className="button button--outline button--lg"
+                  className="button button--outline button--lg tg-button"
                   to="https://t.me/humblebeeai"
                 >
                   Telegram kanalimiz

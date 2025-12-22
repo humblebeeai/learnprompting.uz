@@ -384,7 +384,7 @@ function CTASection() {
           }`}
         >
           <h2 className="cta-title">
-            <Translate id="homepage.cta.title">Bugun boshlang</Translate>
+            <Translate id="homepage.cta.title">Hoziroq boshlang</Translate>
           </h2>
           <p className="cta-description">
             <Translate id="homepage.cta.description">
@@ -429,9 +429,6 @@ function CollaborationSection() {
           isInView ? "animate-slide-up" : "init-slide-up"
         }`}
       >
-        <div className="collab-badge">
-          <Translate id="homepage.collab.badge">Hamkorlik</Translate>
-        </div>
         <p className="collab-text">
           <Translate
             id="homepage.collab.text"
@@ -451,9 +448,9 @@ function CollaborationSection() {
             }
           </Translate>
         </p>
-        <Link className="collab-link" to="/about-collaboration">
+        <Link className="collab-link" to="/about-project">
           <Translate id="homepage.collab.link">
-            Hamkorlik haqida batafsil
+            Loyiha haqida batafsil
           </Translate>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path

@@ -12,7 +12,7 @@ async function createConfig() {
     baseUrl: "/",
     onBrokenLinks: "warn", // Changed to warn to avoid build failures during migration
     onBrokenMarkdownLinks: "warn",
-    favicon: "img/favicon.ico",
+    favicon: "img/simple_ai.webp",
     organizationName: "humblebeeai", // Updated to new owner
     projectName: "Learn_Prompting",
     deploymentBranch: "gh-pages",
@@ -96,16 +96,15 @@ async function createConfig() {
             remarkPlugins: [
               math,
               (await import("remark-gfm")).default,
-              
-							[
-							  (await import("@benchmark-urbanism/remark-bibtex")).default,
-							  { bibtexFile: "bibliography.bib" },
-							],
-							[
-							  (await import("@renatonagliati/remark-auto-glossary")).default,
-							  { yamlFile: "glossary.yml" },
-							],
 
+              [
+                (await import("@benchmark-urbanism/remark-bibtex")).default,
+                { bibtexFile: "bibliography.bib" },
+              ],
+              [
+                (await import("@renatonagliati/remark-auto-glossary")).default,
+                { yamlFile: "glossary.yml" },
+              ],
             ],
             rehypePlugins: [[katex, { strict: false }]],
           },
@@ -168,8 +167,8 @@ async function createConfig() {
             position: "right",
           },
           {
-            to: "/about-collaboration",
-            label: "Hamkorlik haqida",
+            to: "/about-project",
+            label: "Loyiha haqida",
             position: "right",
           },
           {
@@ -216,8 +215,8 @@ async function createConfig() {
                 to: "/docs/intro",
               },
               {
-                label: "Hamkorlik haqida",
-                to: "/about-collaboration",
+                label: "Loyiha haqida",
+                to: "/about-project",
               },
             ],
           },
