@@ -12,7 +12,7 @@
 		"message": "ChatGPT, Claude va boshqa sun'iy intellekt vositalaridan ish, ta'lim va biznesda to'g'ri va samarali foydalanishni o'rganing. 100% bepul, ochiq manbali, real ko'nikmalarga yo'naltirilgan kurs."
 	},
 	"homepage.hero.trust": {
-		"message": "O'zbek tilida tarjima va lokalizatsiya - hamjamiyat bilan birga."
+		"message": "O'zbek tiliga tarjima - HumblebeeAI jamoasi tomonidan tarjima qilindi."
 	},
 	"homepage.hero.button.start": {
 		"message": "Kursni boshlash"
@@ -116,12 +116,6 @@
 	"homepage.collab.content.title": {
 		"message": "Kontent yaratish"
 	},
-	"homepage.collab.maintitle": {
-		"message": "Ochiq manba asosida"
-	},
-	"homepage.collab.content.title": {
-		"message": "Kontent yaratish"
-	},
 	"homepage.collab.content": {
 		"message": "Open-source hamjamiyat"
 	},
@@ -138,7 +132,7 @@
 		"message": "100% bepul va ochiq manba"
 	},
 	"homepage.collab.text": {
-		"message": "O'zbekcha nashr {humblebee} tomonidan yuritiladi. Barcha kontent ochiq manbali va bepul."
+		"message": "O'zbekcha nashr HumblebeeAI tomonidan yuritiladi."
 	},
 	"homepage.collab.link": {
 		"message": "Loyiha haqida batafsil"
@@ -147,7 +141,7 @@
 		"message": "AI bilan muloqot"
 	},
 	"homepage.meta.description": {
-		"message": "Learn Prompting × HumblebeeAI"
+		"message": "Learn Prompting (O'zbekcha)"
 	},
 	"footer.quickLinks.docs": {
 		"message": "Dokumentatsiya"
@@ -183,10 +177,10 @@
 		"message": "Aloqa"
 	},
 	"footer.copyright": {
-		"message": "© {year} Learn Prompting × {humblebee}"
+		"message": "© {year} Learn Prompting (O'zbekcha)"
 	},
 	"footer.attribution": {
-		"message": "O'zbekcha nashr {humblebee} tomonidan yuritiladi."
+		"message": "O'zbekcha nashr: {humblebee}."
 	},
 	"theme.admonition.takeaways": {
 		"message": "Asosiy xulosalar"
