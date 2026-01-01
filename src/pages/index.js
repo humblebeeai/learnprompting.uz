@@ -538,16 +538,9 @@ function CollaborationSection() {
 
 					<div
 						className={`collab-grid animate-slide-up`}
-						style={{
-							display: "grid",
-							gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
-							gap: "2rem",
-							maxWidth: "1000px",
-							margin: "0 auto 3rem",
-							padding: "0 1rem"
-						}}
+						style={{ margin: "0 auto 3rem" }} // Explicit section spacing
 					>
-						{/* Card 1: Original Project */}
+						{/* Card 1: Original Project (Secondary) */}
 						<div style={{
 							background: "var(--color-card-bg)",
 							padding: "2.5rem",
@@ -556,13 +549,16 @@ function CollaborationSection() {
 							display: "flex",
 							flexDirection: "column",
 							height: "100%",
-							boxShadow: "0 10px 20px -5px rgba(0, 0, 0, 0.05)",
-							textAlign: "left"
+							boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.03)", // Subtle shadow
+							opacity: 0.9, // Slightly muted
+							transition: "transform 0.3s ease",
+							position: "relative",
+							zIndex: 1
 						}}>
 							<div style={{ marginBottom: "2rem" }}>
 								<div style={{
-									width: "60px",
-									height: "60px",
+									width: "56px",
+									height: "56px",
 									background: "var(--color-bg-secondary)",
 									borderRadius: "12px",
 									display: "flex",
@@ -573,68 +569,118 @@ function CollaborationSection() {
 									<img
 										src="/img/simple_ai.webp"
 										alt="Learn Prompting"
-										width="36"
-										height="36"
+										width="32"
+										height="32"
 									/>
 								</div>
-								<h3 style={{ fontSize: "1.5rem", marginBottom: "0.75rem", fontWeight: 700 }}>Asl loyiha: Learn Prompting</h3>
-								<p style={{ opacity: 0.8, fontSize: "1.05rem", lineHeight: 1.6 }}>
-									<strong>Learn Prompting</strong> — dunyo bo‘ylab millionlab foydalanuvchilar foydalanadigan ochiq manbali ta’lim loyihasi.
+								<h3 style={{ fontSize: "1.35rem", marginBottom: "0.75rem", fontWeight: 700, letterSpacing: "-0.01em" }}>Asl loyiha - Learn Prompting</h3>
+								<p style={{ opacity: 0.8, fontSize: "1rem", lineHeight: 1.5, color: "var(--color-text-paragraph)" }}>
+									Learn Prompting - dunyo bo‘ylab millionlab foydalanuvchilar foydalanadigan ochiq manbali ta’lim loyihasi.
 								</p>
 							</div>
-							<div style={{ marginTop: "auto", paddingTop: "1.5rem", borderTop: "1px solid var(--color-border)", fontSize: "0.9rem", display: "flex", gap: "1.5rem", opacity: 0.7, fontWeight: 500 }}>
-								<a href="https://learnprompting.org" target="_blank" style={{ color: "inherit", textDecoration: "none", borderBottom: "1px dotted currentColor" }}>learnprompting.org</a>
-								<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" style={{ color: "inherit", textDecoration: "none", borderBottom: "1px dotted currentColor" }}>CC BY-NC-SA 4.0</a>
+
+							{/* Footer */}
+							<div style={{ marginTop: "auto", paddingTop: "1.5rem", borderTop: "1px solid var(--color-border)" }}>
+								<div style={{
+									display: "grid",
+									gridTemplateColumns: "1fr 1fr",
+									gap: "1rem",
+									fontSize: "0.85rem"
+								}}>
+									<div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+										<span style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em", opacity: 0.5, fontWeight: 600 }}>Manba</span>
+										<a href="https://learnprompting.org" target="_blank" style={{ color: "inherit", textDecoration: "none", fontWeight: 500, borderBottom: "1px dotted currentColor", width: "fit-content" }}>learnprompting.org</a>
+									</div>
+									<div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+										<span style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em", opacity: 0.5, fontWeight: 600 }}>Litsenziya</span>
+										<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" style={{ color: "inherit", textDecoration: "none", fontWeight: 500, borderBottom: "1px dotted currentColor", width: "fit-content" }}>CC BY-NC-SA 4.0</a>
+									</div>
+								</div>
 							</div>
 						</div>
 
-						{/* Card 2: Uzbek Edition */}
-						<div style={{
-							background: "var(--color-card-bg)",
-							padding: "2.5rem",
-							borderRadius: "20px",
-							border: "1px solid var(--color-border)",
-							display: "flex",
-							flexDirection: "column",
-							height: "100%",
-							boxShadow: "0 10px 20px -5px rgba(0, 0, 0, 0.05)",
-							textAlign: "left"
-						}}>
+						{/* Card 2: Uzbek Edition (Primary) */}
+						<div
+							className="hover-lift"
+							style={{
+								background: "var(--color-card-bg)",
+								padding: "2.5rem",
+								borderRadius: "20px",
+								border: "1px solid var(--color-brand-primary)", // Active border
+								display: "flex",
+								flexDirection: "column",
+								height: "100%",
+								boxShadow: "0 15px 35px -5px rgba(16, 185, 129, 0.15)", // Premium glow
+								position: "relative",
+								zIndex: 2,
+								transform: "scale(1.02)", // Subtle scale up for dominance
+							}}>
+							{/* UZ Badge */}
+							<div style={{
+								position: "absolute",
+								top: "2rem",
+								right: "2rem",
+								background: "rgba(16, 185, 129, 0.1)",
+								color: "var(--color-brand-primary)",
+								padding: "4px 8px",
+								borderRadius: "6px",
+								fontSize: "0.75rem",
+								fontWeight: 700,
+								letterSpacing: "0.05em"
+							}}>
+								UZ • COMMUNITY
+							</div>
+
 							<div style={{ marginBottom: "2rem" }}>
 								<div style={{
 									width: "60px",
 									height: "60px",
-									background: "var(--color-bg-secondary)",
+									background: "linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(6, 182, 212, 0.1))",
 									borderRadius: "12px",
 									display: "flex",
 									alignItems: "center",
 									justifyContent: "center",
-									marginBottom: "1.5rem",
-									opacity: 0.9
+									marginBottom: "1.5rem"
 								}}>
 									<img
 										src="https://academy.humblebee.ai/images/logo/logo.svg"
 										alt="HumblebeeAI"
 										width="36"
 										height="36"
-										style={{ opacity: 0.8, filter: "grayscale(20%)" }}
 									/>
 								</div>
-								<h3 style={{ fontSize: "1.5rem", marginBottom: "0.75rem", fontWeight: 700 }}>O‘zbekcha nashr</h3>
-								<p style={{ opacity: 0.8, fontSize: "1.05rem", lineHeight: 1.6 }}>
-									Ushbu sahifa Learn Prompting asosidagi <strong>o‘zbekcha nashr</strong>. Nashr HumblebeeAI jamoasi tomonidan <strong>lokalizatsiya qilinib yuritiladi</strong>.
+								<h3 style={{ fontSize: "1.5rem", marginBottom: "0.75rem", fontWeight: 800, letterSpacing: "-0.01em", color: "var(--color-text-primary)" }}>
+									O‘zbekcha nashr <span style={{ fontWeight: 400, opacity: 0.6, fontSize: "0.8em" }}>(rasmiy tarjima)</span>
+								</h3>
+								<p style={{ opacity: 0.9, fontSize: "1.05rem", lineHeight: 1.6, color: "var(--color-text-paragraph)" }}>
+									Ushbu sahifa Learn Prompting asosidagi <strong>rasmiy o‘zbekcha tarjima</strong> bo‘lib, HumblebeeAI jamoasi tomonidan <strong>ochiq litsenziya asosida</strong> yuritiladi.
 								</p>
 							</div>
-							<div style={{ marginTop: "auto", paddingTop: "1.5rem", borderTop: "1px solid var(--color-border)", fontSize: "0.9rem", display: "flex", gap: "1.5rem", opacity: 0.7, fontWeight: 500 }}>
-								<a href="https://github.com/humblebeeai/learnprompting.uz" target="_blank" style={{ color: "inherit", textDecoration: "none", borderBottom: "1px dotted currentColor" }}>GitHub Repo</a>
-								<a href="https://github.com/humblebeeai/learnprompting.uz/pulls" target="_blank" style={{ color: "inherit", textDecoration: "none", borderBottom: "1px dotted currentColor" }}>Hissa qo‘shish</a>
+
+							{/* Footer */}
+							<div style={{ marginTop: "auto", paddingTop: "1.5rem", borderTop: "1px solid var(--color-border)" }}>
+								<div style={{
+									display: "grid",
+									gridTemplateColumns: "1fr 1fr",
+									gap: "1rem",
+									fontSize: "0.9rem"
+								}}>
+									<div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+										<span style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em", opacity: 0.5, fontWeight: 600 }}>Manba</span>
+										<a href="https://github.com/humblebeeai/learnprompting.uz" target="_blank" style={{ color: "inherit", textDecoration: "none", fontWeight: 600, borderBottom: "1px dotted currentColor", width: "fit-content" }}>GitHub Repo</a>
+									</div>
+									<div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+										<span style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em", opacity: 0.5, fontWeight: 600 }}>Hissa</span>
+										<a href="https://github.com/humblebeeai/learnprompting.uz/pulls" target="_blank" style={{ color: "var(--color-brand-primary)", textDecoration: "none", fontWeight: 600, borderBottom: "1px dotted currentColor", width: "fit-content" }}>Tarjimaga hissa qo‘shish</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				{/* 100% Free Badge */}
-				<div style={{ textAlign: "center", marginTop: "2rem" }}>
+				{/* 100% Free Badge & Power Move */}
+				<div style={{ textAlign: "center", marginTop: "4rem" }}>
 					<a
 						href="https://github.com/humblebeeai/Learn_Prompting"
 						target="_blank"
@@ -647,19 +693,21 @@ function CollaborationSection() {
 								display: "inline-flex",
 								alignItems: "center",
 								gap: "0.5rem",
-								padding: "0.75rem 1.5rem",
-								background: "rgba(16, 185, 129, 0.1)",
-								borderRadius: "12px",
-								border: "1px solid rgba(16, 185, 129, 0.2)",
+								padding: "0.5rem 1rem",
+								background: "rgba(16, 185, 129, 0.08)", // Softer
+								borderRadius: "10px",
+								border: "1px solid rgba(16, 185, 129, 0.15)",
 								color: "var(--color-brand-primary)",
-								fontSize: "1rem",
+								fontSize: "0.9rem",
 								fontWeight: 600,
-								transition: "all 0.2s ease"
+								opacity: 0.9,
+								transition: "all 0.2s ease",
+								marginBottom: "1rem"
 							}}
 						>
 							<svg
-								width="20"
-								height="20"
+								width="16"
+								height="16"
 								viewBox="0 0 24 24"
 								fill="currentColor"
 							>
@@ -672,6 +720,9 @@ function CollaborationSection() {
 							</span>
 						</div>
 					</a>
+					<p style={{ fontSize: "0.9rem", opacity: 0.6, fontStyle: "italic", maxWidth: "600px", margin: "0 auto" }}>
+						Bu loyiha o‘rganish uchun yaratilgan. Sotuv yoki sertifikat emas.
+					</p>
 				</div>
 
 				<div
