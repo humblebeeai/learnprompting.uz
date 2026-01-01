@@ -1,0 +1,191 @@
+---
+sidebar_position: 1
+title: "🟢 Kirish"
+---
+
+
+# Kirish
+
+Mukammal rasm yaratish uchun eng yaxshi promptni topish o'ziga xos qiyinchilikdir.
+Buni amalga oshirish usullari bo'yicha tadqiqotlar matn promptingiga nisbatan unchalik rivojlanmagan.
+Bu, ehtimol, asosan subyektiv bo'lgan obyektlarni yaratishdagi ichki qiyinchiliklar
+va ko'pincha yaxshi aniqlik metrikalarining yo'qligi bilan bog'liq bo'lishi mumkin. Biroq, xavotir olmang, chunki rasm prompting
+hamjamiyati (@parsons2022dalleprompt) turli rasm modellari uchun qanday prompt berish bo'yicha ajoyib kashfiyotlar qilgan (@rombach2021highresolution)(@ramesh2022hierarchical).
+
+Ushbu qo'llanmada asosiy rasm prompting texnikalari yoritiladi va biz bob oxiridagi ajoyib manbalarni ko'rib chiqishingizni qat'iy tavsiya qilamiz.
+Bob oxiridagi ajoyib manbalarni ko'rib chiqishingizni qat'iy tavsiya qilamiz.
+Bundan tashqari, quyida rasm prompting jarayonining boshidan oxirigacha bo'lgan misolini keltiramiz.
+
+## Misol
+
+Bu yerda men ushbu kursning bosh sahifasi uchun rasmlarni qanday yaratganim bo'yicha misolni ko'rsataman.
+Men chuqur mustahkamlovchi o'rganish uchun low poly uslubida
+neural radiance field loyihasi ustida tajriba o'tkazayotgan edim. Menga low poly uslubi yoqdi va uni
+ushbu kurs rasmlari uchun ishlatmoqchi edim.
+
+Bosh sahifadagi rasmlar uchun men astronavt, raketa va kompyuter bo'lishini xohladim.
+
+Men low poly rasmlar yaratish bo'yicha [r/StableDiffusion](https://www.reddit.com/r/StableDiffusion/)
+va boshqa saytlarda ko'p tadqiqot qildim, lekin juda foydali narsa topa olmadim.
+
+Men shunchaki DALLE va quyidagi promptdan boshlashga va natijani ko'rishga qaror qildim.
+
+
+**Prompt:**
+
+<AIInput>
+Low poly oq va ko‘k raketa oyga uchayotgan, oldida siyrak yashil
+  meadow
+</AIInput>
+
+
+
+
+
+
+Natijalar birinchi urinish uchun ancha yaxshi deb o'yladim; ayniqsa
+pastki chapdagi raketa menga yoqdi.
+
+Keyin, men xuddi shu uslubda kompyuter xohladim:
+
+
+**Prompt:**
+
+<AIInput>
+Low poly oq va ko‘k kompyuter siyrak yashil o‘tloqda turibdi
+</AIInput>
+
+
+
+
+Nihoyat, menga astronavt kerak edi! Ushbu prompt ish berdi:
+
+
+**Prompt:**
+
+<AIInput>
+Low poly oq va ko‘k astronavt siyrak yashil o‘tloqda, orqa fonda low
+  poly tog‘lar bilan
+</AIInput>
+
+
+
+
+Ikkinchisi yomon emas deb o'yladim.
+
+Endi menda astronavt, raketa va kompyuter bor edi. Men ulardan mamnun edim,
+shuning uchun ularni bosh sahifaga joylashtirdim. Bir necha kundan so'ng va do'stlarimning fikridan keyin
+uslub bir xil emasligini angladim 😔.
+
+Men [r/StableDiffusion](https://www.reddit.com/r/StableDiffusion/) da yana tadqiqot qildim va odamlar isometric so'zini ishlatayotganini ko'rdim. DALLE o'rniga Stable Diffusion dan foydalanib, buni sinab ko'rishga qaror qildim.
+Shuningdek, promptimga ko'proq modifikatorlar qo'shishim kerakligini angladim
+uslubni cheklash uchun. Mana bu promptni sinab ko'rdim:
+
+
+**Prompt:**
+
+<AIInput>
+Low poly dunyo, oq kostyum va ko‘k vizorga ega astronavt
+  siyrak yashil o‘tloqda, orqa fonda low poly tog‘lar bilan. Juda
+  batafsil, isometric, 4K
+</AIInput>
+
+
+
+
+Bular yaxshi emas edi, shuning uchun raketadan boshlashga qaror qildim
+
+
+**Prompt:**
+
+<AIInput>
+Low poly dunyo, oq va ko‘k raketa siyrak yashil o‘tloqdan uchib chiqmoqda,
+  orqa fonda low poly tog‘lar bilan. Juda batafsil,
+  isometric, 4K
+</AIInput>
+
+
+
+
+Bular unchalik yaxshi emas, lekin bu yerda biroz takrorlashdan so'ng, men quyidagiga erishdim
+
+
+
+Endi menga yaxshiroq noutbuk kerak edi:
+
+
+**Prompt:**
+
+<AIInput>
+Low poly dunyo, oq va ko‘k noutbuk siyrak yashil o‘tloqda turibdi
+  orqa fonda low poly tog‘lar bilan. Ekran to‘liq ko‘k.
+  Juda batafsil, isometric, 4K
+</AIInput>
+
+
+
+
+Men ba'zi nomuvofiq natijalarni oldim; pastki o'ngdagisi yoqdi, lekin boshqa yo'nalishga qaror qildim.
+
+
+**Prompt:**
+
+<AIInput>
+Low poly dunyo, siyrak yashil o‘tloqda porlayotgan oq va ko‘k qimmatbaho tosh
+  orqa fonda low poly tog‘lar bilan. Juda batafsil,
+  isometric, 4K
+</AIInput>
+
+
+
+
+Bu to'g'ri emas edi. Keling, sehrli va nur sochuvchi narsani sinab ko'ramiz.
+
+
+**Prompt:**
+
+<AIInput>
+Past poligonli dunyo, unda oppoq va ko‘k nur sochuvchi qimmatbaho tosh sehrli tarzda
+  ekranning o‘rtasida, siyrak yashil maysazor ustida, orqa fonda past poligonli tog‘lar bilan
+  joylashgan. Juda batafsil, izometrik, 4K
+</AIInput>
+
+
+
+
+Menga bular yoqdi, lekin tosh ekranning o'rtasida bo'lishini xohlagandim.
+
+
+**Prompt:**
+
+<AIInput>
+Past poligonli dunyo, unda ko‘k nur sochuvchi qimmatbaho tosh sehrli tarzda
+  ekranning o‘rtasida, siyrak yashil maysazor ustida, orqa fonda past poligonli tog‘lar bilan
+  joylashgan. Juda batafsil, izometrik, 4K
+</AIInput>
+
+
+
+
+Shu atrofda, men SD'ning oldingi tasvirdan keyingi tasvirlarga ta'sir ko'rsatish imkoniyatidan foydalandim.
+Va shunday qilib men quyidagiga erishdim:
+
+
+
+Nihoyat, men astronavtga o'tdim.
+
+
+**Prompt:**
+
+<AIInput>
+Past poligonli dunyo, unda oq kostyum va ko‘k vizorga ega astronavt
+  siyrak yashil maysazorda, orqa fonda past poligonli tog‘lar bilan o‘tiribdi. Juda
+  batafsil, izometrik, 4K
+</AIInput>
+
+
+
+
+Bu vaqtda, uchta tasvirim o'rtasidagi uslub bir xilligidan yetarlicha mamnun bo'ldim va ularni
+veb-saytda ishlatishga qaror qildim. Mening asosiy xulosalarim shundan iborat bo'ldiki, bu juda iterativ, tadqiqotga boy jarayon bo'ldi,
+va men turli promptlar va modellarda tajriba o'tkazganimda o'z kutganlarim va g'oyalarimni o'zgartirishimga to'g'ri keldi.

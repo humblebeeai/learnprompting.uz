@@ -1,108 +1,124 @@
-<p align="center">
-  <img width="100%" src="https://github.com/kavaivaleri/Learn_Prompting/blob/main/astronaut_welcome.webp" alt="Learn Prompting, astronaut">
-</p>
+# Learn Prompting (Uzbek Edition)
 
-[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Awesome%20Prompting%20Resources%20-%20a%20collection%20of%20awesome%20lists%20related%20to%20prompt%20engineering%20by%20@learnprompting&url=https://github.com/trigaten/Learn_Prompting) [![Twitter](https://img.shields.io/twitter/url?label=Follow%20%40learnprompting&style=social&url=https%3A%2F%2Ftwitter.com%2Flearnprompting)](https://twitter.com/learnprompting)
-[![](https://dcbadge.vercel.app/api/server/7enStJXQzD?compact=true&style=flat)](https://discord.gg/7enStJXQzD)
-![Website](https://img.shields.io/website?down_message=offline%20%3A%28&up_message=learnprompting.org&url=https%3A%2F%2Flearnprompting.org)
-
-<h1 align="center">
-    <strong>Learn Prompting — Your Go-To Resource for Mastering Generative AI</strong>
-</h1>
-<p align="center">
-Learn prompt engineering and generative AI with our free resources, courses, and on-demand webinars.
-
-<p align="center">
-<strong>
-<a href="https://learnprompting.org/">Website</a> • <a href="https://discord.com/invite/learn-prompting-1046228027434086460">Discord</a> • <a href="https://x.com/learnprompting">Twitter (X)</a> • <a href="https://www.linkedin.com/company/learn-prompting/">LinkedIn</a> • <a href="https://learnprompting.beehiiv.com/subscribe">Newsletter</a> • <a href="https://learnprompting.org/courses/chatgpt-for-everyone">Free ChatGPT Course</a> • <a href="https://learnprompting.org/docs/introduction">Free Prompt Engineering Guide</a> • <a href="https://learnprompting.org/courses">Course Catalog</a> • <a href="https://learnprompting.org/contact-sales">Book a Demo</a> • <a href="mailto:team@learnprompting.org">Contact us</a>
-
-</strong>
-</p>
-
-## What is Learn Prompting?
-The **Learn Prompting** team are creators of:
-- The [free Prompt Engineering Guide](https://learnprompting.org/docs/introduction), cited by OpenAI and Google.
-- [15 courses on Generative AI](https://learnprompting.org/courses) to help you develop cutting-edge AI skills.
-- [On-demand workshops and training](https://learnprompting.org/for-business) for individuals and businesses.
-- [HackAPrompt](https://www.hackaprompt.com/), the largest AI red-teaming competition ever.
-
-## 📢 Announcements and Updates
-
-- 🏆 **[HackAPrompt 2.0](https://www.hackaprompt.com/)** is here with **$500,000 in prizes** and 5 exciting tracks! [Join the waitlist](https://docs.google.com/forms/d/e/1FAIpQLScWexmVn_BWYhBsfZY7udh-iM8j2ZVyEoFLt3xhVVxP4gKFHA/viewform) and learn more in this [article](https://learnprompting.org/blog/announce-hackaprompt-2).
-- 🎓 We’ve launched a cohort-based **AI Red Teaming and AI Safety course**! [Enroll here](https://maven.com/learn-prompting-company/ai-red-teaming-and-ai-safety-masterclass).
-- 💼 Our team has hosted workshops at OpenAI, Microsoft, Deloitte, Dropbox, and more. [Contact us](https://learnprompting.org/for-business) for custom solutions.
-
-### Learn Prompting Research
-- **[The Prompt Report: A Systematic Survey of Prompting Techniques](https://trigaten.github.io/Prompt_Survey_Site/)** ([blog post](https://learnprompting.org/blog/the_prompt_report)): The most comprehensive study of prompting techniques to date.
-- **[Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs](https://arxiv.org/abs/2311.16119):** Insights from analyzing over 600K adversarial prompts across state-of-the-art LLMs.
+👋 **Welcome to the Learn Prompting Uzbek Edition!**
+This is a collaborative open-source project between [Learn Prompting](https://learnprompting.org) and [HumblebeeAI](https://humblebee.ai) to bring high-quality AI education to Uzbekistan.
 
 ---
 
-## 🚀 Contribution Guidelines
+## 📋 Overview
 
-We welcome contributions of all kinds! Here’s how you can help:
+This project uses [Docusaurus 2](https://docusaurus.io/), a modern static website generator, to host the curriculum. It includes custom localization, a dedicated "About Collaboration" page, and alignment with national AI initiatives.
 
-- Suggest new **content** ideas or improvements.
-- **Translate** resources into other languages.
-- Contribute **artwork** or additional resources.
-- Help fix **typos** or improve clarity.
+## 🚀 Installation & Setup
 
-Every contribution is appreciated, no matter how big or small! ❤️
+### Prerequisites
 
-## Local Development
+- Node.js version 18.0 or above
+- Docker (optional, for containerized deployment)
 
-### First Steps
-Before you start, ensure you have the following installed:
-- **[Visual Studio Code](https://code.visualstudio.com/)**
-- **[Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)**
-- **[Node.js](https://nodejs.org/en/download/)** (version **18.0.0** or higher, `node -v`)
+### Local Development
 
-If you're on macOS or Linux, you can use **[Homebrew](https://brew.sh/)**, a package manager, to install the necessary tools.
+1. **Clone the repository:**
 
-To begin:
-1. Clone the repository from GitHub:
-   ```bash
-   git clone https://github.com/trigaten/Learn_Prompting_nextjs.git
-   ```
-2. Navigate to the project folder:
-   ```bash
-   cd Learn_Prompting_nextjs
-   ```
+    ```bash
+    git clone https://github.com/humblebeeai/Learn_Prompting.git
+    cd Learn_Prompting
+    ```
 
-### Run the Website Locally
-Once the setup is complete, you can run the website locally to preview your changes:
+2. **Install dependencies:**
 
-1. Ensure you are using Node.js version **18.0.0** or higher:
-   ```bash
-   node -v
-   ```
-2. Install the required Node.js modules:
-   ```bash
-   npm install
-   ```
-3. Run the website in development mode:
-   ```bash
-   npm run dev
-   ```
+    ```bash
+    npm install
+    ```
 
-This will start a local development server, and your changes will be reflected live in the browser.
+3. **Start the development server:**
 
-## ❤️ A Huge Thanks to All Contributors
-We’re grateful for all the amazing contributions from our community! 🙌
-Check out our contributors below:
+    ```bash
+    npm start
+    ```
 
-<p align="center"> <a href="https://github.com/trigaten/Learn_Prompting/graphs/contributors"> <img src="https://contrib.rocks/image?repo=trigaten/Learn_Prompting" alt="Contributors"> </a> </p>
+    The site will open at `http://localhost:3000`.
 
-## Cite
+## ⚙️ Configuration
 
-Use the provided GitHub citation in this repository:
+Copy the example environment file to `.env` to configure the application:
 
+```bash
+cp .env.example .env
 ```
-@software{Schulhoff_Learn_Prompting_2022,
- author = {Schulhoff, Sander and Community Contributors},
- month = dec,
- title = {{Learn Prompting}},
- url = {https://github.com/trigaten/Learn_Prompting},
- year = {2022}
-}
-```
+
+| Variable | Description | Default |
+| :--- | :--- | :--- |
+| `LP_PORT` | Port inside the container | `80` |
+| `LP_EXTERNAL_PORT` | Port exposed to host | `3000` |
+
+## 🐳 Deployment (Docker)
+
+To run the application in a Docker container (recommended for production):
+
+1. **Build and run:**
+
+    ```bash
+    docker compose up --build -d
+    ```
+
+2. **Verify:**
+    Access the site at `http://localhost:3000`.
+    Health Check: `http://localhost:3000/health.json`
+
+## 🩺 Health Check
+
+The application exposes a health check endpoint at `/health.json`.
+
+- **URL:** `http://localhost:3000/health.json`
+- **Response:** `{"status": "ok", "service": "learn-prompting", ...}`
+
+This is actively monitored by the Docker container's `HEALTHCHECK` instruction.
+
+## 🛠 Troubleshooting
+
+**Docker Connection Failed:**
+> `Cannot connect to the Docker daemon...`
+Ensure Docker Desktop is running.
+
+**Port Conflicts:**
+If port 3000 is in use, modify `LP_EXTERNAL_PORT` in your `.env` file.
+
+---
+
+## ✅ Pre-Deployment Checklist
+
+Ensure all items are checked before deploying to production:
+
+### Project Structure & Organization
+
+- [x] Source code inside `src/`.
+- [x] Root contains `Dockerfile`, `docker-compose.yml`, `.gitignore`, `.dockerignore`.
+- [x] No hardcoded secrets.
+
+### Git Management
+
+- [x] `.gitignore` properly configured.
+- [x] No unnecessary files (build outputs, etc.) committed.
+
+### Dockerization
+
+- [x] `Dockerfile` uses multi-stage builds.
+- [x] `docker-compose.yml` configured.
+- [x] Image size optimized (using `nginx:alpine`).
+- [x] `HEALTHCHECK` implemented in Dockerfile.
+
+### Configuration
+
+- [x] No hardcoded configs.
+- [x] `.env.example` included with `LP_` prefix.
+
+### Health Checks
+
+- [x] `/health.json` endpoint implemented.
+- [x] Docker container monitors health status.
+
+### Documentation
+
+- [x] `README.md` is comprehensive (this file).
+- [x] API/Service documentation included.

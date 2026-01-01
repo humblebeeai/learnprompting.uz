@@ -1,0 +1,8 @@
+{
+  "label": "🖼️ Tasvir Prompti",
+  "position": 40,
+  "link": {
+    "type": "generated-index",
+    "description": "DALLE va Stable Diffusion kabi matnni tasvirga aylantirish modellari uchun prompting muhandisligi!"
+  }
+}

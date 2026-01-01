@@ -1,0 +1,117 @@
+---
+sidebar_position: 20
+title: "🟢 Prompt Engineering"
+---
+
+# 🟢 Prompt Engineering
+
+## Prompt Engineering nima?
+
+Prompt engineering - bu generativ sun'iy intellekt modellarining samaradorligini oshirish uchun promptlarni yaratish va takomillashtirish jarayoni. Bu ChatGPT, Midjourney yoki Gemini kabi vositalarga aniq kirishlarni berish, sun'iy intellektni yanada aniq va kontekstga mos natijalar berishga yo'naltirishni o'z ichiga oladi.
+
+Sun'iy intellekt modeli kerakli javobni bermasa, prompt engineering bizga natijani optimallashtirish uchun promptni takrorlash va sozlash imkonini beradi. Bu usul generativ modellarning cheklovlarini, masalan, mantiqiy xatolar yoki javoблардagi etarli bo'lmagan kontekstni bartaraf etish uchun ayniqsa foydalidir.
+
+## Nima uchun Prompt Engineering muhim?
+
+Generativ sun'iy intellekt modellari foydalanuvchilar tomonidan beriladigan kirishga (yoki "prompt"ga) katta darajada tayanadi. Yaxshi tuzilgan prompt modelning imkoniyatlaridan foydalanish va uning tegishli, aniq javoblar berishini ta'minlash uchun kalitdir.
+
+Prompt engineering muhim, chunki:
+
+* U noaniq, umumiy so'rovlar va aniq, amaliy natijalar o'rtasidagi tafovutni bartaraf qiladi.
+* U xatolarni kamaytirish ga yordam beradi, masalan, ahamiyatsiz kontent yoki noto'g'ri javoblar yaratish.
+* U sun'iy intellekt ijodiy yozuv, rasm yaratish yoki hatto kod ishlab chiqish kabi vazifalarni minimal keyingi qayta ishlashni talab qilgan holda bajarishini ta'minlaydi.
+
+## Prompt ishlamasa nima bo'ladi?
+
+Ba'zan Gen AI'lar berilgan promptga noto'g'ri javob qaytaradi. Masalan, ular sonlarni ko'paytirishda unchalik kuchli emas va ko'pincha **ishonch bilan noto'g'ri javob** berishi mumkin. Quyidagi promptni ChatGPT'ga berib ko'ring:
+
+
+<AIInput>
+923 × 99 nechaga teng?
+</AIInput>
+
+<AIOutput>
+923 × 99 = 91 677 ga teng.
+</AIOutput>
+
+ChatGPT bu yerda noto'g'ri javob berdi (to'g'ri javob - **91,377**). Endi esa promptni o'zgartirib, ChatGPT'dan masalani **bosqichma-bosqich o'ylab chiqishni** so'raymiz.
+
+<AIInput>
+  923 × 99 nechaga teng? Keling, bosqichma-bosqich hisoblaylik. Har bir had uchun 0 lar sonini to‘liq yozing.
+</AIInput>
+
+<AIOutput>
+923 ni 99 ga ko‘paytirish uchun uni kichikroq bosqichlarga ajratamiz:
+
+1-qadam: Har bir had uchun nol (0) larni to‘liq yozamiz:
+923 × 99 = 923 × 90 + 923 × 9
+
+2-qadam: Birinchi sonni 9 ga ko‘paytiramiz:
+923 × 9 = 8307
+
+3-qadam: Birinchi sonni 90 ga ko‘paytiramiz (bitta nol qo‘shiladi):
+923 × 90 = 83070
+
+4-qadam: Natijalarni qo‘shamiz:
+8307 + 83070 = 91377
+
+Demak, 923 ni 99 ga ko‘paytirish natijasi 91,377 ga teng.
+</AIOutput>
+
+Qiziq tomoni shundaki, ushbu qo'shimcha ko'rsatmalar yordamida ChatGPT masalani to'g'ri yecha oldi. Buning sababi - model barcha hisoblash jarayonini yozib chiqdi va xatoga yo'l qo'ymadi. Gen AI'larning matematik imkoniyatlarini **prompt engineering** orqali yaxshilash mumkin. Endi boshqa bir misolni ko'rib chiqamiz.
+
+<Caution>
+  ChatGPT
+  <a href="/docs/basics/configuration_hyperparameters"> non-deterministic </a>
+  bo'lgani sababli, hatto ushbu prompt ham ba'zan ishlamasligi mumkin.
+  Siz 91,177 yoki 91,077 kabi javoblarni ham ko'rishingiz ehtimol.
+</Caution>
+
+### ArchaeologistAI misoli
+
+Bu safar ChatGPT'dan biz o'ylab topayotgan yangi, uydirma AI mahsulot - **ArchaeologistAI** haqida marketing tvit yozishni so'raymiz. ArchaeologistAI mashhur arxeologlar haqida hikoyalar aytib beradi.
+
+<AIInput>
+ArchaeologistAI haqida tvit yozing.
+</AIInput>
+
+<AIOutput>
+  "🔍 ArchaeologistAI bilan hayajonli davr boshlanmoqda! Ushbu ilg‘or texnologiya
+  arxeologiya sohasini tubdan o‘zgartirib, qadimiy sirlarni ochishga va o‘tmishimizni
+  yana-da chuqurroq anglashga yordam bermoqda. Qanday yangi topilmalarni taqdim
+  etishini intiqlik bilan kutyapman! #AI #Archaeology"
+</AIOutput>
+
+Bu tvit aniq emas, chunki ArchaeologistAI yangi narsalarni kashf qilmaydi, u faqat hikoyalar aytib beradi. Biroq bu ChatGPT'ning xatosi emas - u ArchaeologistAI haqida hech qanday ma'lumotga ega emas edi. Keling, promptga kerakli ma'lumotni qo'shamiz.
+
+<AIInput>
+  ArchaeologistAI haqida tvit yozing: ArchaeologistAI mashhur arxeologlar haqidagi hikoyalarni so‘zlab beradi.
+</AIInput>
+
+<AIOutput>
+  "🔍 Mashhur arxeologlarning hayratlanarli hikoyalarini #ArchaeologistAI bilan
+  kashf eting! Indiana Jones'dan tortib Mary Leakey'gacha - ushbu AI hikoyachi
+  ularning sarguzashtlarini jonlantirib, tarixni sevuvchilarni ilhomlantiradi. 🌍
+  #Archaeology"
+</AIOutput>
+
+Bu ancha yaxshi natija! Endi ChatGPT'dan tvitni **Indiana Jones uslubida** yozishni so'raymiz.
+
+<AIInput>
+  Indiana Jons uslubida ArchaeologistAI haqida tvit yozing:
+  ArchaeologistAI mashhur arxeologlar haqidagi hikoyalarni so‘zlab beradi.
+</AIInput>
+
+<AIOutput>
+  "Shlyapangizni va qamchingizni tayyorlang! 🎩🔥 ArchaeologistAI - xuddi yoningizda
+  Sallah turgandek, afsonaviy arxeologlarning qadimiy ibodatxonalar va yashirin
+  xazinal bilan bog'liq sarguzashtlarini hikoya qiladi! 🗺️💎 Tarix bo'ylab raqamli
+  sarguzashtga tayyor bo'ling!
+  #ArchaeologistAI #UnearthTheLegends"
+</AIOutput>
+
+Aynan mana shu xabar arxeologiya ishqibozlari uchun mos bo'lishi mumkin! Bir nechta promptlarni sinab ko'rish orqali qaysi biri eng yaxshi natija berishini aniqlashimiz mumkin.
+
+## Xulosa
+
+Promptni vaqt o'tishi bilan takomillashtirib borish jarayoni **prompt engineering** deb ataladi. Birinchi urinishdayoq mukammal prompt yozish deyarli imkonsiz, shuning uchun promptni qayta-qayta yaxshilashni o'rganish muhim. Prompt engineering'da muvaffaqiyatga erishish asosan ko'p mashq qilish (trial and error) orqali keladi. Ushbu bo'limdagi keyingi maqolalar sizni prompt engineering jarayonida qo'llashingiz mumkin bo'lgan turli prompting strategiyalari bilan tanishtiradi.

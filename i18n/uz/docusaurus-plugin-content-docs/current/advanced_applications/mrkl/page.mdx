@@ -1,0 +1,94 @@
+---
+sidebar_position: 2
+title: "🟡 LLM lar asboblar yordamida foydalanish"
+---
+
+
+# LLM lar vositalardan foydalanishi
+
+MRKL tizimlari (@karpas2022mrkl) (Modulli mantiq, bilim va til, "miracle" deb talaffuz qilinadi)
+bu **neuro-symbolic arxitektura** bo'lib, LLMs (neyron hisoblash) va tashqi
+kalkulyatorlar (ramziy hisoblash) kabi vositalar yordamida murakkab muammolarni hal qilish.
+
+MRKL tizimi bir qator modullardan (masalan, kalkulyator, ob-havo API, ma'lumotlar bazasi va boshqalar) va kiruvchi tabiiy til so'rovlarini mos modulga qanday “yo'naltirish”ni hal qiladigan routerdan iborat.
+
+MRKL tizimining oddiy namunasi bu LLM bo'lib, u
+kalkulyator ilovasidan foydalaning. Bu bitta modul tizimi bo'lib, unda LLM marshrutizator hisoblanadi.
+So'ralganda, `What is 100*100?`, LLM quyidagini tanlashi mumkin
+promptdan raqamlarni ajrating va so'ng MRKL System'ga kalkulyatordan foydalanishni ayting
+natijani hisoblash uchun ilova. Bu quyidagicha ko'rinishi mumkin:
+
+<AIInput>
+  100*100 nechaga teng?
+  KALKULYATOR[100*100]
+</AIInput>
+
+MRKL tizimi `CALCULATOR` so'zini ko'radi va `100*100` ni kalkulyator ilovasiga kiritadi.
+Bu oddiy g'oya turli xil ramziy hisoblash vositalariga osonlikcha kengaytirilishi mumkin.
+
+Quyidagi qo'shimcha dastur misollarini ko'rib chiqing:
+
+- Moliyaviy ma'lumotlar bazasi haqida savollarga javob bera oladigan chatbot
+foydalanuvchi matnidan SQL so'rovi tuzish uchun ma'lumotlarni ajratib olish.
+
+<pre>
+  <p>What is the price of Apple stock right now?</p>
+
+  <span className="bluegreen-highlight">
+Joriy narx DATABASE[SELECT price FROM stock WHERE company =
+"Apple" VA vaqt = "hozir"].
+  </span>
+</pre>
+
+- Ob-havo haqidagi savollarga javob bera oladigan chatbot
+promptdan ma'lumot olib, ob-havo API yordamida ma'lumotni olish.
+
+<pre>
+  <p>What is the weather like in New York?</p>
+
+  <span className="bluegreen-highlight">
+Ob-havo WEATHER_API[New York].
+  </span>
+</pre>
+
+- Yoki hatto bir nechta ma'lumot manbalariga tayanadigan ancha murakkab vazifalar, masalan,
+  following:
+
+
+
+
+
+Keyin, men `Specification` yorlig'iga o'tdim va ma'lumotlar to'plamini `input` bloki yordamida yukladim.
+
+
+
+Keyingi bosqichda men raqamlar va amallarni ajratib oladigan `llm` blokini yaratdim. E'tibor bering, qanday qilib
+promptda men Google'ning kalkulyatoridan foydalanishimizni aytdim. Men foydalanadigan model (GPT-3)
+ehtimol, pretraining jarayonida Google kalkulyatori haqida biroz ma'lumotga ega.
+
+
+
+Keyin, men ba'zi oddiy javascript kodini olib tashlash uchun ishlaydigan `code` blokini yaratdim
+natijadan bo'sh joylarni o'chirish.
+
+
+
+Nihoyat, men qayta formatlangan tenglamani Google kalkulyatoriga yuboradigan `search` blokini yaratdim.
+
+
+
+Quyida biz yakuniy natijalarni ko'rishimiz mumkin, ularning barchasi to'g'ri!
+
+
+
+Ushbu playgroundni bemalol klonlab, tajriba o'tkazishingiz mumkin [bu yerda](https://dust.tt/w/ddebdfcdde/a/98bdd65cb7).
+
+## Izohlar
+
+MRKL [AI21](https://www.ai21.com/) tomonidan ishlab chiqilgan va dastlab ularning
+J-1 (Jurassic 1)(@lieberjurassic) LLM.
+
+## Boshqalar
+
+MRKL tizimining [bu misolini](https://python.langchain.com/docs/modules/agents/how_to/mrkl) ko'ring
+LangChain yordamida yaratilgan.

@@ -1,0 +1,276 @@
+---
+sidebar_position: 60
+title: "🟢 Rollarni tayinlash"
+description: "Rol prompting - bu AI tomonidan yaratilgan matn uslubini boshqarish va aniqligini oshirish usuli."
+---
+
+
+# Rollarni tayinlash
+
+
+<div style={{ textAlign: "center"}}>
+  <Image
+    src={"/assets/role_prompt.png"}
+    style={{
+      maxWidth: "800px",
+      width: "100%",
+      height: "auto",
+      margin: "auto",
+    }}
+  />
+</div>
+<br />
+
+- Rol promptlarini tushuning
+- Rol promptlaridan matn uslubini sozlash va aniqligini oshirish uchun foydalaning
+
+
+Rol prompting[^a] - bu AI tomonidan yaratilgan matn uslubini boshqarish uchun ishlatiladigan usuldir (@shanahan2023roleplay)(@li2023camel)(@santu2023teler). Bu, shuningdek, AI matematik masalalarni yechishda aniqligini oshirishi mumkin. Role prompting ni amalga oshirish AI ga "ovqat tanqidchisi bo'l" yoki "detektiv kabi harakat qil" deb ko'rsatma berish kabi oddiydir. Role prompting keng qo'llaniladigan usul bo'lib, ushbu saytdagi ko'plab misollarda ishlatiladi.
+
+## Matnni uslublash
+
+Rol prompting ko'pincha matn uslubini o'zgartirish uchun ishlatiladi. Bu, AIdan ma'lum bir odam bo'lib ko'rinishni yoki ma'lum bir tarzda harakat qilishni so'rashni o'z ichiga oladi, shuning uchun u yozish uslubini belgilangan rolga mos ravishda o'zgartiradi. Bu usul yordamida taqdim etilayotgan ma'lumotning ohangi, uslubi va hatto chuqurligini o'zgartirish mumkin. Keling, bu tushunchani oziq-ovqat sharhi misolida ko'rib chiqamiz.
+
+### Oziq-ovqat sharhi namunasi
+
+Sharh yozishda, foydalanayotgan platformangiz va yozayotgan auditoriyangizga qarab yondashuvingizni moslashtirish muhimdir. Google Reviews, TripAdvisor va Yelp kabi turli saytlar bo'ylab bir xil sharhni nusxalash va joylashtirish samarali strategiya emas, ayniqsa agar siz jurnal yoki blog posti uchun oziq-ovqat tanqidchisi sifatida yozayotgan bo'lsangiz. Sharhingiz mo'ljallangan auditoriyangizga yetib borishini ta'minlash uchun uzunligi, uslubi, tili va ohangi kabi omillarni hisobga oling va ushbu omillardan foydalanib, o'quvchilaringizning qiziqishlari va kutganlariga to'g'ridan-to'g'ri murojaat qiladigan sharh yarating. O'ylangan yondashuv va sifatli mazmunga e'tibor bilan, siz yozayotgan pizza joyining mohiyatini to'liq aks ettiruvchi sharh yaratishingiz mumkin. Keling, rolsiz oddiy prompt bilan boshlaymiz.
+
+
+**Prompt:**
+
+<AIInput>
+[pizza joy] haqida sharh yozing.
+</AIInput>
+
+
+
+**AI javobi:**
+
+<AIOutput>
+Yaqinda men [random pizza place] ni sinab ko‘rish baxtiga muyassar bo‘ldim va aytishim kerakki
+  men juda hayratda qoldim. Pitsa mukammal darajada pishirilgan edi va
+  toppinglar yangi va mazali edi. Qobig'i yengil va xırom edi, va
+  sous aynan to'g'ri darajada nordon edi. Xizmat ham juda yuqori darajada edi;
+  xodimlar do'stona va e'tiborli edi. Umuman olganda, men a'lo tajriba oldim va
+  albatta [random pizza place] ni mazali taom izlayotgan har kimga tavsiya qilaman
+  pizza."
+</AIOutput>
+
+
+Bu natija anchagina yaxshi, lekin keling, AI oziq-ovqat tanqidchisi rolini o'z zimmasiga olganda nima bo'lishini ko'ramiz.
+
+
+**Prompt:**
+
+<AIInput>
+Siz oziq-ovqat tanqidchisisiz. [tasodifiy pizza joyi] haqida sharh yozing.
+</AIInput>
+
+
+
+**AI javobi:**
+
+<AIOutput>
+Yaqinda men shaharning markazida joylashgan qulay [Pizza Place] pizzeriyasida ovqatlandim. Uning kichik hajmiga qaramay, restoran ta'mi jihatidan juda katta taassurot qoldiradi.
+
+  Pitsa mukammal darajada pishirilgan edi. Qobig'i yoqimli yupqa va xushbo'y, ustiga qo'yilgan mahsulotlar esa yangi va mazali edi. Ta'mlarning uyg'unligi juda mazali edi. Marinara sousi boy va mazali bo'lib, ustiga qo'yilgan mahsulotlarga juda mos tushgan edi. Pishloq esa yumshoq va og'izda erib ketardi.
+
+  Xizmat ham a'lo darajada edi. Xodimlar do'stona va e'tiborli edi. Ular savollarga tezda javob berishdi va taomimiz o'z vaqtida yetkazib berilishiga ishonch hosil qilishdi.
+
+  Umuman olganda, [Pizza Place] dagi tajribam ajoyib bo‘ldi va mazali pizza izlayotganlarga uni chin dildan tavsiya qilaman.
+</AIOutput>
+
+
+Ko'rib turibmizki, u ko'proq tafsilot qo'shmoqda va biroz chuqurroq tahlil qilmoqda. Endi esa bir qadam oldinga boramiz va uni Michelin qo'llanmasi uchun yozuvchi rolini bajarishini so'raymiz:
+
+
+**Prompt:**
+
+<AIInput>
+Siz Michelin Guide uchun yozayotgan oziq-ovqat tanqidchisiz. Quyidagining sharhini yozing
+  [tasodifiy pizza joyi].
+</AIInput>
+
+
+
+**AI javobi:**
+
+<AIOutput>
+"[random city] markazida joylashgan [random pizza place] mashhur joy hisoblanadi"
+pitsa ishqibozlari uchun. Ichkariga kirganingizda, iliq va yoqimli muhit hamda hid
+yangi pishirilgan pizza hidlari sizni o'zingizni uyda his qilishingizga sabab bo'ladi. Menyuda
+klassik pizzalarning keng tanlovi, shuningdek, ba'zi noyob va ijodiy variantlar.
+Qobig'i mukammal darajada qarsildoq va ustidagi mahsulotlar har doim yangi hamda mazali.
+Xizmat do'stona va e'tiborli, narxlar esa o'rtacha.
+siz tezkor tamaddi yoki bemalol kechki ovqat izlayotgan bo'lsangiz, [random pizza place] bu
+pitsa istagingizni qondirishga ishonch hosil qiladi.
+</AIOutput>
+
+
+Endi ko'rishimiz mumkinki, GPT-3 ga oziq-ovqat tanqidchisi rolini berish sharhni o'z tavsifida yanada “boy” va “professional” qilib ko'rsatadi.
+
+Siz buni o'zingiz bu yerda sinab ko'rishingiz mumkin:
+
+<iframe
+  src="https://embed.learnprompting.org/embed?config=eyJ0b3BQIjoxLCJ0ZW1wZXJhdHVyZSI6MC40LCJtYXhUb2tlbnMiOjI1Niwib3V0cHV0IjoiWWFxaW5kYSBtZW4gc2hhaGFybmluZyBtYXJrYXppZGEgam95bGFzaGdhbiBzaGluYW0gW1BpenphIEpveWldIHBpdHNhcml5YXNpZGEgb3ZxYXRsYW5pc2hkYW4gbWFtbnVuIGJv4oCYbGRpbS4gUmVzdG9yYW4ga2ljaGlrIGJv4oCYbGlzaGlnYSBxYXJhbWF5LCB0YeKAmW1pIGppaGF0aWRhbiBqdWRhIGthdHRhIHRhYXNzdXJvdCBxb2xkaXJkaS4iLCJwcm9tcHQiOiJTaXogb3ppcS1vdnFhdCB0YW5xaWRjaGlzaXNpei5cblxuUGl0c2EgcmVzdG9yYW5pIHVjaHVuIG5hbXVuYXZpeSBzaGFyaCAocmV2aWV3KSB5b3ppbmcuIiwibW9kZWwiOiJ0ZXh0LWRhdmluY2ktMDAzIn0%3D"
+  style={{
+    width: "100%",
+    height: "325px",
+    border: "0",
+    borderRadius: "4px",
+    overflow: "hidden",
+  }}
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
+
+### Email yozish namunasi
+
+Keling, rol prompting yordamida matnni uslublashning yana bir misolini ko'rib chiqamiz. ChatGPT kabi til modelidan elektron pochta xatini tayyorlash uchun foydalanganda, AI'ning “roli”ni hisobga olish u yaratadigan mazmunni shakllantirishda muhim ahamiyatga ega. Sizning natijaviy elektron pochtangiz qanday yo'nalishda bo'lishini xohlayotganingiz, AI'ga qaysi rolni yuklashingiz kerakligini belgilaydi.
+
+Aytaylik, siz AIga mijozga yetkazib berish jadvalidagi kechikish haqida xabar beruvchi elektron pochta yozishni topshirdingiz, bu kechikish logistik muammolar tufayli yuzaga kelgan. Sizning maqsadingiz ushbu yangilanishni samarali yetkazish va shu bilan birga mijozning xizmatlaringizga bo'lgan ishonchini saqlab qolishdir. Modelga turli rollarni berib, siz turli xil natijalarni olishingiz mumkin.
+
+Masalan, mumkin bo'lgan rollardan biri bu aloqa bo'yicha mutaxassis bo'lib, uning uslubi aniq, professional va qisqa bo'lishi mumkin:
+
+
+**Prompt:**
+
+<AIInput>
+Siz aloqa bo‘yicha mutaxassissiz. Mijozingizga maslahat beruvchi elektron pochta xabarini tayyorlang.
+  yetkazib berish jadvalidagi kechikish haqida, bu logistika muammolari sababli yuzaga kelganini ayting.
+</AIInput>
+
+
+
+**AI javobi:**
+
+<AIOutput>
+Mavzu: Buyurtmangiz bo‘yicha muhim yangilanish
+
+Hurmatli [Mijozning ismi],
+
+Umid qilamanki, ushbu xat sizni yaxshi holatda topadi. Sizga buyurtmangiz yetkazib berilishida kechikish yuzaga kelgani haqida xabar bermoqchiman. Afsuski, biz logistik muammo bilan duch keldik va bu qisqa muddatli to'xtalishga sabab bo'ldi. Ushbu muammoni tezda hal qilish uchun barcha choralarni ko'rayotgan bo'lsak-da, buyurtmangizni [yangi taxminiy yetkazib berish sanasi] ichida yetkazib berilishini kutmoqdamiz.
+
+Keltirilgan noqulayliklar uchun chuqur uzr so'raymiz va jarayonni tezlashtirish uchun qo'limizdan kelganini qilayotganimizni sizga ma'lum qilmoqchimiz. Sabr-toqatingiz uchun katta rahmat. Agar savol yoki tashvishlaringiz bo'lsa, biz bilan bog'lanishdan tortinmang.
+
+Tushunganingiz uchun katta rahmat.
+
+Eng yaxshi tilaklar bilan,
+[Your Name]
+</AIOutput>
+
+
+Yoki, modeldan marketing bo'yicha mutaxassis rolini bajarishini so'rab, ko'proq ishontirish, ijobiylik va munosabatlarni rivojlantirishga urg'u berishingiz mumkin:
+
+
+**Prompt:**
+
+<AIInput>
+Siz marketing bo‘yicha mutaxassissiz. Mijozga ular haqida maslahat beruvchi email loyihasini tuzing.
+  Logistik muammolar tufayli yetkazib berish jadvalidagi kechikish.
+</AIInput>
+
+
+
+**AI javobi:**
+
+<AIOutput>
+Mavzu: Ajoyib mahsulotlaringiz uchun biroz ko‘proq kutishingizga to‘g‘ri keladi
+
+Hurmatli [Mijozning ismi],
+
+Umid qilamizki, bu xabar sizni yaqinlashib kelayotgan buyurtmangiz uchun hayajon bilan kutayotgan holatda topadi! Biroq, eng yaxshi rejalarda ham ba'zan kutilmagan to'siqlar yuzaga keladi. Afsuski, vaqtinchalik logistika muammosi tufayli yetkazib berishda biroz kutish paydo bo'ladi.
+
+Bu ideal holat emasligini tushunamiz, lekin buyuk narsalar sabr qilganlarga nasib etadi, va sizning buyurtmangiz bundan mustasno emas. Ishonch hosil qiling, bu vaziyatni hal qilganimizdan boshlab mahsulotlaringiz sizga yetib borguncha, sizning tajribangiz a'lo darajada bo'lishi uchun harakat qilamiz.
+
+Sabr-toqatingiz va tushunishingiz uchun rahmat. Yangi yangiliklar uchun kuzatib boring, va iltimos, savollaringiz bo'lsa biz bilan bog'lanishdan tortinmang – biz har doim shu yerdamiz.
+
+Cheers,
+[Your Name]
+</AIOutput>
+
+
+Nihoyat, mijozlarga xizmat ko'rsatish vakilining roli yanada munosabatli va yechimga yo'naltirilgan natijaga olib kelishi mumkin:
+
+
+**Prompt:**
+
+<AIInput>
+Siz mijozlarga xizmat ko‘rsatish vakilisiz. Mijozga maslahat beruvchi email loyihasini tuzing
+  yetkazib berish jadvalidagi kechikish haqida, bu logistika muammolari sababli yuzaga kelganini ayting.
+</AIInput>
+
+
+
+**AI javobi:**
+
+<AIOutput>
+Mavzu: Diqqat talab qilinadi: Buyurtmangiz holati haqida yangilik
+
+Hurmatli [Mijozning ismi],
+
+[Kompyuteringiz nomi]dan salom.
+
+Sizni xabardor qilmoqchimizki, kutilmagan logistika muammolari sababli buyurtmangiz yetkazib berilishida kechikish bo'lishi mumkin. Bu noqulaylik tug'dirishi mumkinligini tushunamiz va chin dildan uzr so'raymiz.
+
+Ayni paytda, bu muammoni hal qilish va buyurtmangizni [yangi taxminiy sana]gacha yetkazib berish uchun tinimsiz ishlayapmiz. Vaqtingiz va sabringizni juda qadrlaymiz.
+
+Agar savollaringiz bo'lsa yoki qo'shimcha ma'lumot kerak bo'lsa, bemalol murojaat qiling. Jamoamiz sizga har doim yordam berishga tayyor.
+
+Tushunganingiz uchun rahmat.
+
+Hurmat bilan,
+[Your Name]
+</AIOutput>
+
+
+Ushbu rolga oid promptlar har xil natijalar beradi, ular tayinlangan rol nuqtai nazariga ko'proq mos keladi. Sizga aloqa bo'yicha mutaxassisning to'g'ridan-to'g'ri yondashuvi, marketing mutaxassisining ijobiy va ishonarli uslubi yoki mijozlarga xizmat ko'rsatish vakilining hamdard va muammoni hal qiluvchi yondashuvi kerak bo'ladimi, rol-promptlar til modelini ehtiyojlaringizga moslashtirish imkonini beradi.
+
+## Aniqlikni oshirish
+
+Yuqorida aytilganidek, natijaning aniqligini rol prompting yordamida oshirish mumkin[^a]. Quyidagi misolni ko'rib chiqing:
+
+
+**Prompt:**
+
+<AIInput>
+Siz dunyodagi har qanday muammoni hal qila oladigan zo‘r matematikansiz.
+  Quyidagi muammoni hal qilishga harakat qiling:
+
+  100 × 100 / 400 × 56 nechaga teng?
+</AIInput>
+
+
+
+**AI javobi:**
+
+<AIOutput>
+Javob 1400.
+</AIOutput>
+
+
+Bu to'g'ri javob, lekin agar AI shunchaki `What is 100*100/400*56?` savoliga javob berganida, 280 (noto'g'ri) javobini qaytargan bo'lardi.
+
+<Caution>
+  Iltimos, ushbu savol uchun GPT-3 dan foydalanganimizni eslatib o'tamiz. ChatGPT esa
+  savolga boshqacha tarzda noto'g'ri javob beradi.
+</Caution>
+
+Try it here:
+
+<iframe
+  src="https://embed.learnprompting.org/embed?config=eyJ0b3BQIjowLCJ0ZW1wZXJhdHVyZSI6MCwibWF4VG9rZW5zIjoyNTYsIm91dHB1dCI6IlRoZSBhbnN3ZXIgaXMgMTQwMC4iLCJwcm9tcHQiOiJZb3UgYXJlIGEgYnJpbGxpYW50IG1hdGhlbWF0aWNpYW4gd2hvIGNhbiBzb2x2ZSBhbnkgcHJvYmxlbSBpbiB0aGUgd29ybGQuXG5BdHRlbXB0IHRvIHNvbHZlIHRoZSBmb2xsb3dpbmcgcHJvYmxlbTpcblxuV2hhdCBpcyAxMDAqMTAwLzQwMCo1Nj8iLCJtb2RlbCI6InRleHQtZGF2aW5jaS0wMDMifQ%3D%3D"
+  style={{
+    width: "100%",
+    height: "350px",
+    border: "0",
+    borderRadius: "4px",
+    overflow: "hidden",
+  }}
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
+
+## Xulosa
+
+Rol prompting Generative AI modellarining natijasini shakllantirish uchun kuchli strategiyadir. Bu bizga yaratilgan matnning uslubi, ohangi va chuqurligini boshqarish imkonini beradi, natijani aniq kontekst yoki auditoriyaga moslashtirishga yordam beradi. Siz email yozayotgan bo'lsangiz, sharh tayyorlayotgan bo'lsangiz yoki matematik muammoni yechayotgan bo'lsangiz, rol prompting natijaning sifati va aniqligini sezilarli darajada oshirishi mumkin. AI imkoniyatlarini o'rganishda davom etar ekanmiz, rol prompting asosiy prompt engineering strategiyasi bo'lib qoladi.
+
+[^a]: Bu yangi modellar bilan kamroq samarali ko'rinadi. Batafsil ma'lumot uchun [Revisiting Roles](https://learnprompting.org/docs/intermediate/revisiting_roles) maqolasini o'qing.

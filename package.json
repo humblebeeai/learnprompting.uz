@@ -14,7 +14,7 @@
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
-    "@benchmark-urbanism/remark-bibtex": "https://github.com/trigaten/remark-bibtex.git",
+    "@benchmark-urbanism/remark-bibtex": "github:trigaten/remark-bibtex",
     "@benrbray/micromark-extension-cite": "^1.0.0",
     "@docusaurus/core": "^2.4.0",
     "@docusaurus/plugin-client-redirects": "^2.4.0",
@@ -28,10 +28,9 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@headlessui/react": "^1.7.16",
-    "@kailualabs/multimodal-search": "^1.0.1",
     "@mdx-js/react": "^1.6.22",
     "@motionone/utils": "^10.15.1",
-    "@renatonagliati/remark-auto-glossary": "git://github.com/renatonagliati/remark-auto-glossary.git#fed3f0983592ea15298b54b82fc92acc53359c25",
+    "@renatonagliati/remark-auto-glossary": "github:renatonagliati/remark-auto-glossary#fed3f0983592ea15298b54b82fc92acc53359c25",
     "clsx": "^1.2.1",
     "cspell": "^6.17.0",
     "framer-motion": "^6.5.1",

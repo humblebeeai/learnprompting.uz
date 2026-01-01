@@ -1,0 +1,59 @@
+---
+sidebar_position: 2
+title: "🟢 Prompt sizib chiqishi"
+---
+
+
+# Prompt Sizib chiqishi
+
+<<<<<<< HEAD
+Prompt leaking - bu prompt injectionning bir turi bo'lib, unda modeldan so'raladi
+=======
+Prompt leaking - bu prompt injectionning bir turi bo'lib, unda modeldan so'raladi
+>>>>>>> main
+o'zining _o'z promptini_ chiqaradi.
+
+Quyidagi misol rasmida (@ignore_previous_prompt) ko'rsatilganidek, hujumchi `user_input` ni o'zgartirib, prompt ni qaytarishga harakat qiladi. Mo'ljallangan maqsad goal hijacking (oddiy prompt injection) dan farq qiladi, bunda hujumchi `user_input` ni zararli ko'rsatmalarni chiqarish uchun o'zgartiradi (@ignore_previous_prompt).
+
+
+
+Quyidagi rasm (@simon2022inject), yana `remoteli.io` misolidan olingan, quyidagilarni ko'rsatadi
+Twitter foydalanuvchisi modeldan uning promptini oshkor qilishga erishmoqda.
+
+
+
+Xo'sh, unda nima bo'pti? Nega kimdir prompt leaking haqida qayg'urishi kerak?
+
+Ba'zan odamlar o'z promptlarini maxfiy saqlashni xohlashadi. Masalan, bir ta'lim kompaniyasi
+men uchun buni 5 yoshli bola kabi tushuntirib bering degan promptdan foydalanayotgan bo'lishi mumkin
+murakkab mavzular. Agar prompt sizib chiqsa, unda har kim undan foydalanishi mumkin bo'ladi
+o'sha kompaniya orqali.
+
+### Microsoft Bing Chat
+
+<<<<<<< HEAD
+Eng muhimi shundaki, Microsoft 2/7/23 sanasida ChatGPT asosida ishlovchi qidiruv tizimi - "yangi Bing"ni chiqardi, va u prompt leaking ga zaif ekani namoyish qilindi. Quyidagi misolda [@kliu128](https://twitter.com/kliu128/status/1623472922374574080) tomonidan ko'rsatilganidek, Bing Search ning avvalgi versiyasi, kod nomi "Sydney" bo'lgan, prompt ning bir qismini (@kevinbing) berganda, zaif bo'lgan. Bu foydalanuvchiga prompt ning qolgan qismini uni ko'rish uchun to'g'ri autentifikatsiyasiz olish imkonini bergan.
+=======
+Eng muhimi shundaki, Microsoft 2/7/23 sanasida ChatGPT asosida ishlovchi qidiruv tizimi - "yangi Bing"ni chiqardi, va u prompt leaking ga zaif ekani namoyish qilindi. Quyidagi misolda [@kliu128](https://twitter.com/kliu128/status/1623472922374574080) tomonidan ko'rsatilganidek, Bing Search ning avvalgi versiyasi, kod nomi "Sydney" bo'lgan, prompt ning bir qismini (@kevinbing) berganda, zaif bo'lgan. Bu foydalanuvchiga prompt ning qolgan qismini uni ko'rish uchun to'g'ri autentifikatsiyasiz olish imkonini bergan.
+>>>>>>> main
+
+
+
+Yaqinda GPT-3 asosidagi startaplar sonining keskin oshishi, ancha murakkab promptlar bilan, bu Promptlar...
+ko'p soatlab ishlab chiqilishi uchun, bu haqiqiy muammo hisoblanadi.
+
+## Amaliyot
+
+Quyidagi prompt (@chase2021adversarial) ni matn qo'shish orqali oshkor qilishga harakat qiling:
+
+<iframe
+  src="https://embed.learnprompting.org/embed?config=eyJ0b3BQIjowLCJ0ZW1wZXJhdHVyZSI6MCwibWF4VG9rZW5zIjoyNTYsIm91dHB1dCI6IiIsInByb21wdCI6IkZyYW5zdXpjaGE6IEplIHZldXggYWxsZXIgYXUgcGFyYyBhdWpvdXJkJ2h1aS5cbk%2FigJh6YmVrY2hhOiBNZW4gYnVndW4gYm9n4oCYZ2EgYm9ybW9xY2hpbWFuLlxuXG5GcmFuc3V6Y2hhOiBKJ2FpbWUgcG9ydGVyIHVuIGNoYXBlYXUgcXVhbmQgaWwgcGxldXQuXG5P4oCYemJla2NoYTogWW9tZ%2BKAmGlyIHlvZ%2BKAmGdhbmRhIHNobHlhcGEga2l5aXNobmkgeW9xdGlyYW1hbi5cblxuRnJhbnN1emNoYTogUXUnZXN0LWNlIHF1ZSB0dSBmYWlzIMOgIGwnw6ljb2xlID9cbk%2FigJh6YmVrY2hhOiBNYWt0YWJkYSBuaW1hIHFpbHlhcHNhbj8iLCJtb2RlbCI6InRleHQtZGF2aW5jaS0wMDMifQ%3D%3D"
+  style={{
+    width: "100%",
+    height: "500px",
+    border: "0",
+    borderRadius: "4px",
+    overflow: "hidden",
+  }}
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>

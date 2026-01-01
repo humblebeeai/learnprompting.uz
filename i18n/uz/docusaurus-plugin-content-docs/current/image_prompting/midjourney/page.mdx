@@ -1,0 +1,158 @@
+---
+sidebar_position: 99
+title: "🟢 Midjourney"
+---
+
+
+# Midjourney
+
+[Midjourney](https://www.midjourney.com) - bu Discord bot interfeysi va veb-ilova orqali ishlaydigan sun'iy intellektli tasvir generatoridir (Midjourney'ning API versiyasi rejalashtirilgan). Midjourney yordamida tasvirlar yaratish jarayoni boshqa sun'iy intellektli tasvir generatorlari kabi asosiy tamoyillarga asoslanadi, jumladan, generatsiya jarayonini boshqarish uchun promptlardan foydalaniladi.
+
+Midjourney'ni boshqa sun'iy intellektli tasvir generatorlaridan ajratib turadigan noyob xususiyatlardan biri - u vizual jihatdan ta'sirli va badiiy jihatdan mukammal tasvirlar yaratish qobiliyatiga ega. Bu modelning maxsus o'qitilganligi bilan bog'liq bo'lib, u aniq badiiy parametrlar bilan yuqori sifatli tasvirlar yaratishga imkon beradi (bu haqda batafsil "Advanced Prompts" >
+"Parameters" bo'limida).
+
+Siz Midjourney Bot'ini [Learn Prompting Discord](https://learnprompting.org/discord) yoki [rasmiy Midjourney Discord serveri](https://discord.gg/midjourney)da sinab ko'rishingiz mumkin.
+
+# Asosiy foydalanish
+
+Midjourney'da asosiy prompt tuzilmasi quyidagicha: `/imagine prompt: [IMAGE PROMPT] [--OPTIONAL PARAMETERS]`.
+
+Masalan: `/imagine prompt: astronaut on a horse`
+
+
+
+Parametrlar bilan misol: `/imagine prompt: astronaut on a horse --ar 3:2 --c 70 --q 2 --seed 1000 `
+
+
+
+Ushbu asosiy misolda quyidagi parametrlar ishlatilgan:
+
+`--ar 3:2` tasvirning tomonlar nisbatini 3:2 qilib belgilaydi
+
+`--c 70` Midjourney'ga promptni erkinroq talqin qilish imkonini beruvchi 70 qiymatli chaos qo'shadi (chaos qiymati oraliği: 0 - 100)
+
+`--seed 100` tasodifiy seed qiymatini belgilaydi, bu yordamida tasvirni keyinchalik qayta yaratish yoki o'zgartirish mumkin
+
+(Midjourney parametrlar haqida ko'proq "Advanced Prompts" >
+"Parameters" bo'limida bilib olishingiz mumkin)
+
+# Kengaytirilgan promptlar
+
+Midjourney'dagi kengaytirilgan promptlar parametrlar va Midjourney algoritmi tomonidan qo'llab-quvvatlanadigan maxsus prompting texnikalaridan foydalanadi.
+
+## Ko'p promptlar
+
+Midjourney odatda sizning promptingizni butunlay talqin qiladi. Ikkita nuqta `::` ishlatish orqali Midjourney har bir prompt qismini alohida talqin qiladi.
+
+Example:
+
+```text
+/imagine prompt: astronaut and horse
+```
+
+
+
+```text
+/imagine prompt: astronaut:: and horse
+```
+
+
+
+## Tasvir promptlari
+
+Discord'ga tasvir yuklab, uning URL manzilini promptda ishlatish orqali siz Midjourney'ga natijalaringiz mazmuni, uslubi va kompozitsiyasiga ushbu tasvir ta'sir ko'rsatishini ko'rsatishingiz mumkin.
+Example:
+[Astronaut (Manba: Wikipedia)](<https://en.wikipedia.org/wiki/Astronaut#/media/File:STS41B-35-1613_-_Bruce_McCandless_II_during_EVA_(Retouched).webp>)
+
+```text
+/imagine prompt: [image URL], impressionist painting
+```
+
+
+
+## Parametrlar (v4)
+
+Quyidagi parametrlar Midjourney'ning eng so'nggi modeli (v4) tomonidan qo'llab-quvvatlanadi.
+
+### Tomonlar nisbati:
+
+`--ar [ratio]` standart nisbatni (1:1) yangi nisbatga o'zgartiradi (hozirda maksimal qo'llab-quvvatlanadigan nisbat 2:1)
+
+Misol: `astronaut on a horse --ar 16:9` va `astronaut on a horse --ar 1:2`
+
+
+
+### Chaos:
+
+`--c [value]` chaos qiymatini belgilaydi, bu Midjourney promptni qanchalik o'zgartirishini aniqlaydi; chaos qiymati qanchalik yuqori bo'lsa, natijalar va kompozitsiyalar shunchalik noodatiy va kutilmagan bo'ladi (oraliq: 0 - 100)
+
+Misol: `astronaut on a horse --c20` va `astronaut on a horse --c 80`
+
+
+
+### Sifat:
+
+`--q [value]` tasvir yaratishga qancha vaqt sarflanishini belgilaydi, natijada sifat oshadi. Standart sozlama "1". Yuqori qiymatlar obunangizdagi GPU daqiqalarini ko'proq ishlatadi (".25", ".5", "1" va "2" qiymatlarini qabul qiladi)
+
+Misol: `astronaut on a horse --q .5` va `astronaut on a horse --q 2`
+
+
+
+### Seed:
+
+`--seed [value]` seed raqamini belgilaydi, bu tasvir yaratish uchun boshlang'ich nuqtani (shovqin maydoni) aniqlaydi. Har bir tasvir uchun seed parametrisiz tasodifiy yaratiladi. Bir xil seed raqami va promptdan foydalansangiz, o'xshash tasvirlar yaratiladi.
+
+Misol: `astronaut on a horse --seed 123`
+
+
+
+### Stilizatsiya:
+
+`--stylize [value]` yoki `--s [value]` Midjourney o'zining badiiy algoritmini qanchalik kuchli qo'llashini belgilaydi. Past qiymatlar promptga yaqin tasvirlar yaratadi, yuqori qiymatlar esa promptga kamroq bog'langan juda badiiy tasvirlar hosil qiladi. Standart qiymat 100, qiymatlar oraliği 0 - 1000.
+(Eslatma: `/settings` buyrug'idan foydalanib, standart stilizatsiya qiymatini "🖌️ Style Med" (=`--s 100`) dan "🖌️ Style Low" (=`--s 50`), "🖌️ Style High"(=`--s 250`) yoki "🖌️ Style Very High" (=`--s 750`) ga o'zgartirishingiz mumkin)
+
+Misol: `astronaut on a horse --s 50` va `astronaut on a horse --s 900`
+
+
+
+### Versiya:
+
+`--v [version number]` yoki `--version [version number]` yordamida oldingi Midjourney modellariga (1-3) kirishingiz mumkin
+
+Misol: `--v 1`, `--v 2`, va `--v 3`
+
+
+
+## Parametrlar (oldingi modellar)
+
+### Bir xil seed
+
+`--sameseed`: `--seed` parametri boshlang'ich griddagi barcha tasvirlarga bitta shovqin maydonini qo'llasa, sameseed parametri boshlang'ich griddagi barcha tasvirlarga bir xil boshlang'ich shovqinni qo'llaydi va natijada juda o'xshash tasvirlar yaratiladi.
+
+Misol: `astronavt ot ustida --sameseed --v 3`
+
+
+
+### Plitka
+
+`--tile` matolar, devor qog'ozlari va teksturalar uchun uzluksiz naqshlar yaratish uchun ishlatilishi mumkin bo'lgan takrorlanuvchi plitkalar sifatida ishlatiladigan tasvirlarni yaratadi (faqat 1 - 3 modellarda ishlaydi)
+
+Misol: `astronavt ot ustida --tile --v 3`
+
+
+
+### Video
+
+`--video` tasvirlar to'plami yaratilayotgan qisqa filmni hosil qiladi. ✉️ emoji bilan javob berish Midjourney Bot-ga sizga videoga havola bilan DM yuborish imkonini beradi.
+
+Misol: `astronavt ot ustida --video --v 3`
+
+<div style={{ textAlign: "center" }}>
+  <video className="img-docs" height="240" autoPlay muted controls>
+    <source className="img-docs" src="/midjourney.mp4" type="video/mp4" />
+  </video>
+</div>
+
+## Havolalar
+
+[Rasmiy Midjourney hujjatlari](https://docs.midjourney.com/)

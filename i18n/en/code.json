@@ -1,0 +1,182 @@
+{
+	"homepage.hero.title.line1": {
+		"message": "Learn to work"
+	},
+	"homepage.hero.title.line2": {
+		"message": "with AI"
+	},
+	"homepage.hero.title.line3": {
+		"message": "professionally"
+	},
+	"homepage.hero.subtitle": {
+		"message": "Master ChatGPT, Claude and other AI tools professionally. Free, open source course."
+	},
+	"homepage.hero.button.start": {
+		"message": "Start"
+	},
+	"homepage.stats.learners": {
+		"message": "Learners"
+	},
+	"homepage.stats.modules": {
+		"message": "Modules"
+	},
+	"homepage.stats.free": {
+		"message": "Free"
+	},
+	"homepage.features.stepbystep.title": {
+		"message": "Step-by-step Learning"
+	},
+	"homepage.features.stepbystep.description": {
+		"message": "Learn systematically from simple concepts to complex techniques"
+	},
+	"homepage.features.practice.title": {
+		"message": "Practical Exercises"
+	},
+	"homepage.features.practice.description": {
+		"message": "Reinforce with real tasks and interactive exercises in every lesson"
+	},
+	"homepage.features.community.title": {
+		"message": "Community"
+	},
+	"homepage.features.community.description": {
+		"message": "Join the community of AI enthusiasts"
+	},
+	"homepage.features.label": {
+		"message": "What you will learn"
+	},
+	"homepage.features.mainTitle": {
+		"message": "The Art of AI Communication"
+	},
+	"homepage.path.label": {
+		"message": "Learning Path"
+	},
+	"homepage.path.mainTitle": {
+		"message": "Reach Professional Level in 4 Steps"
+	},
+	"homepage.path.step1.title": {
+		"message": "AI Basics"
+	},
+	"homepage.path.step1.description": {
+		"message": "Understand how AI works"
+	},
+	"homepage.path.step2.title": {
+		"message": "Prompt Engineering"
+	},
+	"homepage.path.step2.description": {
+		"message": "Learn to craft effective prompts"
+	},
+	"homepage.path.step3.title": {
+		"message": "Advanced Techniques"
+	},
+	"homepage.path.step3.description": {
+		"message": "Master professional methods"
+	},
+	"homepage.path.step4.title": {
+		"message": "Practical Application"
+	},
+	"homepage.path.step4.description": {
+		"message": "Use in real projects"
+	},
+	"homepage.cta.title": {
+		"message": "Start Today"
+	},
+	"homepage.cta.description": {
+		"message": "Join over 3 million learners and master AI skills"
+	},
+	"homepage.cta.button": {
+		"message": "Start Course"
+	},
+	"homepage.collab.badge": {
+		"message": "Collaboration & Openness"
+	},
+	"homepage.collab.maintitle": {
+		"message": "Built on Open source"
+	},
+	"homepage.collab.content.title": {
+		"message": "Content Creation"
+	},
+	"homepage.collab.content": {
+		"message": "Open-source community"
+	},
+	"homepage.collab.translation.title": {
+		"message": "Translation & Localization"
+	},
+	"homepage.collab.translation": {
+		"message": "Uzbek language adaptation"
+	},
+	"homepage.collab.license.title": {
+		"message": "Open Source"
+	},
+	"homepage.collab.license": {
+		"message": "100% free and open source"
+	},
+	"homepage.collab.text": {
+		"message": "Uzbek edition maintained by {humblebee}. Content created by {learnprompting} open source community."
+	},
+	"homepage.collab.link": {
+		"message": "More about collaboration"
+	},
+	"homepage.meta.title": {
+		"message": "Communicating with AI"
+	},
+	"homepage.meta.description": {
+		"message": "Learn Prompting × HumblebeeAI Collaboration"
+	},
+	"footer.quickLinks.docs": {
+		"message": "Docs"
+	},
+	"footer.quickLinks.uzbek": {
+		"message": "Uzbek Tutorials"
+	},
+	"footer.quickLinks.english": {
+		"message": "English Tutorials"
+	},
+	"footer.quickLinks.academy": {
+		"message": "AI Academy"
+	},
+	"footer.quickLinks.collaboration": {
+		"message": "Collaboration"
+	},
+	"footer.legalLinks.privacy": {
+		"message": "Privacy Policy"
+	},
+	"footer.legalLinks.terms": {
+		"message": "Terms of Service"
+	},
+	"footer.legalLinks.license": {
+		"message": "License"
+	},
+	"footer.tagline": {
+		"message": "Learn to work with AI professionally"
+	},
+	"footer.column.quickLinks": {
+		"message": "Quick Links"
+	},
+	"footer.column.contact": {
+		"message": "Contact"
+	},
+	"footer.copyright": {
+		"message": "© {year} Learn Prompting × {humblebee}"
+	},
+	"footer.attribution": {
+		"message": "Uzbek edition maintained by {humblebee}. Content created by {learnprompting} contributors."
+	},
+	"theme.admonition.takeaways": {
+		"message": "Takeaways"
+	},
+	"theme.admonition.note": {
+		"message": "Note"
+	},
+	"theme.admonition.tip": {
+		"message": "Tip"
+	},
+	"theme.admonition.danger": {
+		"message": "Danger"
+	},
+	"theme.admonition.info": {
+		"message": "Info"
+	},
+	"theme.admonition.caution": {
+		"message": "Caution"
+	}
+}
