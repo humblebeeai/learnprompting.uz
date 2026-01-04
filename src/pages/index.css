@@ -20,7 +20,7 @@
 }
 
 [data-theme='dark'] .homepage {
-	background: #0a0a0a;
+	background: #0a0a0a !important;
 }
 
 
@@ -831,7 +831,7 @@
 
 @media (min-width: 768px) {
 	.collab-diagram {
-		grid-template-columns: 1fr auto 1fr;
+		grid-template-columns: 1fr 1fr;
 		gap: 2rem;
 		align-items: center;
 	}
