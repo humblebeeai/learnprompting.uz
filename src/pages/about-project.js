@@ -168,7 +168,7 @@ export default function AboutCollaboration() {
 									color: "var(--color-text-secondary)",
 									marginBottom: "2rem"
 								}}>
-									Ushbu loyiha O'zbekiston Respublikasi Prezidentining <strong><a href="https://president.uz/oz/lists/view/8719/">Digital Uzbekistan 2030</a></strong> strategiyasidan ilhomlangan holda yaratildi. Biz har bir o'zbekistonlik - xoh u talaba, o'qituvchi yoki tadbirkor bo'lsin - kelajak texnologiyalaridan erkin foydalana olishini istaymiz.
+									Ushbu loyiha O'zbekiston Respublikasi Prezidentining <strong><a href="https://aiconf.uz/">Digital Uzbekistan 2030</a></strong> strategiyasidan ilhomlangan holda yaratildi. Biz har bir o'zbekistonlik - xoh u talaba, o'qituvchi yoki tadbirkor bo'lsin - kelajak texnologiyalaridan erkin foydalana olishini istaymiz.
 									<br /><br />
 									<span style={{ fontSize: "0.9em", opacity: 0.8, fontStyle: "italic" }}>
 										Bu tashabbus tarjima loyihamizga ilhom bo'lgan umumiy kontekst bo'lib, rasmiy hamkorlikni yoki davlat tomonidan tasdiqlanganlikni anglatmaydi.
