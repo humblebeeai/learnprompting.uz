@@ -86,7 +86,7 @@ If port 3000 is in use, modify `LP_EXTERNAL_PORT` in your `.env` file.
 
 ---
 
-## ✅ Pre-Deployment Checklist
+##  Pre-Deployment Checklist
 
 Ensure all items are checked before deploying to production:
 
