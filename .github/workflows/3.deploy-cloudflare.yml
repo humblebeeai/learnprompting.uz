@@ -38,7 +38,7 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          command: pages deploy ./build --project-name=learnprompting-uz --commit-dirty=true
+          command: pages deploy ./build --project-name=learnpromptinguz --commit-dirty=true
 
       - name: Comment preview URL on PR
         if: github.event_name == 'pull_request'
