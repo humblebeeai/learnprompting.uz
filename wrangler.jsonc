@@ -1,14 +1,15 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "learnpromptinguz",
-  "compatibility_date": "2026-04-12",
-  "observability": {
-    "enabled": true
-  },
-  "assets": {
-    "directory": "build"
-  },
-  "compatibility_flags": [
-    "nodejs_compat"
-  ]
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "learnpromptinguz",
+	"compatibility_date": "2026-04-12",
+	"pages_build_output_dir": "./build",
+	"observability": {
+		"enabled": true
+	},
+	"assets": {
+		"directory": "build"
+	},
+	"compatibility_flags": [
+		"nodejs_compat"
+	]
 }
