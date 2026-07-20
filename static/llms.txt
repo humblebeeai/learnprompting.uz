@@ -1,69 +1,131 @@
 # Learn Prompting (O'zbekcha)
 
-> Learn Prompting is a free, open-source course teaching how to communicate effectively with AI systems (prompt engineering). This is the Uzbek-language ("O'zbekcha nashr") edition, maintained by HumblebeeAI, adapted from the original English project at learnprompting.org. Content covers everything from prompting basics to advanced techniques, image prompting, prompt hacking/security, and reliability methods.
+> Learn Prompting is a free, open-source course teaching how to communicate effectively with AI systems (prompt engineering). This is the Uzbek-language ("O'zbekcha nashr") edition, maintained by HumblebeeAI, adapted from the original English project at learnprompting.org. Content covers prompting basics, intermediate and advanced techniques, applied/basic applications, image prompting, prompt hacking & defense, reliability, trainable prompts, and tooling.
 
 ## Docs: Basics
-- [Kirish (Intro)](https://learnprompting.uz/docs/intro): Course introduction and starting point.
-- [Prompt Engineering asoslari](https://learnprompting.uz/docs/basics/prompt_engineering): What prompt engineering is and why it matters.
-- [Promptlash (Prompting)](https://learnprompting.uz/docs/basics/prompting): Core prompting concepts.
-- [Ko'rsatmalar (Instructions)](https://learnprompting.uz/docs/basics/instructions): Writing effective instructions for LLMs.
-- [Rollar (Roles)](https://learnprompting.uz/docs/basics/roles): Using role prompting.
-- [Chatbot asoslari](https://learnprompting.uz/docs/basics/chatbot_basics): Basics of chatbot interaction design.
+- [Introduction to AI](https://learnprompting.uz/docs/basics/intro): What large language models are and how they work.
+- [Prompt Engineering](https://learnprompting.uz/docs/basics/prompt_engineering): What prompt engineering is and why it matters.
+- [Prompting With ChatGPT](https://learnprompting.uz/docs/basics/prompting): Core prompting concepts and interacting with ChatGPT.
+- [Giving Instructions](https://learnprompting.uz/docs/basics/instructions): Writing effective instructions for LLMs.
+- [Assigning Roles](https://learnprompting.uz/docs/basics/roles): Using role prompting to steer model behavior.
+- [Chatbots](https://learnprompting.uz/docs/basics/chatbot_basics): Basics of chatbot interaction design.
+- [Combining Techniques](https://learnprompting.uz/docs/basics/combining_techniques): Mixing multiple prompting techniques together.
+- [LLM Settings](https://learnprompting.uz/docs/basics/configuration_hyperparameters): Configuring temperature, top-p, and other hyperparameters.
+- [Formalizing Prompts](https://learnprompting.uz/docs/basics/formalizing): A structured framework for describing prompts.
+- [The Learn Prompting Method](https://learnprompting.uz/docs/basics/learn_prompting_method): The course's approach to teaching prompt engineering.
+- [OpenAI Playground](https://learnprompting.uz/docs/basics/openai_playground): Using OpenAI's Playground tool.
+- [Pitfalls of LLMs](https://learnprompting.uz/docs/basics/pitfalls): Common failure modes and limitations of LLMs.
+- [Priming Chatbots](https://learnprompting.uz/docs/basics/priming_prompt): Setting up context before the main prompt.
+- [Starting Your Journey](https://learnprompting.uz/docs/basics/starting_your_journey): Where to begin learning prompt engineering.
+- [Understanding AI Minds](https://learnprompting.uz/docs/basics/world): How to reason about what an LLM "knows".
+- [Learn Prompting Embeds](https://learnprompting.uz/docs/basics/embeds): Embedding interactive course content.
 
 ## Docs: Intermediate Techniques
-- [Chain-of-Thought](https://learnprompting.uz/docs/intermediate/chain_of_thought): Step-by-step reasoning prompts.
-- [Zero-Shot CoT](https://learnprompting.uz/docs/intermediate/zero_shot_cot): Zero-shot chain-of-thought prompting.
-- [Least-to-Most Prompting](https://learnprompting.uz/docs/intermediate/least_to_most): Decomposing complex problems.
+- [Chain of Thought Prompting](https://learnprompting.uz/docs/intermediate/chain_of_thought): Step-by-step reasoning prompts.
+- [Zero Shot Chain of Thought](https://learnprompting.uz/docs/intermediate/zero_shot_cot): Zero-shot chain-of-thought prompting.
+- [Least to Most Prompting](https://learnprompting.uz/docs/intermediate/least_to_most): Decomposing complex problems into subproblems.
 - [Self-Consistency](https://learnprompting.uz/docs/intermediate/self_consistency): Improving answer reliability via sampling.
 - [Generated Knowledge](https://learnprompting.uz/docs/intermediate/generated_knowledge): Generating context before answering.
+- [What's in a Prompt?](https://learnprompting.uz/docs/intermediate/whats_in_a_prompt): Breaking down the components of a prompt.
+- [Revisiting Roles](https://learnprompting.uz/docs/intermediate/revisiting_roles): Advanced role-prompting patterns.
+- [Dealing With Long Form Content](https://learnprompting.uz/docs/intermediate/long_form_content): Techniques for long documents and context windows.
 
 ## Docs: Advanced Applications
-- [Umumiy ko'rinish (Overview)](https://learnprompting.uz/docs/advanced_applications/overview): Advanced prompting application patterns.
-- [ReAct](https://learnprompting.uz/docs/advanced_applications/react): Reasoning + acting agent pattern.
-- [MRKL](https://learnprompting.uz/docs/advanced_applications/mrkl): Modular reasoning and tool use.
-- [PAL](https://learnprompting.uz/docs/advanced_applications/pal): Program-aided language models.
+- [Introduction](https://learnprompting.uz/docs/advanced_applications/overview): Advanced prompting application patterns.
+- [LLMs that Reason and Act (ReAct)](https://learnprompting.uz/docs/advanced_applications/react): Reasoning + acting agent pattern.
+- [LLMs Using Tools (MRKL)](https://learnprompting.uz/docs/advanced_applications/mrkl): Modular reasoning and tool use.
+- [Code as Reasoning (PAL)](https://learnprompting.uz/docs/advanced_applications/pal): Program-aided language models.
 
 ## Docs: Applied Prompting
-- [Umumiy ko'rinish](https://learnprompting.uz/docs/applied_prompting/overview): Applied, real-world prompting projects.
-- [ChatGPT yasash](https://learnprompting.uz/docs/applied_prompting/build_chatgpt): Building a ChatGPT-like assistant.
-- [Bilim bazasidan chatbot yasash](https://learnprompting.uz/docs/applied_prompting/build_chatbot_from_kb): Building a knowledge-base chatbot.
+- [Introduction](https://learnprompting.uz/docs/applied_prompting/overview): Applied, real-world prompting projects.
+- [Build ChatGPT from GPT-3](https://learnprompting.uz/docs/applied_prompting/build_chatgpt): Building a ChatGPT-like assistant from a base model.
+- [Chatbot + Knowledge Base](https://learnprompting.uz/docs/applied_prompting/build_chatbot_from_kb): Building a knowledge-base-grounded chatbot.
+- [Multiple Choice Questions](https://learnprompting.uz/docs/applied_prompting/mc_tutorial): Prompting LLMs to answer multiple-choice questions.
+- [Solve Discussion Questions](https://learnprompting.uz/docs/applied_prompting/short_response): Prompting for short discussion-style answers.
 
 ## Docs: Basic Applications
-- [Kirish (Introduction)](https://learnprompting.uz/docs/basic_applications/introduction): Everyday practical use cases for prompting.
-- [Kod yozishda yordam](https://learnprompting.uz/docs/basic_applications/coding_assistance): Using AI for coding assistance.
-- [Xulosalash (Summarize)](https://learnprompting.uz/docs/basic_applications/summarize): Summarization prompts.
-- [Email yozish](https://learnprompting.uz/docs/basic_applications/writing_emails): Writing emails with AI.
+- [Introduction](https://learnprompting.uz/docs/basic_applications/introduction): Everyday practical use cases for prompting.
+- [Coding Assistance](https://learnprompting.uz/docs/basic_applications/coding_assistance): Using AI for coding assistance.
+- [Summarizing Text](https://learnprompting.uz/docs/basic_applications/summarize): Summarization prompts.
+- [Writing An Email](https://learnprompting.uz/docs/basic_applications/writing_emails): Writing emails with AI.
+- [Blogs](https://learnprompting.uz/docs/basic_applications/blog_generation): Generating blog content with AI.
+- [Contracts](https://learnprompting.uz/docs/basic_applications/contracts): Drafting and reviewing contracts with AI.
+- [Digital Marketing](https://learnprompting.uz/docs/basic_applications/digital_marketing): AI for marketing copy and campaigns.
+- [Finding Emojis](https://learnprompting.uz/docs/basic_applications/emojis): Using AI to find relevant emojis.
+- [Study Buddy](https://learnprompting.uz/docs/basic_applications/study_tool): AI as a study and learning aid.
+- [Structuring Data](https://learnprompting.uz/docs/basic_applications/table_generation): Generating tables and structured data.
+- [Different Writing Styles](https://learnprompting.uz/docs/basic_applications/writing_in_diff_voices): Writing in different tones and voices.
+- [Zapier for Emails](https://learnprompting.uz/docs/basic_applications/zapier_for_emails): Automating email workflows with Zapier and AI.
 
 ## Docs: Image Prompting
-- [Kirish (Intro)](https://learnprompting.uz/docs/image_prompting/intro): Basics of prompting image generation models.
+- [Introduction](https://learnprompting.uz/docs/image_prompting/intro): Basics of prompting image generation models.
 - [Midjourney](https://learnprompting.uz/docs/image_prompting/midjourney): Midjourney-specific prompting techniques.
 - [Shot Type](https://learnprompting.uz/docs/image_prompting/shot_type): Controlling camera framing in prompts.
 - [Style Modifiers](https://learnprompting.uz/docs/image_prompting/style_modifiers): Adjusting visual style via prompts.
+- [Quality Boosters](https://learnprompting.uz/docs/image_prompting/quality_boosters): Keywords that improve generation quality.
+- [Weighted Terms](https://learnprompting.uz/docs/image_prompting/weighted_terms): Weighting specific terms in image prompts.
+- [Repetition](https://learnprompting.uz/docs/image_prompting/repetition): Using repetition to emphasize prompt elements.
+- [Fix Deformed Generations](https://learnprompting.uz/docs/image_prompting/fix_deformed_generations): Correcting common generation artifacts.
+- [Resources](https://learnprompting.uz/docs/image_prompting/resources): Further image-prompting resources.
 
 ## Docs: Prompt Hacking & Security
-- [Kirish (Intro)](https://learnprompting.uz/docs/prompt_hacking/intro): Overview of prompt hacking / adversarial prompting.
+- [Introduction](https://learnprompting.uz/docs/prompt_hacking/intro): Overview of prompt hacking / adversarial prompting.
 - [Prompt Injection](https://learnprompting.uz/docs/prompt_hacking/injection): Prompt injection attacks.
 - [Jailbreaking](https://learnprompting.uz/docs/prompt_hacking/jailbreaking): LLM jailbreak techniques.
 - [Prompt Leaking](https://learnprompting.uz/docs/prompt_hacking/leaking): Extracting hidden system prompts.
-- [Himoya choralari (Defensive Measures)](https://learnprompting.uz/docs/prompt_hacking/defensive_measures): Defending against prompt attacks.
+- [Offensive Measures: Overview](https://learnprompting.uz/docs/prompt_hacking/offensive_measures/overview): Overview of offensive prompt-hacking techniques.
+- [Payload Splitting](https://learnprompting.uz/docs/prompt_hacking/offensive_measures/payload_splitting): Splitting malicious payloads across a prompt.
+- [Obfuscation / Token Smuggling](https://learnprompting.uz/docs/prompt_hacking/offensive_measures/obfuscation): Evading filters via obfuscated tokens.
+- [Indirect Injection](https://learnprompting.uz/docs/prompt_hacking/offensive_measures/indirect_injection): Injection via untrusted third-party content.
+- [Recursive Injection](https://learnprompting.uz/docs/prompt_hacking/offensive_measures/recursive_attack): Recursive prompt-injection attacks.
+- [Code Injection](https://learnprompting.uz/docs/prompt_hacking/offensive_measures/code_injection): Injecting executable code via prompts.
+- [Virtualization](https://learnprompting.uz/docs/prompt_hacking/offensive_measures/virtualization): Roleplay-based jailbreak framing.
+- [Defined Dictionary Attack](https://learnprompting.uz/docs/prompt_hacking/offensive_measures/defined_dictionary): Dictionary-substitution based attacks.
+- [Defensive Measures: Overview](https://learnprompting.uz/docs/prompt_hacking/defensive_measures/overview): Overview of defenses against prompt attacks.
+- [Filtering](https://learnprompting.uz/docs/prompt_hacking/defensive_measures/filtering): Filtering malicious input/output.
+- [Instruction Defense](https://learnprompting.uz/docs/prompt_hacking/defensive_measures/instruction): Hardening instructions against override attempts.
+- [Post-Prompting](https://learnprompting.uz/docs/prompt_hacking/defensive_measures/post_prompting): Placing instructions after user input.
+- [Random Sequence Enclosure](https://learnprompting.uz/docs/prompt_hacking/defensive_measures/random_sequence): Enclosing input with random sequences.
+- [Sandwich Defense](https://learnprompting.uz/docs/prompt_hacking/defensive_measures/sandwich_defense): Sandwiching user input between instructions.
+- [XML Tagging](https://learnprompting.uz/docs/prompt_hacking/defensive_measures/xml_tagging): Using XML tags to delimit trusted content.
+- [Separate LLM Evaluation](https://learnprompting.uz/docs/prompt_hacking/defensive_measures/llm_eval): Using a second LLM to evaluate outputs.
+- [Other Approaches](https://learnprompting.uz/docs/prompt_hacking/defensive_measures/other): Additional defensive techniques.
 
 ## Docs: Reliability
-- [Kirish (Intro)](https://learnprompting.uz/docs/reliability/intro): Improving the reliability of LLM outputs.
-- [Kalibratsiya (Calibration)](https://learnprompting.uz/docs/reliability/calibration): Calibrating model confidence.
-- [Debiasing](https://learnprompting.uz/docs/reliability/debiasing): Reducing bias in model outputs.
-- [Ensembling](https://learnprompting.uz/docs/reliability/ensembling): Combining multiple prompts/outputs.
+- [Introduction](https://learnprompting.uz/docs/reliability/intro): Improving the reliability of LLM outputs.
+- [Calibrating LLMs](https://learnprompting.uz/docs/reliability/calibration): Calibrating model confidence.
+- [Prompt Debiasing](https://learnprompting.uz/docs/reliability/debiasing): Reducing bias in model outputs.
+- [Prompt Ensembling](https://learnprompting.uz/docs/reliability/ensembling): Combining multiple prompts/outputs.
+- [LLM Self Evaluation](https://learnprompting.uz/docs/reliability/lm_self_eval): Having a model evaluate its own output.
+- [Math](https://learnprompting.uz/docs/reliability/math): Improving LLM performance on math problems.
 
-## Docs: Tooling & Trainable Prompts
-- [IDEs](https://learnprompting.uz/docs/tooling/IDEs): Prompting tools and IDE integrations.
-- [Discretized Prompting](https://learnprompting.uz/docs/trainable/discretized): Discrete trainable prompt tokens.
-- [Soft Prompting](https://learnprompting.uz/docs/trainable/soft_prompting): Continuous/soft trainable prompts.
+## Docs: Trainable Prompts
+- [Interpretable Soft Prompts](https://learnprompting.uz/docs/trainable/discretized): Discrete trainable prompt tokens.
+- [Soft Prompts](https://learnprompting.uz/docs/trainable/soft_prompting): Continuous/soft trainable prompts.
+
+## Docs: Tooling
+- [Prompt Engineering Tools](https://learnprompting.uz/docs/tooling/tools): Overview of prompt engineering tools.
+- [Prompt Engineering IDEs](https://learnprompting.uz/docs/tooling/IDEs): Comparison of IDEs for building and testing prompts.
+
+## Docs: Miscellaneous
+- [Detecting AI Generated Text](https://learnprompting.uz/docs/miscl/detect): Methods for detecting AI-generated content.
+- [Detection Trickery](https://learnprompting.uz/docs/miscl/trickery): Evading AI-content detectors.
+- [Music Generation](https://learnprompting.uz/docs/miscl/music): Prompting AI music-generation models.
+- [Hot Topics](https://learnprompting.uz/docs/hot_topics): Current and trending prompt engineering topics.
+- [Prompted Products](https://learnprompting.uz/docs/products): Products built on prompt engineering.
+- [Additional Resources](https://learnprompting.uz/docs/additional): Further reading and resources.
 
 ## Pages
-- [Loyiha haqida (About Project)](https://learnprompting.uz/about-project): About this Uzbek edition and HumblebeeAI.
-- [Hissa qo'shish (Contribute)](https://learnprompting.uz/contribute): How to contribute to the project.
+- [Introduction (Course Home)](https://learnprompting.uz/docs/intro): Course introduction and starting point.
+- [About Project](https://learnprompting.uz/about-project): About this Uzbek edition and HumblebeeAI.
+- [Contribute](https://learnprompting.uz/contribute): How to contribute to the project.
+- [Certificate](https://learnprompting.uz/certificate): Course completion certificate info.
+- [Our Services](https://learnprompting.uz/our_services): HumblebeeAI's services.
+- [Hiring](https://learnprompting.uz/hiring): Job openings at HumblebeeAI.
 
 ## Optional
 - [Bibliography](https://learnprompting.uz/docs/bibliography): Academic references cited across the course.
 - [Credits](https://learnprompting.uz/docs/credits): Contributors and credits.
+- [Vocabulary](https://learnprompting.uz/docs/vocabulary): Glossary of prompt engineering terms.
 - [Terms of Use](https://learnprompting.uz/terms_of_use): Site terms of use.
 - [Privacy Policy](https://learnprompting.uz/privacy_policy): Site privacy policy.
